@@ -75,3 +75,6 @@ jobs:
             --set image.repository=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
             --set image.tag=latest \
             --namespace dev
+            --set ingress.enabled=true
+            --set ingress.host=pinuspintar.id            
+            
