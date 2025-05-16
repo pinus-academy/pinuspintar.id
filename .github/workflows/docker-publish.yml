@@ -74,7 +74,7 @@ jobs:
           helm upgrade --install pinuspintar-web pinus-academy/app \
             --set image.repository=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
             --set image.tag=latest \
-            --namespace dev
-            --set ingress.enabled=true
+            --namespace dev \
+            --set ingress.enabled=true \
             --set ingress.host=pinuspintar.id            
             
