@@ -55,25 +55,28 @@ jobs:
           cache-to: type=gha,mode=max
           platforms: linux/amd64
 
+  deploy:
+    needs: build-and-push
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Install Helm
-        if: github.event_name != 'pull_request'
         uses: azure/setup-helm@v3
         with:
           version: 'latest'
 
       - name: Setup kubeconfig
-        if: github.event_name != 'pull_request'
         run: |
           mkdir -p ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
           chmod 600 ~/.kube/config
 
       - name: Deploy to k3s with Helm
-        if: github.event_name != 'pull_request'
         run: |
           helm repo add pinus-academy https://pinus-academy.github.io/helm-chart
           helm repo update
-          helm upgrade --install pinuspintar-web pinus-academy/pinuspintar \
+          helm upgrade --install pinuspintar-web pinus-academy/app \
             --set image.repository=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
             --set image.tag=sha-${{ github.sha }} \
             --namespace default \
