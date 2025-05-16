@@ -74,10 +74,9 @@ jobs:
 
       - name: Deploy to k3s with Helm
         run: |
-          helm repo add pinus-academy https://pinus-academy.github.io/helm-chart
+          helm repo add pinus-academy https://pinus-academy.github.io/helm-chart 
           helm repo update
           helm upgrade --install pinuspintar-web pinus-academy/app \
             --set image.repository=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
             --set image.tag=sha-${{ github.sha }} \
-            --namespace default \
-            --create-namespace
+            --namespace dev
