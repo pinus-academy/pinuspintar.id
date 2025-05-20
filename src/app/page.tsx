@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Heart, MessageCircle, Search, User } from 'lucide-react';
+import { Heart, Search, User } from 'lucide-react';
 
 export default function InstagramReelPlayer() {
   const [isLiked, setIsLiked] = useState(false);
