@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Search, Bell, Award, ArrowRight, Clock, Users } from 'lucide-react';
+import { Search, Award, ArrowRight, Clock, Users } from 'lucide-react';
 
 const PinusPintarHomepage = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -157,11 +157,6 @@ const PinusPintarHomepage = () => {
             />
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
           </div>
-          {/* <Bell className="h-5 w-5 text-gray-600" />
-          <div className="flex items-center">
-            <Award className="h-5 w-5 mr-1" style={{ color: colors.yellow }} />
-            <span className="font-medium">243 Points</span>
-          </div> */}
           <button 
             className="px-4 py-2 rounded-lg text-sm font-medium text-white cursor-pointer"
             style={{ backgroundColor: colors.greenArmy }}
@@ -225,9 +220,6 @@ const PinusPintarHomepage = () => {
       <div className="px-4 py-16" style={{ maxWidth: '100%' }}>
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold" style={{ color: colors.greenArmy }}>Featured Courses</h2>
-          {/* <a href="#" className="flex items-center font-medium" style={{ color: colors.greenArmy }}>
-            View All <ArrowRight className="ml-2 h-4 w-4" />
-          </a> */}
         </div>
 
         <div className="flex overflow-x-auto gap-4 mb-12 pb-4">

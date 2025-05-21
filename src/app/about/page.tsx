@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Users, Award, Clock, Target, Heart, Lightbulb } from 'lucide-react';
+import Image from 'next/image';
 
 const AboutUsPage = () => {
   // Color palette (matching the homepage)
@@ -54,7 +55,7 @@ const AboutUsPage = () => {
     {
       icon: <Heart className="h-8 w-8" />,
       title: 'Passion',
-      description: 'We  are passionate about technology and helping others succeed in their tech careers.'
+      description: 'We&apos;re passionate about technology and helping others succeed in their tech careers.'
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
@@ -72,7 +73,7 @@ const AboutUsPage = () => {
             About PinusPintar
           </h1>
           <p className="text-lg mb-8" style={{ color: colors.darkText }}>
-            We're on a mission to bridge the digital skills gap in Indonesia by providing 
+            We&apos;re on a mission to bridge the digital skills gap in Indonesia by providing 
             high-quality tech education that prepares students for real-world challenges.
           </p>
         </div>
@@ -118,15 +119,15 @@ const AboutUsPage = () => {
             </p>
             <p>
               Our founder, Budi Santoso, a former tech lead at Gojek, recognized that traditional 
-              education wasn't keeping pace with the rapidly evolving tech industry. This realization 
+              education wasn&apos;t keeping pace with the rapidly evolving tech industry. This realization 
               led to the creation of PinusPintar, a bootcamp designed to provide practical, 
               industry-relevant education.
             </p>
             <p>
-              Today, we've grown into a leading tech education provider, helping thousands of 
+              Today, we&apos;ve grown into a leading tech education provider, helping thousands of 
               students launch their careers in technology. Our success is measured not just in 
               numbers, but in the success stories of our graduates who are now making an impact 
-              in Indonesia's tech industry.
+              in Indonesia&apos;s tech industry.
             </p>
           </div>
         </div>
@@ -165,11 +166,14 @@ const AboutUsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-48 object-cover"
-                />
+                <div className="relative w-full h-48">
+                  <Image 
+                    src={member.image} 
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-1" style={{ color: colors.greenArmy }}>
                     {member.name}
@@ -195,7 +199,7 @@ const AboutUsPage = () => {
           </h2>
           <p className="text-lg mb-8" style={{ color: colors.white }}>
             Be part of our journey to transform tech education in Indonesia.
-            Whether you're a student, instructor, or partner, we'd love to hear from you.
+            Whether you&apos;re a student, instructor, or partner, we&apos;d love to hear from you.
           </p>
           <button 
             className="px-8 py-3 rounded-lg font-semibold text-lg cursor-pointer"
