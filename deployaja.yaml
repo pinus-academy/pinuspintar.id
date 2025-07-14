@@ -1,6 +1,6 @@
 name: pinuspintarid
 version: latest
-description: CRM Application with WhatsApp Integration
+description: pinuspintar.id
 
 container:
   image: ghcr.io/pinus-academy/pinuspintar.id:latest
