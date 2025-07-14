@@ -3,7 +3,7 @@ version: latest
 description: CRM Application with WhatsApp Integration
 
 container:
-  image: ghcr.io/pinus-academy/pinuspintar.id:a9c315ff9982bc777ce087b5273b4d74a7625c2c
+  image: ghcr.io/pinus-academy/pinuspintar.id:latest
   port: 8070
 
 resources:
