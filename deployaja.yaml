@@ -11,4 +11,4 @@ resources:
   memory: 512Mi
   replicas: 1
 
-domain: pp.deployaja.id
+domain: pinuspintar.id
