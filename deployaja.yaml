@@ -1,17 +1,14 @@
-name: pinuspintar
-description: PinusPintar is an educational platform for Indonesian students, providing
-  interactive learning experiences and resources.
+name: pp
+version: latest
+description: CRM Application with WhatsApp Integration
+
 container:
-  image: ghcr.io/pinus-academy/pinuspintar.id:latest
+  image: ghcr.io/pinus-academy/pinuspintar.id:a9c315ff9982bc777ce087b5273b4d74a7625c2c
   port: 8070
+
 resources:
   cpu: 500m
-  memory: 1Gi
-  replicas: 2
-healthCheck:
-  path: /
-  port: 8070
-  initialDelaySeconds: 30
-  periodSeconds: 20
-domain: pinuspintar.deployaja.id
-env: []
+  memory: 512Mi
+  replicas: 1
+
+domain: pp.deployaja.id
