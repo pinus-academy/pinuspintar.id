@@ -1,6 +1,6 @@
 name: pinuspintarid
 version: latest
-description: CRM Application with WhatsApp Integration
+description: PinusPintar offers intensive bootcamps in tech, design, and digital marketing,
 
 container:
   image: ghcr.io/pinus-academy/pinuspintar.id:latest
