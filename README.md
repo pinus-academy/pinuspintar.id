@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## 🚀 Deployment to deployaja.id
+
+This project is now deployed to [https://deployaja.id](https://deployaja.id) using a custom CI/CD pipeline.
+
+### CI/CD Setup
+
+- `.github/workflows/main.yml` → GitHub Actions workflow for building & deploying
+- `deployaja.yaml` → Server configuration or deployment descriptor
+
+All changes pushed to the `deployaja` branch will trigger an automatic deployment.
+
