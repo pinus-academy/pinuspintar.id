@@ -18,7 +18,6 @@ export default function CourseCard({
   id,
   image,
   type,
-  level,
   title,
   description,
   instructor,
