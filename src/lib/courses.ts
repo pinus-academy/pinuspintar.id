@@ -17,7 +17,7 @@ export const courses:CourseCardProps[] = [
     type: "online",
     category: "development",
     featured: true,
-    image: "js.png",
+    image: "/js.png",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ export const courses:CourseCardProps[] = [
     type: "hybrid",
     category: "design",
     featured: true,
-    image: "js.png",
+    image: "/js.png",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const courses:CourseCardProps[] = [
     type: "offline",
     category: "data",
     featured: false,
-    image: "cloud.png",
+    image: "/cloud.png",
   },
   {
     id: 4,
@@ -71,6 +71,6 @@ export const courses:CourseCardProps[] = [
     type: "online",
     category: "marketing",
     featured: true,
-    image: "java.png",
+    image: "/java.png",
   },
 ];

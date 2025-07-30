@@ -35,7 +35,7 @@ export default function CourseCard({
       <a href={`/courses/${id}`} className="block group">
         <div className="bg-white rounded-lg overflow-hidden shadow-md h-full transition-transform">
           {/* Image */}
-          <img src={image} alt={title} className="w-full h-48 object-cover" />
+          <Image src={image} width={1000} height={1000} alt={title} className="w-full h-48 object-cover" />
 
           {/* Content */}
           <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100">
