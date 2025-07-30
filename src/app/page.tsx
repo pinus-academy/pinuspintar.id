@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { courses } from '@/lib/courses';
-import { Search, Award, ArrowRight, Clock, Users } from 'lucide-react';
+import {  ArrowRight, Clock } from 'lucide-react';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import CourseCard from '@/components/ui/CourseCard';
@@ -114,7 +114,7 @@ const PinusPintarHomepage = () => {
           <div className="flex-1 aspect-video w-full bg-linear-to-bl to-green-primary-2 from-green-secondary p-3 rounded-xl shadow-lg">
             <div className='overflow-hidden max-h-96 rounded-lg bg-center'>
               {/* <div className='h-96 w-full'></div> */}
-              <img src="bg.jpeg" alt="Students learning" className="min-w-full" />
+              <Image src="/bg.jpeg" width={1000} height={1000} alt="Students learning" className="min-w-full" />
             </div>
           </div>
 
@@ -276,7 +276,7 @@ const PinusPintarHomepage = () => {
           {/* Event 1 */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
-              <img src="js.png" alt="Tech Talk" className="w-full h-48 object-cover" />
+              <Image src="/js.png" width={500} height={500} alt="Tech Talk" className="w-full h-48 object-cover" />
               <div className="p-5">
                 <div 
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
@@ -307,7 +307,7 @@ const PinusPintarHomepage = () => {
           {/* Event 2 */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
-              <img src="cloud.png" alt="Workshop" className="w-full h-48 object-cover" />
+              <Image src="/cloud.png" width={500} height={500} alt="Workshop" className="w-full h-48 object-cover" />
               <div className="p-5">
                 <div 
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
@@ -338,7 +338,7 @@ const PinusPintarHomepage = () => {
           {/* Event 3 */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
-              <img src="cloud.png" alt="Bootcamp" className="w-full h-48 object-cover" />
+              <Image src="/cloud.png" width={500} height={500} alt="Bootcamp" className="w-full h-48 object-cover" />
               <div className="p-5">
                 <div 
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
