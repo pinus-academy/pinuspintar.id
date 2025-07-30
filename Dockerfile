@@ -1,5 +1,5 @@
 # Stage 1: Dependencies
-FROM node:20-alpine3.14 AS deps
+FROM node:20-alpine AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -7,7 +7,7 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 # Stage 2: Builder
-FROM node:20-alpine3.14 AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -20,7 +20,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # Stage 3: Runner
-FROM node:20-alpine3.14 AS runner
+FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
