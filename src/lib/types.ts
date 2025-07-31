@@ -16,4 +16,5 @@ export interface CourseCardProps {
   category: string;
   featured: boolean;
   image: string;
+  url?: string;
 }

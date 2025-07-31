@@ -27,6 +27,7 @@ export default function CourseCard({
   startDate,
   price,
   discountPrice,
+  url,
 }: CourseCardProps) {
   const courseStatus = getCourseStatus(startDate, duration, durationType);
 
@@ -47,8 +48,8 @@ export default function CourseCard({
                   type === "online"
                     ? "emerald"
                     : type === "offline"
-                    ? "blue"
-                    : "purple"
+                      ? "blue"
+                      : "purple"
                 }
               >
                 {type}
@@ -111,7 +112,7 @@ export default function CourseCard({
             {/* Button pakai component */}
             <Button
               className="w-full font-semibold"
-              onClick={(e) => e.preventDefault()}
+              href={url || '#'} // Menggunakan URL yang diberikan, jika tidak ada, arahkan ke '#'
             >
               Register Now
             </Button>

@@ -6,7 +6,7 @@ export const courses:CourseCardProps[] = [
     title: "Full-Stack Web Development",
     description:
       "Master modern web development with JavaScript, React, and Node.js",
-    instructor: "Budi Santoso",
+    instructor: "Haidar Alfatah",
     instructorAvatar: "",
     price: 2500000,
     discountPrice: 0,
@@ -18,13 +18,14 @@ export const courses:CourseCardProps[] = [
     category: "development",
     featured: true,
     image: "/js.png",
+    url: "https://crm.deployaja.id/lp/full-stack-web-development",
   },
   {
     id: 2,
     title: "UI/UX Design Fundamentals",
     description:
       "Learn the principles of user-centered design and create stunning interfaces",
-    instructor: "Siti Rahayu",
+    instructor: "Daffa ",
     instructorAvatar: "",
     price: 1800000,
     discountPrice: 1499000,
@@ -36,6 +37,7 @@ export const courses:CourseCardProps[] = [
     category: "design",
     featured: true,
     image: "/js.png",
+    url: "",
   },
   {
     id: 3,
@@ -54,6 +56,7 @@ export const courses:CourseCardProps[] = [
     category: "data",
     featured: false,
     image: "/cloud.png",
+    url: "",
   },
   {
     id: 4,
@@ -72,5 +75,6 @@ export const courses:CourseCardProps[] = [
     category: "marketing",
     featured: true,
     image: "/java.png",
+    url: "",
   },
 ];

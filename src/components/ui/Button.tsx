@@ -1,19 +1,33 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 import clsx from "clsx";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type CommonProps = {
   variant?: "primary" | "secondary";
   className?: string;
+  children?: React.ReactNode;
+};
+
+interface ButtonAsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  href?: undefined;
 }
+
+interface ButtonAsLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+}
+
+type ButtonProps = CommonProps & (ButtonAsButtonProps | ButtonAsLinkProps);
 
 export default function Button({
   children,
   variant = "primary",
   className,
+  href,
   ...props
 }: ButtonProps) {
+  const Component = href ? 'a' : 'button';
+
   return (
-    <button
+    <Component
       className={clsx(
         "px-4 py-2.5 rounded-lg text-base font-medium cursor-pointer transition-all duration-300",
         variant === "primary" &&
@@ -22,9 +36,10 @@ export default function Button({
           "bg-gray-200 text-gray-800 hover:bg-gray-300",
         className
       )}
-      {...props}
+      href={href}
+      {...(props as any)}
     >
       {children}
-    </button>
+    </Component>
   );
 }
