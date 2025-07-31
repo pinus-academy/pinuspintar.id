@@ -174,102 +174,6 @@ const PinusPintarHomepage = () => {
         </div>
       </div>
 
-      {/* Learning Paths Section */}
-      <div className="px-4 py-16" style={{ backgroundColor: colors.lightGray, maxWidth: '100%' }}>
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold" style={{ color: colors.greenArmy }}>Learning Paths</h2>
-          <a href="#" className="flex items-center font-medium" style={{ color: colors.greenArmy }}>
-            View All <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </div>
-
-        <div style={{ margin: '0 -8px', overflow: 'hidden' }}>
-          {/* Web Development Path */}
-          <div style={cardStyle}>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div
-                className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundColor: colors.lightYellow }}
-              >
-                <span className="text-2xl font-bold" style={{ color: colors.greenArmy }}>WD</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2" style={{ color: colors.greenArmy }}>
-                Web Development
-              </h3>
-              <p className="text-sm mb-4" style={{ color: colors.lightText }}>
-                From HTML basics to advanced React and Node.js applications
-              </p>
-              <div className="flex items-center mb-4">
-                <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>5 Courses</span>
-                <span className="text-sm" style={{ color: colors.lightText }}>• 24 weeks</span>
-              </div>
-              <button
-                className="w-full py-2 rounded font-medium cursor-pointer"
-                style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
-              >
-                View Path
-              </button>
-            </div>
-          </div>
-
-          {/* UI/UX Design Path */}
-          <div style={cardStyle}>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div
-                className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundColor: colors.lightYellow }}
-              >
-                <span className="text-2xl font-bold" style={{ color: colors.greenArmy }}>UX</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2" style={{ color: colors.greenArmy }}>
-                UI/UX Design
-              </h3>
-              <p className="text-sm mb-4" style={{ color: colors.lightText }}>
-                Master user research, wireframing, prototyping, and design systems
-              </p>
-              <div className="flex items-center mb-4">
-                <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>4 Courses</span>
-                <span className="text-sm" style={{ color: colors.lightText }}>• 16 weeks</span>
-              </div>
-              <button
-                className="w-full py-2 rounded font-medium cursor-pointer"
-                style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
-              >
-                View Path
-              </button>
-            </div>
-          </div>
-
-          {/* Data Science Path */}
-          <div style={cardStyle}>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div
-                className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
-                style={{ backgroundColor: colors.lightYellow }}
-              >
-                <span className="text-2xl font-bold" style={{ color: colors.greenArmy }}>DS</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2" style={{ color: colors.greenArmy }}>
-                Data Science
-              </h3>
-              <p className="text-sm mb-4" style={{ color: colors.lightText }}>
-                From statistics fundamentals to advanced machine learning models
-              </p>
-              <div className="flex items-center mb-4">
-                <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>6 Courses</span>
-                <span className="text-sm" style={{ color: colors.lightText }}>• 32 weeks</span>
-              </div>
-              <button
-                className="w-full py-2 rounded font-medium cursor-pointer"
-                style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
-              >
-                View Path
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Upcoming Events Section */}
       <div className="px-4 py-16" style={{ maxWidth: '100%' }}>
         <div className="flex justify-between items-center mb-8">
@@ -301,12 +205,6 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>May 25, 2025 • 19:00 WIB</span>
                 </div>
-                <button
-                  className="w-full py-2 rounded font-medium cursor-pointer"
-                  style={{ backgroundColor: colors.greenArmy, color: colors.white }}
-                >
-                  Register Now
-                </button>
               </div>
             </div>
           </div>
@@ -332,12 +230,6 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>June 5, 2025 • 10:00 WIB</span>
                 </div>
-                <button
-                  className="w-full py-2 rounded font-medium cursor-pointer"
-                  style={{ backgroundColor: colors.greenArmy, color: colors.white }}
-                >
-                  Register Now
-                </button>
               </div>
             </div>
           </div>
@@ -363,12 +255,6 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>June 12-16, 2025 • 09:00 WIB</span>
                 </div>
-                <button
-                  className="w-full py-2 rounded font-medium cursor-pointer"
-                  style={{ backgroundColor: colors.greenArmy, color: colors.white }}
-                >
-                  Register Now
-                </button>
               </div>
             </div>
           </div>
