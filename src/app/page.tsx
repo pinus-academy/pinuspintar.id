@@ -261,25 +261,6 @@ const PinusPintarHomepage = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="px-8 py-16" style={{ backgroundColor: colors.greenArmy }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: colors.yellow }}>
-            Ready to Accelerate Your Career?
-          </h2>
-          <p className="text-lg mb-8" style={{ color: colors.white }}>
-            Join PinusPintar bootcamp today and gain the skills employers are looking for.
-            Get 20% off on all courses with code LAUNCH20.
-          </p>
-          <button
-            className="px-8 py-3 rounded-lg font-semibold text-lg cursor-pointer"
-            style={{ backgroundColor: colors.yellow, color: colors.greenArmy }}
-          >
-            Join Bootcamp Now
-          </button>
-        </div>
-      </div>
-
       {/* Footer */}
       <footer className="px-8 py-12 bg-gray-900 text-white">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
