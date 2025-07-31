@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { courses } from '@/lib/courses';
-import {  ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import CourseCard from '@/components/ui/CourseCard';
@@ -11,6 +11,13 @@ import CourseCard from '@/components/ui/CourseCard';
 const PinusPintarHomepage = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [windowWidth, setWindowWidth] = useState(0);
+
+  const scrollToFeaturedCourses = () => {
+    const featuredSection = document.getElementById('featured-courses');
+    if (featuredSection) {
+      featuredSection.scrollIntoView({ behavior: 'smooth' }); // gulir dengan efek 
+    }
+  };
 
   // Color palette
   const colors = {
@@ -28,11 +35,11 @@ const PinusPintarHomepage = () => {
   useEffect(() => {
     // Set initial window width
     setWindowWidth(window.innerWidth);
-    
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -52,13 +59,13 @@ const PinusPintarHomepage = () => {
       .find(([width]) => windowWidth >= Number(width))?.[1] || '100%';
   };
 
-  
+
   // Add more courses to create a better visual of multiple rows
-  const extendedCourses = [...courses, ...courses.map(course => ({...course, id: course.id + 4}))];
+  const extendedCourses = [...courses, ...courses.map(course => ({ ...course, id: course.id + 4 }))];
 
   // Filter courses based on active tab
-  const filteredCourses = activeTab === 'all' 
-    ? extendedCourses 
+  const filteredCourses = activeTab === 'all'
+    ? extendedCourses
     : extendedCourses.filter(course => course.type === activeTab);
 
   const cardStyle = {
@@ -71,7 +78,7 @@ const PinusPintarHomepage = () => {
   };
 
   return (
-    <div  className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* Navigation */}
       <nav className=" bg-green-primary w-full ">
         <div className='flex items-center justify-between p-8 max-w-8xl mx-auto'>
@@ -90,23 +97,23 @@ const PinusPintarHomepage = () => {
       {/* Hero Section */}
       <div className="bg-linear-to-b -mt-1 from-green-primary to-green-primary-2">
         <div className="flex flex-col-reverse px-4 py-16 w-full max-w-8xl mx-auto items-center lg:flex-row">
-          
+
           {/* Kiri: Konten text */}
           <div className="flex-1">
             <h1 className="flex flex-col text-nowrap gap-2 mt-4 text-4xl lg:text-5xl font-bold mb-6">
               <span>
-                Upgrade Your Skills 
+                Upgrade Your Skills
               </span>
               <span>
                 Boost Your Career
               </span>
             </h1>
             <p className="text-lg mb-7 text-gray-200">
-              PinusPintar offers intensive bootcamps in tech, design, and digital marketing. 
+              PinusPintar offers intensive bootcamps in tech, design, and digital marketing.
               Learn from industry experts through hands-on projects and real-world applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" className="px-6">Explore Courses</Button>
+              <Button variant="primary" className="px-6" onClick={scrollToFeaturedCourses}>Explore Courses</Button>
             </div>
           </div>
 
@@ -124,30 +131,30 @@ const PinusPintarHomepage = () => {
 
       {/* Featured Courses Section */}
       <div className="px-4 py-16 w-full max-w-8xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div id="featured-courses" className="px-4 py-16 w-full max-w-8xl mx-auto">
           <h2 className="text-3xl font-bold text-green-primary">Featured Courses</h2>
         </div>
 
         <div className="flex overflow-x-auto gap-4 mb-6 text-black">
-          <button 
+          <button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'all' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('all')}
           >
             All Courses
           </button>
-          <button 
+          <button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'online' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('online')}
           >
             Online
           </button>
-          <button 
+          <button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'offline' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('offline')}
           >
             Offline
           </button>
-          <button 
+          <button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'hybrid' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('hybrid')}
           >
@@ -156,13 +163,13 @@ const PinusPintarHomepage = () => {
         </div>
 
         <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredCourses.map(course => (
-            <CourseCard
-              key={course.id}
-              {...course} // spread props biar singkat
-            />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {filteredCourses.map(course => (
+              <CourseCard
+                key={course.id}
+                {...course} // spread props biar singkat
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -180,7 +187,7 @@ const PinusPintarHomepage = () => {
           {/* Web Development Path */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div 
+              <div
                 className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
                 style={{ backgroundColor: colors.lightYellow }}
               >
@@ -196,7 +203,7 @@ const PinusPintarHomepage = () => {
                 <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>5 Courses</span>
                 <span className="text-sm" style={{ color: colors.lightText }}>• 24 weeks</span>
               </div>
-              <button 
+              <button
                 className="w-full py-2 rounded font-medium cursor-pointer"
                 style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
               >
@@ -208,7 +215,7 @@ const PinusPintarHomepage = () => {
           {/* UI/UX Design Path */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div 
+              <div
                 className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
                 style={{ backgroundColor: colors.lightYellow }}
               >
@@ -224,7 +231,7 @@ const PinusPintarHomepage = () => {
                 <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>4 Courses</span>
                 <span className="text-sm" style={{ color: colors.lightText }}>• 16 weeks</span>
               </div>
-              <button 
+              <button
                 className="w-full py-2 rounded font-medium cursor-pointer"
                 style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
               >
@@ -236,7 +243,7 @@ const PinusPintarHomepage = () => {
           {/* Data Science Path */}
           <div style={cardStyle}>
             <div className="bg-white rounded-lg overflow-hidden shadow-md p-6 h-full">
-              <div 
+              <div
                 className="h-16 w-16 flex items-center justify-center rounded-full mb-4"
                 style={{ backgroundColor: colors.lightYellow }}
               >
@@ -252,7 +259,7 @@ const PinusPintarHomepage = () => {
                 <span className="text-sm font-medium mr-2" style={{ color: colors.darkText }}>6 Courses</span>
                 <span className="text-sm" style={{ color: colors.lightText }}>• 32 weeks</span>
               </div>
-              <button 
+              <button
                 className="w-full py-2 rounded font-medium cursor-pointer"
                 style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
               >
@@ -278,7 +285,7 @@ const PinusPintarHomepage = () => {
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
               <Image src="/js.png" width={500} height={500} alt="Tech Talk" className="w-full h-48 object-cover" />
               <div className="p-5">
-                <div 
+                <div
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
                   style={{ backgroundColor: colors.lightYellow, color: colors.greenArmy }}
                 >
@@ -294,7 +301,7 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>May 25, 2025 • 19:00 WIB</span>
                 </div>
-                <button 
+                <button
                   className="w-full py-2 rounded font-medium cursor-pointer"
                   style={{ backgroundColor: colors.greenArmy, color: colors.white }}
                 >
@@ -309,7 +316,7 @@ const PinusPintarHomepage = () => {
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
               <Image src="/cloud.png" width={500} height={500} alt="Workshop" className="w-full h-48 object-cover" />
               <div className="p-5">
-                <div 
+                <div
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
                   style={{ backgroundColor: '#E5F6FD', color: '#0287C3' }}
                 >
@@ -325,7 +332,7 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>June 5, 2025 • 10:00 WIB</span>
                 </div>
-                <button 
+                <button
                   className="w-full py-2 rounded font-medium cursor-pointer"
                   style={{ backgroundColor: colors.greenArmy, color: colors.white }}
                 >
@@ -340,7 +347,7 @@ const PinusPintarHomepage = () => {
             <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
               <Image src="/cloud.png" width={500} height={500} alt="Bootcamp" className="w-full h-48 object-cover" />
               <div className="p-5">
-                <div 
+                <div
                   className="inline-block px-3 py-1 rounded text-xs font-medium uppercase mb-3"
                   style={{ backgroundColor: '#F0E5FD', color: '#7B2CBF' }}
                 >
@@ -356,7 +363,7 @@ const PinusPintarHomepage = () => {
                   <Clock className="h-4 w-4 mr-2" style={{ color: colors.lightText }} />
                   <span className="text-sm" style={{ color: colors.lightText }}>June 12-16, 2025 • 09:00 WIB</span>
                 </div>
-                <button 
+                <button
                   className="w-full py-2 rounded font-medium cursor-pointer"
                   style={{ backgroundColor: colors.greenArmy, color: colors.white }}
                 >
@@ -378,7 +385,7 @@ const PinusPintarHomepage = () => {
             Join PinusPintar bootcamp today and gain the skills employers are looking for.
             Get 20% off on all courses with code LAUNCH20.
           </p>
-          <button 
+          <button
             className="px-8 py-3 rounded-lg font-semibold text-lg cursor-pointer"
             style={{ backgroundColor: colors.yellow, color: colors.greenArmy }}
           >
@@ -404,7 +411,7 @@ const PinusPintarHomepage = () => {
               <a href="#" className="text-gray-400 hover:text-white">LI</a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Courses</h3>
             <ul className="space-y-2">
@@ -415,7 +422,7 @@ const PinusPintarHomepage = () => {
               <li><a href="#" className="text-gray-400 hover:text-white">Mobile Development</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
@@ -426,7 +433,7 @@ const PinusPintarHomepage = () => {
               <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-2">
@@ -436,7 +443,7 @@ const PinusPintarHomepage = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-6 border-t border-gray-800 text-center text-gray-500">
           <p>© 2025 PinusPintar. All rights reserved.</p>
         </div>
