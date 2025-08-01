@@ -48,8 +48,8 @@ export default function CourseCard({
                   type === "online"
                     ? "emerald"
                     : type === "offline"
-                    ? "blue"
-                    : "purple"
+                      ? "blue"
+                      : "purple"
                 }
               >
                 {type}
@@ -110,12 +110,12 @@ export default function CourseCard({
             </div>
 
             {/* Button pakai component */}
-            <Button
-              className="w-full font-semibold"
-              href={url || '#'} // Mengarahkan ke URL spesifik atau '#' sebagai fallback
+            <a
+              href={url}
+              className="w-full font-semibold px-4 py-2.5 rounded-lg text-base text-center transition-all duration-300 bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80"
             >
               Register Now
-            </Button>
+            </a>
           </div>
         </div>
       </a>
