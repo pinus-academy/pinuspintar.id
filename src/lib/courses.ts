@@ -1,6 +1,6 @@
 import { CourseCardProps } from "@/lib/types";
 
-export const courses:CourseCardProps[] = [
+export const courses: CourseCardProps[] = [
   {
     id: 1,
     title: "Full-Stack Web Development",
@@ -18,6 +18,7 @@ export const courses:CourseCardProps[] = [
     category: "development",
     featured: true,
     image: "/js.png",
+    url: "https://crm.deployaja.id/lp/full-stack-web-development",
   },
   {
     id: 2,
@@ -36,6 +37,8 @@ export const courses:CourseCardProps[] = [
     category: "design",
     featured: true,
     image: "/js.png",
+    url: "",
+
   },
   {
     id: 3,
@@ -54,6 +57,8 @@ export const courses:CourseCardProps[] = [
     category: "data",
     featured: false,
     image: "/cloud.png",
+    url: "",
+
   },
   {
     id: 4,
@@ -72,5 +77,6 @@ export const courses:CourseCardProps[] = [
     category: "marketing",
     featured: true,
     image: "/java.png",
+
   },
 ];

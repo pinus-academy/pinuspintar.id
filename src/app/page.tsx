@@ -61,7 +61,7 @@ const PinusPintarHomepage = () => {
 
 
   // Add more courses to create a better visual of multiple rows
-  const extendedCourses = [...courses, ...courses.map(course => ({ ...course, id: course.id + 4 }))];
+  const extendedCourses = [...courses.map(course => ({ ...course, id: course.id + 4 }))];
 
   // Filter courses based on active tab
   const filteredCourses = activeTab === 'all'

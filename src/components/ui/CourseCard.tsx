@@ -27,6 +27,7 @@ export default function CourseCard({
   startDate,
   price,
   discountPrice,
+  url,
 }: CourseCardProps) {
   const courseStatus = getCourseStatus(startDate, duration, durationType);
 
@@ -111,7 +112,7 @@ export default function CourseCard({
             {/* Button pakai component */}
             <Button
               className="w-full font-semibold"
-              onClick={(e) => e.preventDefault()}
+              href={url || '#'} // Mengarahkan ke URL spesifik atau '#' sebagai fallback
             >
               Register Now
             </Button>
