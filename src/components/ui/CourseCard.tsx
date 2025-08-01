@@ -109,13 +109,12 @@ export default function CourseCard({
               </span>
             </div>
 
-            {/* Button pakai component */}
-            <a
-              href={url}
-              className="w-full font-semibold px-4 py-2.5 rounded-lg text-base text-center transition-all duration-300 bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80"
-            >
-              Register Now
-            </a>
+            <Button>
+              <a
+                href={url}
+                className="w-full font-semibold px-4 py-2.5 rounded-lg text-base text-center transition-all duration-300 bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80"
+              >Register Now</a>
+            </Button>
           </div>
         </div>
       </a>
