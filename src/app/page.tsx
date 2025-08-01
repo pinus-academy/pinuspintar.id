@@ -118,30 +118,30 @@ const PinusPintarHomepage = () => {
         </div>
 
         <div className="flex overflow-x-auto gap-4 mb-6 text-black">
-          <button
+          <Button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'all' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('all')}
           >
             All Courses
-          </button>
-          <button
+          </Button>
+          <Button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'online' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('online')}
           >
             Online
-          </button>
-          <button
+          </Button>
+          <Button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'offline' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('offline')}
           >
             Offline
-          </button>
-          <button
+          </Button>
+          <Button
             className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer ${activeTab === 'hybrid' ? 'text-white bg-green-primary-2' : 'bg-gray-300'}`}
             onClick={() => setActiveTab('hybrid')}
           >
             Hybrid
-          </button>
+          </Button>
         </div>
 
         <div>
