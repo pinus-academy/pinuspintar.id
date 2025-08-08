@@ -9,7 +9,7 @@ export default function DaftarPage() {
       <div className="relative z-10 max-w-6xl mx-auto space-y-8">
         <div className="flex flex-col items-center text-center space-y-2">
           <Image
-            src="/PinusPintar.png"
+            src="/images/logos/PinusPintar.png"
             alt="Logo Pinus Pintar"
             width={200}
             height={200}
