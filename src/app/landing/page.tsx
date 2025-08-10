@@ -4,50 +4,69 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { mediaItems } from "@/data/mediaData";
 import MediaCard from "@/components/MediaCard";
+import BenefitItem from "@/components/ui/BenefitItem";
 
 export default function LandingPage() {
+    const benefits = [
+    { src: "/images/benefits/benefit-laptop.png", alt: "Laptop", label: "Laptop" },
+    { src: "/images/benefits/benefit-mentor.png", alt: "Mentor", label: "Mentor" },
+    { src: "/images/benefits/benefit-softskill.png", alt: "Soft Skill", label: "Pendidikan Soft Skill" },
+    { src: "/images/benefits/benefit-bootcamp.png", alt: "Bootcamp", label: "Beasiswa Bootcamp" },
+    { src: "/images/benefits/benefit-kerja.png", alt: "Penyaluran Kerja", label: "Penyaluran Kerja" },
+    { src: "/images/benefits/benefit-internet.png", alt: "Internet", label: "Internet" },
+  ];
     return (
         <main className="bg-[#FAF9F6]">
         
-            <section className="max-w-7xl min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:pl-12">
+            <section className=" relative max-w-7xl min-h-screen w-full grid grid-cols-1 md:grid-cols-[70%_30%] gap-8 md:pl-12">
                 <div className="flex flex-col  space-y-10">
                     <div className="flex items-center mt-10">
                         <Image src="/images/logos/logo2.svg" alt="Logo Pinus Pintar" width={60} height={60} />
                         <span className="text-2xl font-sm  text-gray-700">PinusPintar</span>
                     </div>
                     <h1 className=" mt-6 text-3xl md:text-5xl font-md text-gray-700 leading-none"> Beasiswa :<br />Mustahiq menjadi Muzakki</h1>
-                    <Link href="/daftar">
-                        <button className="bg-green-700 hover:bg-green-800 text-white py-4 px-12 rounded-xl mt-6 font-bold">Daftar Beasiswa </button>
-                    </Link>
+                    <Link href="/daftar"> <button className="bg-green-700 hover:bg-green-800 text-white py-4 px-12 rounded-xl mt-6 font-bold">Daftar Beasiswa </button></Link>
 
                 </div>
-                <div className="bg-green-800 flex items-center ml-50 justify-end">
-                    <div className="relative w-full h-[380px] md:h-[500px] md:w-[90%] overflow-hidden ">
-                        <Image src="/images/backgrounds/background.png" alt="Beasiswa" fill className=" object-cover object-center" priority />
-                        
-                    </div>
+                <div className="bg-green-800"></div>
+                <div className="absolute right-[30%] translate-x-1/2 top-1/2 -translate-y-[46%]  w-[400px] h-[600px] ">
+                        <Image src="/images/backgrounds/background.png" alt="Beasiswa" fill className=" object-cover object-center" priority />    
                 </div>
                 
             </section>
 
             
-            <section className="min-h-screen bg-[#FAF9F6] py-20 px-4 md:px-12">
+             <section className="min-h-screen bg-[#FAF9F6] py-20 px-4 md:px-12">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-lg font-medium tracking-widest border border-orange-300 inline-block px-6 py-2 mb-12 text-gray-800"> APA YANG AKAN DI DAPAT</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-10 items-center justify-items-center">
-                        {[
-                            { src: '/images/benefits/benefit-laptop.png', alt: 'Laptop', label: 'Laptop' },
-                            { src: '/images/benefits/benefit-mentor.png', alt: 'Mentor', label: 'Mentor' },
-                            { src: '/images/benefits/benefit-bootcamp.png', alt: 'Bootcamp', label: 'Beasiswa Bootcamp' },
-                            { src: '/images/benefits/benefit-softskill.png', alt: 'Soft Skill', label: 'Pendidikan Soft Skill' },
-                            { src: '/images/benefits/benefit-kerja.png', alt: 'Penyaluran Kerja', label: 'Penyaluran Kerja' },
-                            { src: '/images/benefits/benefit-internet.png', alt: 'Internet', label: 'Internet' },
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex flex-col items-center space-y-2">
-                                <Image src={item.src} alt={item.alt} width={80} height={80} />
-                                <span className="text-sm text-gray-700 font-medium">{item.label}</span>
-                            </div>
-                        ))}
+
+                    <div className="space-y-10">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-items-center">
+                            {benefits.slice(0, 4).map((item, idx) => (
+                                <BenefitItem
+                                    key={idx}
+                                    src={item.src}
+                                    alt={item.alt}
+                                    label={item.label}
+                                    imgWidth={250}
+                                    imgHeight={250}
+                                />
+                            ))}
+                        </div>
+
+  
+                        <div className="flex justify-center gap-10">
+                            {benefits.slice(4).map((item, idx) => (
+                                <BenefitItem
+                                    key={idx + 4}
+                                    src={item.src}
+                                    alt={item.alt}
+                                    label={item.label}
+                                    imgWidth={250}
+                                    imgHeight={250}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
