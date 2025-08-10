@@ -27,29 +27,29 @@ export const mediaItems = [
   },
   {
     type: "image",
-    src: "/images/photo1.jpeg",
+    src: "/images/photos/photo1.jpeg",
     alt: "Logo 1"
   },
   {
     type: "image",
-    src: "/images/photo2.jpeg",
+    src: "/images/photos/photo2.jpeg",
     alt: "Logo 2"
   },
   {
     type: "image",
-    src: "/images/photo3.jpg",
+    src: "/images/photos/photo3.jpg",
     alt: "Logo 3"
   }
   ,
   {
     type: "image",
-    src: "/images/photo4.jpg",
+    src: "/images/photos/photo4.jpg",
     alt: "Logo 4"
   }
   ,
   {
     type: "image",
-    src: "/images/photo5.jpg",
+    src: "/images/photos/photo5.jpg",
     alt: "Logo 5"
   }
 ];

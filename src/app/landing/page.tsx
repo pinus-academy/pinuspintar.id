@@ -5,16 +5,10 @@ import Link from 'next/link'
 import { mediaItems } from "@/data/mediaData";
 import MediaCard from "@/components/MediaCard";
 import BenefitItem from "@/components/ui/BenefitItem";
+import { benefits } from "@/data/Benefits";
+
 
 export default function LandingPage() {
-    const benefits = [
-    { src: "/images/benefits/benefit-laptop.png", alt: "Laptop", label: "Laptop" },
-    { src: "/images/benefits/benefit-mentor.png", alt: "Mentor", label: "Mentor" },
-    { src: "/images/benefits/benefit-softskill.png", alt: "Soft Skill", label: "Pendidikan Soft Skill" },
-    { src: "/images/benefits/benefit-bootcamp.png", alt: "Bootcamp", label: "Beasiswa Bootcamp" },
-    { src: "/images/benefits/benefit-kerja.png", alt: "Penyaluran Kerja", label: "Penyaluran Kerja" },
-    { src: "/images/benefits/benefit-internet.png", alt: "Internet", label: "Internet" },
-  ];
     return (
         <main className="bg-[#FAF9F6]">
         
