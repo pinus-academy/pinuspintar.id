@@ -7,9 +7,9 @@ export default function FormPendaftaran() {
   const [gajiOrtu, setGajiOrtu] = useState('');
 
   return (
-    <div className="w-full bg-gray-50 py-10">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <form className="space-y-6 bg-white p-8 md:p-10 border border-gray-200 rounded-lg shadow">
+    
+      <div className="max-w-screen-xl mx-auto px-4 ">
+        <form className="space-y-6 bg-white p-8 md:p-10 border border-gray-200 rounded-lg shadow ">
           {/* Grid 2 kolom */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Kolom kiri */}
@@ -153,6 +153,6 @@ export default function FormPendaftaran() {
           </div>
         </form>
       </div>
-    </div>
+   
   );
 }

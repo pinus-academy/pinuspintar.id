@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+
 
 type MediaProps = {
   type: "image" | "video";
@@ -10,9 +11,13 @@ type MediaProps = {
 
 export default function MediaCard({ type, src, alt }: MediaProps) {
   const [showOverlay, setShowOverlay] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+   useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const handlePlay = () => {
-    setShowOverlay(false); 
+    setShowOverlay(false);
   };
 
   return (
@@ -33,6 +38,7 @@ export default function MediaCard({ type, src, alt }: MediaProps) {
           alt={alt}
           width={500}
           height={500}
+          loading="lazy"
           className="object-cover w-full h-full"
         />
       )}

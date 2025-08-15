@@ -23,8 +23,8 @@ export default function LandingPage() {
 
                 </div>
                 <div className="bg-green-800"></div>
-                <div className="absolute right-[30%] translate-x-1/2 top-1/2 -translate-y-[46%]  w-[400px] h-[600px] ">
-                        <Image src="/images/backgrounds/background.png" alt="Beasiswa" fill className=" object-cover object-center" priority />    
+                <div className="absolute right-[25%] translate-x-1/2 top-1/2 -translate-y-[46%]  w-[400px] h-[600px] overflow-hidden rounded-t-[340px] ">
+                        <Image src="/images/backgrounds/background.png" alt="Beasiswa" fill className=" object-cover object-center " priority />    
                 </div>
                 
             </section>
