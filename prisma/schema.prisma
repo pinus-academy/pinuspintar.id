@@ -1,19 +1,23 @@
-// prisma/schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite" // Kita pakai SQLite agar mudah, tidak perlu install database terpisah
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model User {
-  id             String    @id @default(cuid())
-  username       String    @unique
-  email          String    @unique
-  hashedPassword String
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+model Registration {
+  id            String   @id @default(cuid())
+  nama          String
+  email         String   @unique
+  telepon       String
+  alamatLengkap String
+  tanggalLahir  DateTime
+  lulusan       String
+  gajiOrtu      Int
+  namaOrtu      String
+  tujuan        String
+  bersedia      Boolean  @default(false)
+  createdAt     DateTime @default(now())
 }

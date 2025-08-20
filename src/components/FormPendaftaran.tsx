@@ -5,11 +5,47 @@ import { formatCurrency } from '@/lib/utils';
 
 export default function FormPendaftaran() {
   const [gajiOrtu, setGajiOrtu] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setMessage('');
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch('/api/daftar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          gajiOrtu: data.gajiOrtu.toString().replace(/[^\d]/g, ''), // hapus format
+          bersedia: formData.get('bersedia') ? true : false,
+        }),
+      });
+
+      if (res.ok) {
+        setMessage('✅ Pendaftaran berhasil disimpan!');
+        e.currentTarget.reset();
+        setGajiOrtu('');
+      } else {
+        setMessage('❌ Gagal menyimpan data.');
+      }
+    } catch {
+      setMessage('⚠️ Terjadi kesalahan server.');
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
+  
     
       <div className="max-w-screen-xl mx-auto px-4 ">
-        <form className="space-y-6 bg-white p-8 md:p-10 border border-gray-200 rounded-lg shadow ">
+        <form  onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-10 border border-gray-200 rounded-lg shadow ">
           {/* Grid 2 kolom */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Kolom kiri */}
@@ -148,8 +184,9 @@ export default function FormPendaftaran() {
               </label>
             </div>
             <div className= "flex justify-center">
-                <button type="submit" className="bg-green-700 hover:bg-green-800 text-white py-2 px-6 rounded-md ">Kirim Pendaftaran</button>
+                <button type="submit" disabled={loading} className="bg-green-700 hover:bg-green-800 text-white py-2 px-6 rounded-md "> {loading ? 'Mengirim...' : 'Kirim Pendaftaran'}</button>
             </div>
+            {message && <p className="text-center text-sm mt-2">{message}</p>}
           </div>
         </form>
       </div>
