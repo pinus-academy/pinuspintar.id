@@ -1,33 +1,31 @@
+// app/layout.tsx
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import AuthProvider from "@/components/AuthProvider";
+import StatusDebug from "@/components/StatusDebug";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PinusPintar.id",
-  description: "Intensive bootcamps in tech, design, and digital marketing.",
+  title: "Aplikasi Donasi PinusPintar",
+  description: "Bantu mereka meraih cita-cita melalui donasi.",
 };
 
+// PASTIKAN HANYA ADA SATU FUNGSI RootLayout SEPERTI DI BAWAH INI
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="id">
+      <body className={inter.className}>
+        <AuthProvider>
+          <StatusDebug />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
