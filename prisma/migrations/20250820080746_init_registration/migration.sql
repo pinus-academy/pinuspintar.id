@@ -10,6 +10,7 @@ CREATE TABLE "public"."Registration" (
     "gajiOrtu" INTEGER NOT NULL,
     "namaOrtu" TEXT NOT NULL,
     "tujuan" TEXT NOT NULL,
+    "foto" TEXT NOT NULL,
     "bersedia" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 

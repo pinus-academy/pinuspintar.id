@@ -18,6 +18,21 @@ model Registration {
   gajiOrtu      Int
   namaOrtu      String
   tujuan        String
+  foto          String
   bersedia      Boolean  @default(false)
   createdAt     DateTime @default(now())
+
+  donations     Donation[]
+}
+
+model Donation {
+  id             String   @id @default(cuid())
+  amount         Int
+  status         String   // e.g., "PENDING", "PAID", "FAILED"
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Foreign key untuk menghubungkan donasi ke pendaftar
+  registrationId String
+  registration   Registration @relation(fields: [registrationId], references: [id])
 }
