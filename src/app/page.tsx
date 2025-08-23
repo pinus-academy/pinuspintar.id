@@ -76,7 +76,7 @@ const PinusPintarHomepage = () => {
       <nav className=" bg-green-primary w-full ">
         <div className='flex items-center justify-between p-8 max-w-8xl mx-auto'>
           <div className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="Logo" width={35} height={35} />
+            <Image src="/images/logos/logo.svg" alt="Logo" width={35} height={35} />
             <span className='font-bold text-2xl'>PinusPintar</span>
           </div>
           <div className="hidden md:flex space-x-6">
@@ -114,7 +114,7 @@ const PinusPintarHomepage = () => {
           <div className="flex-1 aspect-video w-full bg-linear-to-bl to-green-primary-2 from-green-secondary p-3 rounded-xl shadow-lg">
             <div className='overflow-hidden max-h-96 rounded-lg bg-center'>
               {/* <div className='h-96 w-full'></div> */}
-              <Image src="/bg.jpeg" width={1000} height={1000} alt="Students learning" className="min-w-full" />
+              <Image src="/images/backgrounds/bg.jpeg" width={1000} height={1000} alt="Students learning" className="min-w-full" />
             </div>
           </div>
 

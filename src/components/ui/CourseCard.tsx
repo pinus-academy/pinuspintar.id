@@ -73,7 +73,7 @@ export default function CourseCard({
             <div className="flex items-center mb-4">
               <Image
                 src={
-                  instructorAvatar ? instructorAvatar : "/default-avatar.png"
+                  instructorAvatar ? instructorAvatar : "/images/avatars/default-avatar.png"
                 }
                 alt={instructor}
                 width={32}
