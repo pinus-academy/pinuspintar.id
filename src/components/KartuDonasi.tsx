@@ -1,22 +1,36 @@
-import { Registration } from '@/app/donasi/page';
+'use client';
+
+import { Registration } from '@/types';
 
 interface KartuDonasiProps {
   pendaftar: Registration;
   onDonasiClick: (id: string) => void;
-  onShowDetailsClick: (pendaftar: Registration) => void; // Prop baru
+  onShowDetailsClick: (pendaftar: Registration) => void;
 }
 
 export default function KartuDonasi({ pendaftar, onDonasiClick, onShowDetailsClick }: KartuDonasiProps) {
   const sudahDidanai = pendaftar.statusDonasi === 'terdanai';
 
+  // Fungsi untuk format mata uang
+  const formatRupiah = (angka: number) => {
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      minimumFractionDigits: 0,
+    }).format(angka);
+  };
+
+  // Hitung persentase progress
+  const progress = pendaftar.targetDonasi ? (pendaftar.donasiTerkumpul / pendaftar.targetDonasi) * 100 : 0;
+
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group flex flex-col h-full">
       <div className="relative">
         <img
-          src={pendaftar.foto || 'https://placehold.co/600x400/e2e8f0/e2e8f0'} // Fallback image
+          src={pendaftar.foto || 'https://placehold.co/600x400/e2e8f0/e2e8f0'}
           alt={`Foto ${pendaftar.nama}`}
           className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
-          onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x400/e2e8f0/e2e8f0?text=Gagal+Muat'; }} // Handle broken image link
+          onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x400/e2e8f0/e2e8f0?text=Gagal+Muat'; }}
         />
         <div
           className={`absolute top-3 right-3 text-xs font-semibold py-1 px-3 rounded-full text-white ${
@@ -34,25 +48,41 @@ export default function KartuDonasi({ pendaftar, onDonasiClick, onShowDetailsCli
           {pendaftar.tujuan}
         </p>
         
-        <div className="mt-auto space-y-2">
-          <button
-            onClick={() => onShowDetailsClick(pendaftar)}
-            className="w-full py-2.5 px-4 rounded-lg font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 transition-colors duration-300"
-          >
-            Selengkapnya
-          </button>
+        <div className="mt-auto">
+          {/* BAGIAN NOMINAL DONASI DITAMBAHKAN DI SINI */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center text-sm mb-1">
+              <span className="font-semibold text-emerald-700">{formatRupiah(pendaftar.donasiTerkumpul)}</span>
+              <span className="text-gray-500">dari {formatRupiah(pendaftar.targetDonasi)}</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-emerald-600 h-2 rounded-full transition-all duration-500"
+                style={{ width: `${progress > 100 ? 100 : progress}%` }}
+              ></div>
+            </div>
+          </div>
 
-          <button
-            onClick={() => onDonasiClick(pendaftar.id)}
-            disabled={sudahDidanai}
-            className={`w-full py-2.5 px-4 rounded-lg font-semibold text-white transition-all duration-300 ${
-              sudahDidanai
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-emerald-700 hover:bg-emerald-800 hover:shadow-md hover:-translate-y-0.5'
-            }`}
-          >
-            {sudahDidanai ? 'Terima Kasih!' : 'Beri Donasi'}
-          </button>
+          <div className="space-y-2">
+            <button
+              onClick={() => onShowDetailsClick(pendaftar)}
+              className="w-full py-2.5 px-4 rounded-lg font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 transition-colors duration-300"
+            >
+              Selengkapnya
+            </button>
+
+            <button
+              onClick={() => onDonasiClick(pendaftar.id)}
+              disabled={sudahDidanai}
+              className={`w-full py-2.5 px-4 rounded-lg font-semibold text-white transition-all duration-300 ${
+                sudahDidanai
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-emerald-700 hover:bg-emerald-800 hover:shadow-md hover:-translate-y-0.5'
+              }`}
+            >
+              {sudahDidanai ? 'Terima Kasih!' : 'Beri Donasi'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

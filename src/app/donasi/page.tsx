@@ -3,18 +3,11 @@
 import { useState, useEffect } from 'react';
 import KartuDonasi from '@/components/KartuDonasi';
 import Image from 'next/image';
+// HAPUS INTERFACE LAMA, DAN IMPOR YANG BENAR DARI SINI
+import { Registration } from '@/types'; 
 
-export interface Registration {
-  id: string;
-  nama: string;
-  lulusan: string; 
-  tujuan: string;
-  foto: string;
-  statusDonasi: 'membutuhkan' | 'terdanai';
-  alamatLengkap?: string;
-  tanggalLahir?: string;
-}
-
+// --- MODAL DETAIL ---
+// (Kode ModalDetail tidak berubah, tetapi sekarang menggunakan 'Registration' yang diimpor)
 function ModalDetail({ pendaftar, onClose }: { pendaftar: Registration; onClose: () => void; }) {
   if (!pendaftar) return null;
   return (
@@ -43,6 +36,7 @@ function ModalDetail({ pendaftar, onClose }: { pendaftar: Registration; onClose:
 }
 
 // --- MODAL DONASI ---
+// (Kode ModalDonasi tidak berubah, tetapi sekarang menggunakan 'Registration' yang diimpor)
 function ModalDonasi({ pendaftar, onClose, onProceed, isProcessing }: { pendaftar: Registration; onClose: () => void; onProceed: (amount: number) => void; isProcessing: boolean; }) {
   const [amount, setAmount] = useState(100000);
   const [customAmount, setCustomAmount] = useState('');
@@ -97,6 +91,7 @@ function ModalDonasi({ pendaftar, onClose, onProceed, isProcessing }: { pendafta
 
 // --- KOMPONEN UTAMA: PageDonasi ---
 export default function PageDonasi() {
+  // State sekarang menggunakan tipe 'Registration' yang benar
   const [daftarPendaftar, setDaftarPendaftar] = useState<Registration[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -109,9 +104,11 @@ export default function PageDonasi() {
       try {
         const response = await fetch('/api/registration', { cache: 'no-store' });
         if (!response.ok) throw new Error('Gagal mengambil data pendaftar');
+        // Data dari API sekarang dicocokkan dengan tipe 'Registration' yang benar
         const data: Registration[] = await response.json();
         setDaftarPendaftar(data);
-      } catch (err: any) {
+      } catch (err: any)
+      {
         setError(err.message);
       } finally {
         setIsLoading(false);

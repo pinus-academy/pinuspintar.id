@@ -63,7 +63,7 @@ export default function FormPendaftaran() {
                 name="nama"
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
-                placeholder="Contoh: Ahmad"
+                placeholder="Contoh: Pak Ahmad"
               />
             </div>
 
@@ -75,7 +75,7 @@ export default function FormPendaftaran() {
                 name="email"
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
-                placeholder="Contoh: ahmad@gmail.com"
+                placeholder="Contoh: ahmadganteng@gmail.com"
               />
             </div>
 
@@ -125,7 +125,7 @@ export default function FormPendaftaran() {
                 name="lulusan"
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
-                placeholder="Contoh: SMA Negeri 1 Semarang"
+                placeholder="Contoh: SMK Muhammadiyah Semarang"
               />
             </div>
 

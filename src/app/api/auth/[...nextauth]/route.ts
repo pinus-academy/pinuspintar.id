@@ -29,7 +29,6 @@ export const authOptions: AuthOptions = {
           throw new Error('Username tidak ditemukan');
         }
 
-        // Bandingkan password yang diinput dengan hash di database
         const isPasswordCorrect = await bcrypt.compare(
           credentials.password,
           user.hashedPassword
