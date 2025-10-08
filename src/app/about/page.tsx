@@ -1,215 +1,118 @@
 'use client';
 
 import React from 'react';
-import { Users, Award, Clock, Target, Heart, Lightbulb } from 'lucide-react';
 import Image from 'next/image';
 
 const AboutUsPage = () => {
-  // Color palette (matching the homepage)
-  const colors = {
-    greenArmy: '#4B5320',
-    lightGreenArmy: '#5A6324',
-    yellow: '#FFD700',
-    lightYellow: '#FFEB99',
-    darkText: '#222222',
-    lightText: '#666666',
-    white: '#FFFFFF',
-    lightGray: '#F5F5F5'
-  };
-
-  // Team members data
-  const teamMembers = [
-    {
-      name: 'Budi Santoso',
-      role: 'Founder & CEO',
-      image: '/avatar.png',
-      bio: 'Former tech lead at Gojek with 10+ years of experience in software development.'
-    },
-    {
-      name: 'Siti Rahayu',
-      role: 'Head of Education',
-      image: '/avatar.png',
-      bio: 'Education specialist with a passion for creating impactful learning experiences.'
-    },
-    {
-      name: 'Agus Wijaya',
-      role: 'Lead Instructor',
-      image: '/avatar.png',
-      bio: 'Full-stack developer with expertise in modern web technologies.'
-    },
-    {
-      name: 'Dewi Pratiwi',
-      role: 'Career Coach',
-      image: '/avatar.png',
-      bio: 'HR professional specializing in tech recruitment and career development.'
-    }
-  ];
-
-  // Values data
-  const values = [
-    {
-      icon: <Target className="h-8 w-8" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from curriculum design to student support.'
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      title: 'Passion',
-      description: 'We&apos;re passionate about technology and helping others succeed in their tech careers.'
-    },
-    {
-      icon: <Lightbulb className="h-8 w-8" />,
-      title: 'Innovation',
-      description: 'We continuously innovate our teaching methods and curriculum to stay ahead of industry trends.'
-    }
-  ];
 
   return (
-    <div style={{ fontFamily: 'Inter, system-ui, sans-serif', backgroundColor: colors.white }} className="min-h-screen">
-      {/* Hero Section */}
-      <div className="px-8 py-20" style={{ backgroundColor: colors.lightYellow }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: colors.greenArmy }}>
-            About PinusPintar
-          </h1>
-          <p className="text-lg mb-8" style={{ color: colors.darkText }}>
-            We&apos;re on a mission to bridge the digital skills gap in Indonesia by providing 
-            high-quality tech education that prepares students for real-world challenges.
-          </p>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="px-8 py-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <Users className="h-12 w-12" style={{ color: colors.greenArmy }} />
+    <section className='bg-gray-100 '>
+      <div className='flex gap-8  bg-gray-100 space-y-7 py-20 justify-center '>
+        <div className='relative'>
+          <div>
+            <Image src={'/gambar1.png'} alt='gambar 1' width={620} height={761} className='z-0' />
+          </div>
+          <div className='absolute flex gap-10 justify-center backdrop-blur-sm bg-[#26323899]  rounded-3xl w-[1000px] h-[183px] -bottom-7 left-6 '>
+            <div className='relative w-[220px] h-[167] mx-6 pt-3'>
+              <Image src={'/elip.png'} alt='elip' width={100} height={100} className='absolute z-10' />
+              <p className=' text-[36px] px-14 pt-15 -20 w-[250px] h-[108px]'>200+ <br />Peserta</p>
             </div>
-            <h3 className="text-3xl font-bold mb-2" style={{ color: colors.greenArmy }}>5,000+</h3>
-            <p className="text-lg" style={{ color: colors.lightText }}>Graduates</p>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <Award className="h-12 w-12" style={{ color: colors.greenArmy }} />
+            <div className='relative w-[220px] h-[167] mx-6 pt-3'>
+              <Image src={'/elip.png'} alt='elip' width={100} height={100} className='absolute z-10' />
+              <p className=' text-[36px] px-14 pt-15 -20 w-[330px] h-[108px]'>80% Peserta Skill Up</p>
             </div>
-            <h3 className="text-3xl font-bold mb-2" style={{ color: colors.greenArmy }}>85%</h3>
-            <p className="text-lg" style={{ color: colors.lightText }}>Employment Rate</p>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <Clock className="h-12 w-12" style={{ color: colors.greenArmy }} />
+            <div className='relative w-[220px] h-[167] mx-6 pt-3'>
+              <Image src={'/elip.png'} alt='elip' width={100} height={100} className='absolute z-10' />
+              <p className=' text-[36px] px-14 pt-15 -20 w-[330px] h-[108px] '>20+ Kota Terjangkau</p>
             </div>
-            <h3 className="text-3xl font-bold mb-2" style={{ color: colors.greenArmy }}>3 Years</h3>
-            <p className="text-lg" style={{ color: colors.lightText }}>Industry Experience</p>
+          </div>
+        </div>
+        <div className='space-y-7 pt-30 text-justify w-[445px]  h-[360px]'>
+          <h1 className='text-green-900 font-bold text-[36px] '>About Us</h1>
+          <h2 className='text-[#75857E] font-bold text-[36px]'>BOOTCAMP COODING</h2>
+          <p className='text-black text-[16px] '> <span className='font-bold text-[#183428]'>PINUS PINTAR TEKNOLOGI</span> adalah komunitas belajar pengembangan talenta teknologi. Berdiri sejak empat  tahun lalu.</p>
+          <p className='text-black text-[16px] '>Kami telah memberdayakan lebih dari <span className='font-bold text-[#183428]'>250 peserta </span> ,terdiri dari 49 peserta tatap muka dan lebih dari 220 peserta online, untuk mempelajari coding, devops, cloud engineer dari tingkat dasar hingga siap kerja.</p>
+          <p className='text-black text-[16px]'> <span className=' text-[#183428] font-bold'>Semua pembelajaran diberikan secara gratis </span>, termasuk akses ke fasilitas laptop bagi peserta. Pendekatan kami berbasis proyek nyata dan didukung oleh mentor industri, untuk memastikan pesertamemiliki keterampilan yang dibutuhkan dunia kerja saat ini.</p>
+        </div>
+      </div>
+      <div className=' bg-[#F9F9F9] w-[144opx] justify-center h-[215px] top-[1118px]'>
+        <h1 className='text-center text-[#374F44] pt-[80px] font-bold text-[32px]'>Kolaborasi & Kontribusi</h1>
+      </div>
+      <div className='flex gap-8 justify-center'>
+        <div className=''>
+          <h2 className='text-[#566A61] text-[32px] font-bold py-4'>Program Kolaboratif</h2>
+          <p className='w-[606px] h-[270px] text-justify text-black '>Program Kolaborasi adalah inisiatif yang dirancang untuk
+            menghubungkan peserta dengan dunia industri secara langsung. Melalui program ini, peserta tidak hanya mendapatkan
+            pelatihan coding yang disusun bersama mitra industri, tetapi juga berkesempatan mengikuti berbagai kompetisi inovasi
+            seperti hackathon dan ideathon untuk mengasah kreativitas serta kemampuan problem-solving. Selain itu, program ini juga
+            membuka peluang pertukaran mentor dengan profesional di bidangnya sehingga peserta dapat memperoleh wawasan dan pengalaman
+            nyata dari praktisi industri.</p>
+        </div>
+        <div className='pt-8'>
+          <Image src={'/Frame Kolaboratif.png'} alt='gambar3' width={630} height={390} />
+        </div>
+      </div>
+      <div className='pt-10 flex gap-8 justify-center'>
+        <div>
+          <Image src={'/gambar7.png'} alt='gambar 7' width={630} height={390} className='pt-3' />
+        </div>
+        <div>
+          <h1 className='font-bold text-[#566A61] text-[32px]'>Kontribusi Pinus Pintar</h1>
+          <p className='w-[606px] h-[270px] text-justify text-black '>PinusPintar telah memberikan dampak nyata dalam pengembangan
+            talenta digital di Indonesia. Saat ini, lebih dari 200 anggota aktif tersebar di berbagai daerah, dengan 80% di antaranya
+            berhasil meningkatkan keterampilan digital melalui program-program kami. Program dan komunitas PinusPintar sudah menjangkau
+            lebih dari 20 kota di seluruh Indonesia,
+            sehingga semakin banyak anak muda dapat mengakses pelatihan teknologi berkualitas.</p>
+        </div>
+      </div>
+      <div className='text-center mb-8 pt-40'>
+        <h1 className='font-bold text-[32px] text-[#374F44] mb-20 '>Our Galleries</h1>
+        <div className='flex gap-8 px-10 mb-40'>
+          <Image src={'/gambar8.png'} alt='gambar 8' width={305} height={381} />
+          <Image src={'/gambar9.png'} alt='gambar 9' width={305} height={381} />
+        </div>
+      </div>
+      <div className='bg-[#183428]'>
+        <div className='flex gap-20 py-10 justify-evenly'>
+          <div className='space-y-8'>
+            <Image src={'/logo.png'} alt='logo' width={200} height={53} />
+            <p className='text-[#CCCCCC] text-[14px] '>Empowering tech talents through intensive <br /> bootcamps and expert-led training.</p>
+            <Image src={'/gambar10.png'} alt='gambar sosmed' width={144} height={24} />
+          </div>
+          <div className='text-[14px] '>
+            <h1 className='font-bold py-3'>Courses</h1>
+            <p>Web Development</p>
+            <p>UI/UX Design</p>
+            <p>Data Science</p>
+            <p>Digital Marketing</p>
+            <p>Mobile Development</p>
+          </div>
+          <div className='text-[14px] '>
+            <h1 className='font-bold py-3'>Company </h1>
+            <p>About Us</p>
+            <p>Instructions</p>
+            <p>Career</p>
+            <p>Partner</p>
+            <p>Blog</p>
+          </div>
+          <div className='text-[14px] space-y-2 '>
+            <h1 className='font-bold py-3'>Contact</h1>
+            <div className='flex gap-3'>
+              <Image src={'/logo2.png'} alt='logo2' width={14} height={14} />
+              <p>info@pinuspintar.id</p>
+            </div>
+            <div className='flex gap-3'>
+              <Image src={'/logo3.png'} alt='logo2' width={14} height={14} />
+              <p>+62 21 5678 9012</p>
+            </div>
+            <div className='flex gap-3'>
+              <Image src={'/logo4.png'} alt='logo2' width={14} height={14} />
+              <p>Jl. Teknologi No. 123, Jakarta Selatan, Indonesia</p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Our Story Section */}
-      <div className="px-8 py-16" style={{ backgroundColor: colors.lightGray }}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: colors.greenArmy }}>
-            Our Story
-          </h2>
-          <div className="space-y-6" style={{ color: colors.darkText }}>
-            <p>
-              Founded in 2022, PinusPintar emerged from a simple observation: there was a growing gap 
-              between the demand for tech talent in Indonesia and the availability of skilled professionals.
-            </p>
-            <p>
-              Our founder, Budi Santoso, a former tech lead at Gojek, recognized that traditional 
-              education wasn&apos;t keeping pace with the rapidly evolving tech industry. This realization 
-              led to the creation of PinusPintar, a bootcamp designed to provide practical, 
-              industry-relevant education.
-            </p>
-            <p>
-              Today, we&apos;ve grown into a leading tech education provider, helping thousands of 
-              students launch their careers in technology. Our success is measured not just in 
-              numbers, but in the success stories of our graduates who are now making an impact 
-              in Indonesia&apos;s tech industry.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Our Values Section */}
-      <div className="px-8 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: colors.greenArmy }}>
-            Our Values
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg" style={{ backgroundColor: colors.lightGray }}>
-                <div className="flex justify-center mb-4" style={{ color: colors.greenArmy }}>
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3" style={{ color: colors.greenArmy }}>
-                  {value.title}
-                </h3>
-                <p style={{ color: colors.lightText }}>
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Team Section */}
-      <div className="px-8 py-16" style={{ backgroundColor: colors.lightGray }}>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: colors.greenArmy }}>
-            Our Team
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative w-full h-48">
-                  <Image 
-                    src={member.image} 
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1" style={{ color: colors.greenArmy }}>
-                    {member.name}
-                  </h3>
-                  <p className="text-sm mb-3" style={{ color: colors.yellow }}>
-                    {member.role}
-                  </p>
-                  <p className="text-sm" style={{ color: colors.lightText }}>
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="px-8 py-16" style={{ backgroundColor: colors.greenArmy }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: colors.yellow }}>
-            Join Our Mission
-          </h2>
-          <p className="text-lg mb-8" style={{ color: colors.white }}>
-            Be part of our journey to transform tech education in Indonesia.
-            Whether you&apos;re a student, instructor, or partner, we&apos;d love to hear from you.
-          </p>
-          <button 
-            className="px-8 py-3 rounded-lg font-semibold text-lg cursor-pointer"
-            style={{ backgroundColor: colors.yellow, color: colors.greenArmy }}
-          >
-            Get in Touch
-          </button>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
