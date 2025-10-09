@@ -24,7 +24,7 @@ export default function CourseCard({
 
   return (
     <div className="w-full h-full">
-      <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] group">
+      <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
         {/* Image - Clickable */}
         <a href={`/courses/${id}`} className="block">
           <Image
@@ -48,7 +48,7 @@ export default function CourseCard({
             <hr className="my-4 border-t border-gray-300" />
 
             {/* Description */}
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-gray-700 text-[12px]">
               {description ? description : shortDescription}
             </p>
 
@@ -59,7 +59,7 @@ export default function CourseCard({
                 .map((benefit, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-sm text-gray-500"
+                    className="flex items-center gap-2 text-sm text-gray-500 text-[12px]"
                   >
                     <CheckCircle className="w-4 h-4 text-gray-500" />
                     {benefit}
@@ -88,10 +88,10 @@ export default function CourseCard({
 
             <div className="flex items-center justify-between">
               <div className="mb-4 flex flex-col space-y-1">
-                <span className="text-sm line-through text-gray-400">
+                <span className="text-[11px] font-medium line-through text-gray-400">
                   {formatCurrency(price)}
                 </span>
-                <span className="text-lg font-bold text-green-secondary">
+                <span className="text-[14px] font-medium text-green-secondary">
                   {discountPrice > 0 ? formatCurrency(discountPrice) : "Free"}
                 </span>
               </div>
@@ -100,7 +100,6 @@ export default function CourseCard({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full font-semibold  p-2 rounded-lg text-base text-center text-white transition-all duration-300"
                   onClick={(e) => e.stopPropagation()}
                 >
                   Selengkapnya

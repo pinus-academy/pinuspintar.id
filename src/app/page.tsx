@@ -47,14 +47,16 @@ const PinusPintarHomepage = () => {
               <Button variant="primary" className="px-10" onClick={scrollToFeaturedCourses}>Explore</Button>
             </div>
           </div>
-          <Image src="/Vector (1).png" width={507} height={478} alt="Students learning" className="w-1/2 h-auto object-contain" />
+          <Image src="/Vector (1).png" width={507} height={478} alt="Students learning" className="w-full sm:w-1/2 h-auto object-contain mx-auto" />
         </div>
       </div>
 
       {/* Bootcamp Program Section */}
       <div className="p-8 w-full max-w-8xl mx-auto">
         <div id="featured-courses" className="px-4 py-8 w-full max-w-8xl mx-auto">
-          <h2 className="text-4xl font-bold text-green-primary">Bootcamp Programs</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Bootcamp Programs
+          </h2>
         </div>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -71,7 +73,9 @@ const PinusPintarHomepage = () => {
       {/* Upcoming Events Section */}
       <div className="p-8 mb-16 w-full max-w-8xl mx-auto">
         <div id="upcoming-events" className="px-4 py-8 w-full max-w-8xl mx-auto">
-          <h2 className="text-4xl font-bold text-green-primary">Upcoming Events</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Upcoming Events
+          </h2>
         </div>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

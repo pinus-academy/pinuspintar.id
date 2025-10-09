@@ -17,7 +17,7 @@ export default function Badge({ variant = "gray", children, className = "" }: Ba
 
   return (
     <div
-      className={`px-3 py-1 rounded text-xs font-medium ${variantStyles[variant]} ${className}`}
+      className={`h-[22px] px-2.5 rounded text-xs font-medium flex items-center justify-center ${variantStyles[variant]} ${className}`}
     >
       {children}
     </div>
