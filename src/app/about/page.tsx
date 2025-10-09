@@ -2,11 +2,14 @@
 
 import React from 'react';
 import Image from 'next/image';
+import NavBar from '@/components/ui/NavBar';
+import Footer from '@/components/ui/Footer';
 
 const AboutUsPage = () => {
 
   return (
     <section className='bg-gray-100 '>
+        <NavBar />
       <div className='flex gap-8  bg-gray-100 space-y-7 py-20 justify-center '>
         <div className='relative'>
           <div>
@@ -72,46 +75,7 @@ const AboutUsPage = () => {
           <Image src={'/gambar9.png'} alt='gambar 9' width={305} height={381} />
         </div>
       </div>
-      <div className='bg-[#183428]'>
-        <div className='flex gap-20 py-10 justify-evenly'>
-          <div className='space-y-8'>
-            <Image src={'/logo.png'} alt='logo' width={200} height={53} />
-            <p className='text-[#CCCCCC] text-[14px] '>Empowering tech talents through intensive <br /> bootcamps and expert-led training.</p>
-            <Image src={'/gambar10.png'} alt='gambar sosmed' width={144} height={24} />
-          </div>
-          <div className='text-[14px] '>
-            <h1 className='font-bold py-3'>Courses</h1>
-            <p>Web Development</p>
-            <p>UI/UX Design</p>
-            <p>Data Science</p>
-            <p>Digital Marketing</p>
-            <p>Mobile Development</p>
-          </div>
-          <div className='text-[14px] '>
-            <h1 className='font-bold py-3'>Company </h1>
-            <p>About Us</p>
-            <p>Instructions</p>
-            <p>Career</p>
-            <p>Partner</p>
-            <p>Blog</p>
-          </div>
-          <div className='text-[14px] space-y-2 '>
-            <h1 className='font-bold py-3'>Contact</h1>
-            <div className='flex gap-3'>
-              <Image src={'/logo2.png'} alt='logo2' width={14} height={14} />
-              <p>info@pinuspintar.id</p>
-            </div>
-            <div className='flex gap-3'>
-              <Image src={'/logo3.png'} alt='logo2' width={14} height={14} />
-              <p>+62 21 5678 9012</p>
-            </div>
-            <div className='flex gap-3'>
-              <Image src={'/logo4.png'} alt='logo2' width={14} height={14} />
-              <p>Jl. Teknologi No. 123, Jakarta Selatan, Indonesia</p>
-            </div>
-          </div>
-        </div>
-      </div>
+     <Footer />
     </section>
   );
 };
