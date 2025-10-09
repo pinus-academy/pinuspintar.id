@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return ( // ✅ kamu lupa return di versi sebelumnya
+  return (
     <nav className="bg-white-primary w-full shadow-sm">
       <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
         {/* Logo */}
