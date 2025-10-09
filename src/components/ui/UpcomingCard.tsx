@@ -15,8 +15,8 @@ export default function UpcomingCard({
     const shortDescription = truncateText(description, 100);
 
     return (
-        <div className="w-full h-full">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[565px] group">
+        <div className="w-full">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
 
                 {/* Image + Badge */}
                 <div className="relative">
@@ -59,7 +59,7 @@ export default function UpcomingCard({
                                 {truncateText(title, 50)}
                             </h3>
                         </a>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-[14px] text-gray-700">
                             {description ? description : shortDescription}
                         </p>
                     </div>
