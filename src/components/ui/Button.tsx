@@ -17,9 +17,9 @@ export default function Button({
       className={clsx(
         "px-4 py-2.5 rounded-lg text-base font-medium cursor-pointer transition-all duration-300",
         variant === "primary" &&
-          "bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80",
+        "bg-green-primary text-white hover:bg-green-primary-2 transition-all duration-300",
         variant === "secondary" &&
-          "bg-gray-200 text-gray-800 hover:bg-gray-300",
+        "bg-gray-200 text-gray-800 hover:bg-gray-300",
         className
       )}
       {...props}
