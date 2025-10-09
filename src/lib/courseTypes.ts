@@ -4,8 +4,7 @@ export interface CourseCardProps {
   id: number;
   title: string;
   description: string;
-  instructor: string;
-  instructorAvatar: string | null | undefined;
+  benefits: string[];
   price: number;
   discountPrice: number;
   startDate: string;
