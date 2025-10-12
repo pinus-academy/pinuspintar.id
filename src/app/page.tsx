@@ -26,46 +26,62 @@ const PinusPintarHomepage = () => {
       <NavBar />
       {/* Hero Section */}
       <div>
-        <div className="flex flex-col-reverse p-8 w-full max-w-8xl mx-auto items-center lg:flex-row">
-          <div className="flex-1">
-            <h1 className="flex flex-col text-nowrap gap-2 mt-4 text-4xl text-shadow-lg lg:text-6xl font-bold mb-6 text-green-primary">
-              <span>
-                Upgrade Your Skills
-              </span>
-              <span>
-                Boost Your Career
-              </span>
-            </h1>
-            <p className="text-lg mb-7 text-green-primary">
-              PinusPintar offers intensive bootcamps in tech, design,
-              <br />
-              and digital marketing. Learn from industry experts
-              <br />
-              through hands-on projects and real-world applications.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" className="px-10" onClick={scrollToFeaturedCourses}>Explore</Button>
-            </div>
-          </div>
-          <Image src="/Vector (1).png" width={507} height={478} alt="Students learning" className="w-full sm:w-1/2 h-auto object-contain mx-auto" />
+      <div className="flex flex-col-reverse lg:flex-row items-center p-4 sm:p-8 w-full max-w-8xl mx-auto">
+        <div className="flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+        <h1 className="flex flex-col gap-2 mt-4 text-2xl sm:text-4xl lg:text-6xl font-bold mb-6 text-green-primary text-shadow-lg">
+          <span>
+          Tingkatkan Keahlianmu,
+          </span>
+          <span>
+          Majukan Kariermu
+          </span>
+        </h1>
+        <p className="text-sm sm:text-lg mb-7 text-green-primary max-w-xl">
+          PinusPintar menawarkan bootcamp intensif di bidang teknologi, desain,
+          <br className="hidden sm:block" />
+          dan pemasaran digital. Belajar langsung dari para ahli industri
+          <br className="hidden sm:block" />
+          melalui proyek praktis dan aplikasi dunia nyata.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+          <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium" onClick={scrollToFeaturedCourses}>
+          Jelajahi
+          </Button>
         </div>
+        </div>
+        <div className="flex-1 flex justify-center items-center mb-8 lg:mb-0">
+        <Image
+          src="/Vector (1).png"
+          width={507}
+          height={478}
+          alt="Students learning"
+          className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain"
+          priority
+        />
+        </div>
+      </div>
       </div>
 
       {/* Bootcamp Program Section */}
       <div className="p-8 w-full max-w-8xl mx-auto">
         <div id="featured-courses" className="px-4 py-8 w-full max-w-8xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
-            Bootcamp Programs
-          </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Program Bootcamp
+            </h2>
         </div>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredCourses.map(course => (
-              <CourseCard
-                key={course.id}
-                {...course}
-              />
-            ))}
+          <div>
+            {filteredCourses.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {filteredCourses.map(course => (
+                  <CourseCard key={course.id} {...course} />
+                ))}
+              </div>
+            ) : (
+                <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
+                Belum ada kursus yang tersedia saat ini — nantikan pembaruan selanjutnya!
+                </p>
+            )}
           </div>
         </div>
       </div>
@@ -73,19 +89,22 @@ const PinusPintarHomepage = () => {
       {/* Upcoming Events Section */}
       <div className="p-8 mb-16 w-full max-w-8xl mx-auto">
         <div id="upcoming-events" className="px-4 py-8 w-full max-w-8xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
-            Upcoming Events
-          </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Acara Mendatang
+            </h2>
         </div>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredUpcoming.map(upcoming => (
-              <UpcomingCard
-                key={upcoming.id}
-                {...upcoming}
-              />
-            ))}
-          </div>
+          {filteredUpcoming.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {filteredUpcoming.map(upcoming => (
+                <UpcomingCard key={upcoming.id} {...upcoming} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
+                Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
+            </p>
+          )}
         </div>
       </div>
       <Footer />

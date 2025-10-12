@@ -21,29 +21,32 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="font-semibold text-lg mb-4">Courses</h3>
+                    <h3 className="font-semibold text-lg mb-4">Program</h3>
                     <ul className="space-y-2">
                         <li><a href="#" className="text-gray-400 hover:text-white-primary">Web Development</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Frontend Development</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Backend Development</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Fullstack Development</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">DevOps</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">IT Monitoring</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Quality Assurance (QA)</a></li>
                         <li><a href="#" className="text-gray-400 hover:text-white-primary">UI/UX Design</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Data Science</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Digital Marketing</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Mobile Development</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 className="font-semibold text-lg mb-4">Company</h3>
+                    <h3 className="font-semibold text-lg mb-4">Menu</h3>
                     <ul className="space-y-2">
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">About Us</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Instructors</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Careers</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Partners</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Blog</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Beranda</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Tentang Kami</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Acara</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Tim Kami</a></li>
+                        <li><a href="#" className="text-gray-400 hover:text-white-primary">Kemitraan</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 className="font-semibold text-lg mb-4">Contact</h3>
+                    <h3 className="font-semibold text-lg mb-4">Kontak</h3>
                     <ul className="space-y-2">
                         <div className="flex items-center gap-2">
                             <Image src="/social/directbox-default.svg" alt="Email" width={20} height={20} />

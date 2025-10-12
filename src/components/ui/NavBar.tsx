@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,21 +27,21 @@ export default function NavBar() {
 
         {/* Menu desktop */}
         <div className="hidden md:flex space-x-10">
-          <a href="#" className="font-medium text-green-primary hover:text-green-700">
-            Home
-          </a>
-          <a href="#" className="font-medium text-green-primary hover:text-green-700">
-            About Us
-          </a>
-          <a href="#" className="font-medium text-green-primary hover:text-green-700">
-            Event
-          </a>
-          <a href="#" className="font-medium text-green-primary hover:text-green-700">
-            Our Team
-          </a>
-          <a href="#" className="font-medium text-green-primary hover:text-green-700">
-            Partnership
-          </a>
+          <Link href="/" className="font-medium text-green-primary hover:text-green-700">
+            Beranda
+          </Link>
+          <Link href="/about" className="font-medium text-green-primary hover:text-green-700">
+            Tentang Kami
+          </Link>
+          <Link href="" className="font-medium text-green-primary hover:text-green-700">
+            Acara
+          </Link>
+          <Link href="/teams" className="font-medium text-green-primary hover:text-green-700">
+            Tim Kami
+          </Link>
+          <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+            Kemitraan
+          </Link>
         </div>
 
         {/* Tombol menu (mobile only) */}
@@ -56,21 +57,21 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden bg-white-primary border-t border-gray-200 transition-all duration-300">
           <div className="flex flex-col items-center space-y-4 py-4">
-            <a href="#" className="font-medium text-green-primary hover:text-green-700">
-              Home
-            </a>
-            <a href="#" className="font-medium text-green-primary hover:text-green-700">
-              About Us
-            </a>
-            <a href="#" className="font-medium text-green-primary hover:text-green-700">
-              Event
-            </a>
-            <a href="#" className="font-medium text-green-primary hover:text-green-700">
-              Our Team
-            </a>
-            <a href="#" className="font-medium text-green-primary hover:text-green-700">
-              Partnership
-            </a>
+            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+              Beranda
+            </Link>
+            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+              Tentang Kami
+            </Link>
+            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+              Acara
+            </Link>
+            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+              Tim Kami
+            </Link>
+            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+              Kemitraan
+            </Link>
           </div>
         </div>
       )}
