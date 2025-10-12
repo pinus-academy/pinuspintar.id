@@ -13,18 +13,19 @@ export default function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button
-      className={clsx(
-        "px-4 py-2.5 rounded-lg text-base font-medium cursor-pointer transition-all duration-300",
-        variant === "primary" &&
-          "bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80",
-        variant === "secondary" &&
-          "bg-gray-200 text-gray-800 hover:bg-gray-300",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </button>
-  );
+  <button
+    className={clsx(
+      "w-[123px] h-[35px] flex items-center justify-center rounded-lg font-medium text-[12px] cursor-pointer transition-all duration-300",
+      variant === "primary" &&
+        "bg-green-primary text-white hover:bg-green-primary-2",
+      variant === "secondary" &&
+        "bg-gray-200 text-gray-800 hover:bg-gray-300",
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </button>
+);
+
 }

@@ -16,9 +16,14 @@
 @theme {
   --font-sans: 'Rubik', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --spacing-8xl: 1440px;
-  --color-green-primary: #0F2923;
+  --color-green-primary: #183428;
   --color-green-primary-2: #1B4032;
-  --color-green-secondary: #5B874B;
+  --color-green-secondary: #27AE60;
+  --color-white-primary: #F2F2F2;
+  --color-young-green-primary: #2ECC71;
+  --color-blue-primary: #00B4D8;
+  --color-purple-primary: #6C63FF;
+  --shadow-badge: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media (prefers-color-scheme: dark) {
   :root {

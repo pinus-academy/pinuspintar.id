@@ -1,18 +1,9 @@
 import Button from "@/components/ui/Button";
-import { Clock } from "lucide-react";
-import { formatCurrency, getCourseStatus, truncateText } from "@/lib/utils";
+import { formatCurrency, truncateText } from "@/lib/utils";
 import Badge from "./Badge";
-import { CourseCardProps } from "@/lib/types";
+import { CheckCircle } from "lucide-react";
 import Image from "next/image";
-
-function getStatusVariant(
-  status: string
-): "green" | "blue" | "red" | "gray" | "yellow" {
-  if (status.includes("left")) return "yellow"; // upcoming
-  if (status === "Ongoing") return "green";
-  if (status === "Completed") return "red";
-  return "gray";
-}
+import { CourseCardProps } from "@/lib/courseTypes";
 
 export default function CourseCard({
   id,
@@ -20,104 +11,104 @@ export default function CourseCard({
   type,
   title,
   description,
-  instructor,
-  instructorAvatar,
-  duration,
-  durationType,
-  startDate,
+  benefits,
   price,
   discountPrice,
   url,
 }: CourseCardProps) {
-  const courseStatus = getCourseStatus(startDate, duration, durationType);
+  const benefitList: string[] = Array.isArray(benefits)
+    ? benefits
+    : (benefits as string).split(",").map((b) => b.trim());
+
+  const shortDescription = truncateText(description, 100);
 
   return (
-    <div className="w-full">
-      <a href={`/courses/${id}`} className="block group">
-        <div className="bg-white rounded-lg overflow-hidden shadow-md h-full transition-transform">
-          {/* Image */}
-          <Image src={image} width={1000} height={1000} alt={title} className="w-full h-48 object-cover" />
+    <div className="w-full h-full">
+      <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
+        {/* Image - Clickable */}
+        <a href={`/courses/${id}`} className="block">
+          <Image
+            src={image}
+            width={1000}
+            height={1000}
+            alt={title}
+            className="w-full h-[200px] object-cover"
+          />
+        </a>
 
-          {/* Content */}
-          <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100">
-            {/* Type & Level */}
-            <div className="flex justify-between items-start">
+        {/* Content - Non-clickable */}
+        <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100 flex flex-col flex-1 justify-between">
+          <div>
+            {/* Title - Clickable */}
+            <a href={`/courses/${id}`} className="block">
+              <h3 className="font-medium text-[16px] my-2 text-gray-800 hover:text-green-primary transition-colors">
+                {truncateText(title, 50)}
+              </h3>
+            </a>
+            <hr className="my-4 border-t border-gray-300" />
+
+            {/* Description */}
+            <p className="text-sm text-gray-700 text-[12px]">
+              {description ? description : shortDescription}
+            </p>
+
+            {/* Benefits */}
+            <ul className="space-y-2 my-4">
+              {benefitList
+                .slice(3, benefitList.length)
+                .map((benefit, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 text-sm text-gray-500 text-[12px]"
+                  >
+                    <CheckCircle className="w-4 h-4 text-gray-500" />
+                    {benefit}
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Badges + Price + Button */}
+          <div className="mt-auto">
+            <div className="flex items-center gap-2 mb-4">
               <Badge
                 className="capitalize"
                 variant={
                   type === "online"
                     ? "emerald"
                     : type === "offline"
-                      ? "blue"
+                      ? "red"
                       : "purple"
                 }
               >
                 {type}
               </Badge>
-              <Badge
-                variant={getStatusVariant(courseStatus)}
-                className="capitalize"
-              >
-                {courseStatus}
-              </Badge>
+              <Badge variant="blue">Web Programming</Badge>
             </div>
 
-            {/* Title & Description */}
-            <h3 className=" font-medium my-2 text-gray-800">
-              {truncateText(title, 50)}
-            </h3>
-            <p className="text-sm mb-4 text-gray-500">
-              {truncateText(description, 70)}
-            </p>
-
-            {/* Instructor */}
-            <div className="flex items-center mb-4">
-              <Image
-                src={
-                  instructorAvatar ? instructorAvatar : "/default-avatar.png"
-                }
-                alt={instructor}
-                width={32}
-                height={32}
-                className="w-8 h-8 rounded-full mr-2"
-              />
-              <p className="text-sm text-gray-700">
-                By<span className="font-medium"> {instructor}</span>
-              </p>
-            </div>
-
-            {/* Duration */}
-            <div className="flex items-center gap-2 mb-4">
-              <Badge variant="blue" className="py-2">
-                Web Programing
-              </Badge>
-              <div className="flex items-center">
-                <Clock className="fill-gray-500 size-5 mr-2 text-white" />
-                <span className="text-sm text-gray-500 capitalize">
-                  {duration} {durationType}
+            <div className="flex items-center justify-between">
+              <div className="mb-4 flex flex-col space-y-1">
+                <span className="text-[11px] font-medium line-through text-gray-400">
+                  {formatCurrency(price)}
+                </span>
+                <span className="text-[14px] font-medium text-green-secondary">
+                  {discountPrice > 0 ? formatCurrency(discountPrice) : "Free"}
                 </span>
               </div>
+              <Button>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Selengkapnya
+                </a>
+              </Button>
             </div>
-
-            {/* Price */}
-            <div className="mb-4">
-              <span className="text-sm line-through mr-2 text-gray-400">
-                {formatCurrency(price)}
-              </span>
-              <span className="text-lg font-bold text-green-primary">
-                {discountPrice > 0 ? formatCurrency(discountPrice) : "Free"}
-              </span>
-            </div>
-
-            <Button>
-              <a
-                href={url}
-                className="w-full font-semibold px-4 py-2.5 rounded-lg text-base text-center transition-all duration-300 bg-green-secondary shadow shadow-green-secondary/15 text-white hover:bg-green-secondary/80"
-              >Register Now</a>
-            </Button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   );
 }
