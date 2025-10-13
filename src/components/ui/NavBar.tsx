@@ -12,7 +12,7 @@ export default function NavBar() {
     <nav className="bg-white-primary w-full shadow-sm">
       <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="icon/green.svg"
             alt="Logo"
@@ -23,7 +23,7 @@ export default function NavBar() {
           <span className="font-bold text-2xl text-green-primary">
             PinusPintar
           </span>
-        </div>
+        </Link>
 
         {/* Menu desktop */}
         <div className="hidden md:flex space-x-10">

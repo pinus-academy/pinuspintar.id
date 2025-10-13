@@ -51,7 +51,7 @@ const PinusPintarHomepage = () => {
         </div>
         <div className="flex-1 flex justify-center items-center mb-8 lg:mb-0">
         <Image
-          src="/Vector (1).png"
+          src="/Vector.png"
           width={507}
           height={478}
           alt="Students learning"
