@@ -49,18 +49,19 @@ export default function Footer() {
                 <div>
                     <h3 className="font-semibold text-lg mb-4">Kontak</h3>
                     <ul className="space-y-2">
-                        <div className="flex items-center gap-2">
+                        <li className="flex items-center gap-3 text-gray-400">
                             <Image src="/social/directbox-default.svg" alt="Email" width={20} height={20} />
-                            <li className="text-gray-400">info@pinuspintar.id</li>
-                        </div>
-                        <div className="flex items-center gap-2">
+                            info@pinuspintar.id
+                        </li>
+                        <li className="flex items-center gap-3 text-gray-400">
                             <Image src="/social/call.svg" alt="Phone" width={20} height={20} />
-                            <li className="text-gray-400">+62 21 5678 9012</li>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Image src="/social/location.svg" alt="Location" width={20} height={20} />
-                            <li className="text-gray-400">Jl. Teknologi No. 123, Jakarta Selatan, Indonesia</li>
-                        </div>
+                            +62 852 9003 5500
+                        </li>
+                        <li className="flex items-center gap-3 text-gray-400 text-justify">
+                            <Image src="/social/location.svg" alt="Location" width={20} height={20} className="shrink-0" />
+                            RT.5/RW.1, Krajan, Campurejo, Kec. Boja, Kabupaten Kendal, Jawa Tengah 51381
+                        </li>
+
                     </ul>
                 </div>
             </div>
