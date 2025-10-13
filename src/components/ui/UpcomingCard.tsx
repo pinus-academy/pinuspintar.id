@@ -52,7 +52,7 @@ export default function UpcomingCard({
                         </div>
                     </div>
                 </div>
-                <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100 flex flex-col flex-1 justify-between">
+                <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100 flex flex-col flex-1 justify-between text-justify">
                     <div>
                         <a href={`/courses/${id}`} className="block">
                             <h3 className="font-medium text-[16px] my-2 text-gray-800 hover:text-green-primary transition-colors">
