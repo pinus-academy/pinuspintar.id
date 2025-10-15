@@ -57,7 +57,7 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden bg-white-primary border-t border-gray-200 transition-all duration-300">
           <div className="flex flex-col items-center space-y-4 py-4">
-            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+            <Link href="/" className="font-medium text-green-primary hover:text-green-700">
               Beranda
             </Link>
             <Link href="#" className="font-medium text-green-primary hover:text-green-700">
@@ -66,7 +66,7 @@ export default function NavBar() {
             <Link href="#" className="font-medium text-green-primary hover:text-green-700">
               Acara
             </Link>
-            <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+            <Link href="/teams" className="font-medium text-green-primary hover:text-green-700">
               Tim Kami
             </Link>
             <Link href="#" className="font-medium text-green-primary hover:text-green-700">
