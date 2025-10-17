@@ -64,7 +64,7 @@ export default function NavBar() {
           <Link href="/about" className="font-medium text-green-primary hover:text-green-700">
             Tentang Kami
           </Link>
-          <Link href="" className="font-medium text-green-primary hover:text-green-700">
+          <Link href="/events" className="font-medium text-green-primary hover:text-green-700">
             Acara
           </Link>
           <Link href="/teams" className="font-medium text-green-primary hover:text-green-700">
@@ -106,7 +106,7 @@ export default function NavBar() {
           {[
             { href: "/", label: "Beranda" },
             { href: "/about", label: "Tentang Kami" },
-            { href: "#", label: "Acara" },
+            { href: "/events", label: "Acara" },
             { href: "/teams", label: "Tim Kami" },
             { href: "#", label: "Kemitraan" }
           ].map((item, index) => (
