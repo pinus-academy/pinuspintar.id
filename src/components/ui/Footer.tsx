@@ -39,8 +39,8 @@ export default function Footer() {
                     <h3 className="font-semibold text-lg mb-4">Menu</h3>
                     <ul className="space-y-2">
                         <li><Link href="/" className="text-gray-400 hover:text-white-primary">Beranda</Link></li>
-                        <li><Link href="#" className="text-gray-400 hover:text-white-primary">Tentang Kami</Link></li>
-                        <li><Link href="#" className="text-gray-400 hover:text-white-primary">Acara</Link></li>
+                        <li><Link href="/about" className="text-gray-400 hover:text-white-primary">Tentang Kami</Link></li>
+                        <li><Link href="/events" className="text-gray-400 hover:text-white-primary">Acara</Link></li>
                         <li><Link href="/teams" className="text-gray-400 hover:text-white-primary">Tim Kami</Link></li>
                         <li><Link href="#" className="text-gray-400 hover:text-white-primary">Kemitraan</Link></li>
                     </ul>
