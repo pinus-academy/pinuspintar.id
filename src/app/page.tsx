@@ -1,7 +1,5 @@
 'use client';
 
-import NavBar from '@/components/ui/NavBar';
-import Footer from '@/components/ui/Footer';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import CourseCard from '@/components/ui/CourseCard';
@@ -23,7 +21,6 @@ const PinusPintarHomepage = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white-primary">
-      <NavBar />
       {/* Hero Section */}
       <div>
       <div className="flex flex-col-reverse lg:flex-row items-center p-4 sm:p-8 w-full max-w-8xl mx-auto">
@@ -107,7 +104,6 @@ const PinusPintarHomepage = () => {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

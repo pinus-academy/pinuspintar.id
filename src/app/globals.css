@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -14,23 +14,24 @@
 }
 
 @theme {
-  --font-sans: 'Rubik', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --spacing-8xl: 1440px;
   --color-green-primary: #183428;
   --color-green-primary-2: #1B4032;
   --color-green-secondary: #27AE60;
+  --color-green-text: #374F44;
   --color-white-primary: #F2F2F2;
   --color-young-green-primary: #2ECC71;
   --color-blue-primary: #00B4D8;
   --color-purple-primary: #6C63FF;
   --shadow-badge: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);

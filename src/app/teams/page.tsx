@@ -1,7 +1,5 @@
 'use client';
 
-import Footer from '@/components/ui/Footer';
-import NavBar from '@/components/ui/NavBar';
 import TeamsCard from '@/components/ui/TeamsCard';
 import { teams } from '@/lib/teams';
 import Image from 'next/image';
@@ -48,7 +46,6 @@ export default function OurTeamsPage() {
 
     return (
         <div className="flex flex-col min-h-screen bg-white-primary">
-            <NavBar />
 
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row items-center justify-start p-4 sm:p-8 w-full max-w-6xl mx-auto gap-8">
@@ -114,7 +111,6 @@ export default function OurTeamsPage() {
                 </div>
             </div>
 
-            <Footer />
         </div>
     );
 }

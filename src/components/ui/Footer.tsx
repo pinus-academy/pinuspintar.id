@@ -14,7 +14,7 @@ export default function Footer() {
                         Empowering tech talents through intensive bootcamps and expert-led training.
                     </p>
                     <div className="flex space-x-6 mt-4">
-                        <Link href="#"><Image src="/social/Tiktok - Negative.svg" alt="Tiktok" width={24} height={24} className="w-6 h-6" /></Link>
+                        <Link href="#"><Image src="/social/TikTok - Negative.svg" alt="Tiktok" width={24} height={24} className="w-6 h-6" /></Link>
                         <Link href="#"><Image src="/social/Instagram - Negative.svg" alt="Instagram" width={24} height={24} className="w-6 h-6" /></Link>
                         <Link href="#"><Image src="/social/YouTube - Negative.svg" alt="YouTube" width={24} height={24} className="w-6 h-6" /></Link>
                         <Link href="#"><Image src="/social/LinkedIn - Negative.svg" alt="LinkedIn" width={24} height={24} className="w-6 h-6" /></Link>
@@ -51,7 +51,7 @@ export default function Footer() {
                     <ul className="space-y-2">
                         <li className="flex items-center gap-3 text-gray-400">
                             <Image src="/social/directbox-default.svg" alt="Email" width={20} height={20} />
-                            info@pinuspintar.id
+                            admin@pinuspintar.id
                         </li>
                         <li className="flex items-center gap-3 text-gray-400">
                             <Image src="/social/call.svg" alt="Phone" width={20} height={20} />
