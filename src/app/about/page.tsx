@@ -10,7 +10,7 @@ const AboutUsPage = () => {
       <div className='flex flex-col lg:flex-row gap-8 py-20 justify-center max-w-8xl mx-auto px-6'>
         <div className='relative flex justify-center lg:justify-end flex-1/2 text-white text-xl lg:text-4xl'>
           <div>
-            <Image src={'/gambar1.png'} alt='gambar 1' width={620} height={5} className=' rounded-2xl' />
+            <Image src={'/gambar1.png'} priority alt='gambar 1' width={620} height={5} className=' rounded-2xl' />
           </div>
           <div className='hidden xl:block absolute top-36 left-20 -z-10'>
             <Image src={'assets/square-pattern.svg'} alt='square' width={150} height={150} />
@@ -56,12 +56,12 @@ const AboutUsPage = () => {
             </p>
           </div>
           <div className='flex-1/2 order-first lg:order-last'>
-            <Image src={'/Frame Kolaboratif.png'} alt='gambar3' width={630} height={390} className='w-full'/>
+            <Image src={'/Frame Kolaboratif.png'} loading='lazy' alt='gambar3' width={630} height={390} className='w-full'/>
           </div>
         </div>
         <div className='pt-10 flex flex-col lg:flex-row gap-8 justify-center'>
           <div className='flex-1/2 order-first'>
-            <Image src={'/gambar7.png'} alt='gambar 7' width={630} height={390} className='w-full' />
+            <Image src={'/gambar7.png'} loading='lazy' alt='gambar 7' width={630} height={390} className='w-full' />
           </div>
           <div className='flex-1/2'>
             <h3 className='font-bold text-[#566A61] text-3xl py-4 lg:text-right'>Kontribusi Pinus Pintar</h3>
@@ -76,8 +76,8 @@ const AboutUsPage = () => {
         <div className='text-center mb-8 py-20'>
           <h1 className='font-bold text-[32px] text-[#374F44] mb-10 lg:mb-20 '>Our Galleries</h1>
           <div className='flex flex-wrap gap-8 justify-center lg:justify-start'>
-            <Image src={'/gambar8.png'} alt='gambar 8' width={305} height={381} className='w-40 md:w-80' />
-            <Image src={'/gambar9.png'} alt='gambar 9' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/gambar8.png'} loading='lazy' alt='gambar 8' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/gambar9.png'} loading='lazy' alt='gambar 9' width={305} height={381} className='w-40 md:w-80' />
           </div>
         </div>
       </div>
