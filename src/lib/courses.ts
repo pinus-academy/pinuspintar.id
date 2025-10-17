@@ -1,94 +1,110 @@
 import { CourseCardProps } from "@/lib/courseTypes";
 
 export const courses: CourseCardProps[] = [
-//   {
-//   //   id: 1,
-//   //   title: "Full-Stack Web Development",
-//   //   description:
-//   //     "Master modern web development with JavaScript, React, and Node.js",
-//   //   benefits: [
-//   //     "Certificate",
-//   //     "Job Assistance",
-//   //     "Job Assistance",
-//   //     "Job Assistance",
-//   //     "Job Assistance",
-//   //     "Job Assistance",
+    {
+        id: 1,
+        title: "Full-Stack Web Development",
+        description:
+            "Master modern web development with JavaScript, React, and Node.js",
+        benefits: [
+            "Certificate",
+            "Job Assistance",
+            "Job Assistance",
+            "Job Assistance",
+            "Job Assistance",
+            "Job Assistance",
+        ],
+        price: 25000000000,
+        discountPrice: 13000000,
+        startDate: '2025-04-30',
+        duration: 12,
+        durationType: 'weeks', // atau 'days'
+        level: "Intermediate",
+        type: "online",
+        category: "development",
+        featured: true,
+        image: "/js.png",
+        url: "https://crm.deployaja.id/lp/full-stack-web-development",
+    },
+    {
+        id: 2,
+        title: "UI/UX Design Fundamentals",
+        description:
+            "Learn the principles of user-centered design and create stunning interfaces",
+        benefits: [
+            "Certificate",
+        ],
+        price: 1800000,
+        discountPrice: 1499000,
+        startDate: '2025-09-01',
+        duration: 12,
+        durationType: 'weeks', // atau 'days'
+        level: "Beginner",
+        type: "hybrid",
+        category: "design",
+        featured: true,
+        image: "/js.png",
+        url: "",
+    },
+    {
+        id: 3,
+        title: "Data Science Bootcamp",
+        description:
+            "Analytics, machine learning, and AI fundamentals for real-world applications",
+        benefits: [
+            "Certificate",
+            "Job Assistance",
+            "Internship Opportunities"
+        ],
+        price: 3000000,
+        discountPrice: 2499000,
+        startDate: '2025-09-01',
+        duration: 12,
+        durationType: 'weeks', // atau 'days'
+        level: "Advanced",
+        type: "offline",
+        category: "data",
+        featured: false,
+        image: "/cloud.png",
+        url: "",
+    },
+    {
+        id: 4,
+        title: "Java Programming",
+        description:
+            "Learn the fundamentals of Java programming and build your first Java application",
+        benefits: [],
+        price: 1500000,
+        discountPrice: 1299000,
+        startDate: '2025-09-01',
+        duration: 12,
+        durationType: 'weeks', // atau 'days'
+        level: "Beginner",
+        type: "online",
+        category: "marketing",
+        featured: true,
+        image: "/java.png",
+    },
+    {
+        id: 5,
+        title: "Digital Marketing Essentials",
+        description:
+            "Master the basics of digital marketing, including SEO, social media, and email marketing",
+        benefits: [
+            "Certificate",
+            "Job Assistance"
+        ],
+        price: 2000000,
+        discountPrice: 1799000,
+        startDate: '2025-09-01',
+        duration: 12,
+        durationType: 'weeks', // atau 'days'
+        level: "Intermediate",
+        type: "hybrid",
+        category: "marketing",
+        featured: false,
+        image: "/marketing.png",
+        url: "",
+    }
 
-//   //   ],
-//   //   price: 25000000000,
-//   //   discountPrice: 13000000,
-//   //   startDate: '2025-04-30',
-//   //   duration: 12,
-//   //   durationType: 'weeks', // atau 'days'
-//   //   level: "Intermediate",
-//   //   type: "online",
-//   //   category: "development",
-//   //   featured: true,
-//   //   image: "/js.png",
-//   //   url: "https://crm.deployaja.id/lp/full-stack-web-development",
-//   // },
-//   // // {
-//   // //   id: 2,
-//   // //   title: "UI/UX Design Fundamentals",
-//   // //   description:
-//   // //     "Learn the principles of user-centered design and create stunning interfaces",
-//   // //   benefits: [
-//   // //     "Certificate",
-//   // //   ],
-//   // //   price: 1800000,
-//   // //   discountPrice: 1499000,
-//   // //   startDate: '2025-09-01',
-//   // //   duration: 12,
-//   // //   durationType: 'weeks', // atau 'days'
-//   // //   level: "Beginner",
-//   // //   type: "hybrid",
-//   // //   category: "design",
-//   // //   featured: true,
-//   // //   image: "/js.png",
-//   // //   url: "",
-
-//   // // },
-//   // {
-//   //   id: 3,
-//   //   title: "Data Science Bootcamp",
-//   //   description:
-//   //     "Analytics, machine learning, and AI fundamentals for real-world applications",
-//   //   benefits: [
-//   //     "Certificate",
-//   //     "Job Assistance",
-//   //     "Internship Opportunities"
-//   //   ],
-//   //   price: 3000000,
-//   //   discountPrice: 2499000,
-//   //   startDate: '2025-09-01',
-//   //   duration: 12,
-//   //   durationType: 'weeks', // atau 'days'
-//   //   level: "Advanced",
-//   //   type: "offline",
-//   //   category: "data",
-//   //   featured: false,
-//   //   image: "/cloud.png",
-//   //   url: "",
-
-//   // },
-//   // {
-//   //   id: 4,
-//   //   title: "Java Programming",
-//   //   description:
-//   //     "Learn the fundamentals of Java programming and build your first Java application",
-//   //   benefits: [
-
-//   //   ],
-//   //   price: 1500000,
-//   //   discountPrice: 1299000,
-//   //   startDate: '2025-09-01',
-//   //   duration: 12,
-//   //   durationType: 'weeks', // atau 'days'
-//   //   level: "Beginner",
-//   //   type: "online",
-//   //   category: "marketing",
-//   //   featured: true,
-//   //   image: "/java.png",
-
-//   // },
 ];
