@@ -20,7 +20,7 @@ export default function TeamsCard({
                     />
 
                     {/* Box nama & role */}
-                    <div className="absolute bottom-[17px] left-4 right-4 flex flex-col justify-center items-center gap-1 shadow-md p-4 rounded-lg min-h-[120px]">
+                    <div className="absolute bg-white bottom-[17px] left-4 right-4 flex flex-col justify-center items-center gap-1 shadow-md p-4 rounded-lg min-h-[120px]">
                         <div className="text-black text-[28px] font-semibold">{name}</div>
                         <div className="capitalize text-black text-[20px]">{role}</div>
                     </div>
