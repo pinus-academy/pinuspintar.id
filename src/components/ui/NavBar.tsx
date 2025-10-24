@@ -40,7 +40,7 @@ export default function NavBar() {
   }, [isOpen]);
 
   return (
-    <nav className="w-full shadow-sm relative" ref={menuRef}>
+    <nav className="w-full fixed top-0 z-20 bg-white" ref={menuRef}>
       <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

@@ -21,7 +21,7 @@ const PinusPintarHomepage = () => {
   const filteredUpcoming = upcoming;
 
   return (
-    <div className="flex flex-col min-h-screen bg-white-primary">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
       <div>
         <div className="flex flex-col-reverse lg:flex-row items-center p-4 sm:p-8 w-full max-w-8xl mx-auto">
@@ -34,15 +34,13 @@ const PinusPintarHomepage = () => {
                 Majukan Kariermu
               </span>
             </h1>
-            <p className="text-sm sm:text-lg mb-7 text-green-primary max-w-xl">
+            <p className="text-sm text-left sm:text-lg mb-7 text-black max-w-xl">
               PinusPintar menawarkan bootcamp intensif di bidang teknologi, desain,
-              <br className="hidden sm:block" />
               dan pemasaran digital. Belajar langsung dari para ahli industri
-              <br className="hidden sm:block" />
               melalui proyek praktis dan aplikasi dunia nyata.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-              <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium" onClick={scrollToFeaturedCourses}>
+              <Button variant="primary" className="px-10 py-6 w-full  sm:w-auto text-[18px] font-medium" onClick={scrollToFeaturedCourses}>
                 Jelajahi
               </Button>
             </div>
@@ -109,7 +107,7 @@ const PinusPintarHomepage = () => {
         </div>
         <div>
           {filteredUpcoming.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredUpcoming.map(upcoming => (
                 <UpcomingCard key={upcoming.id} {...upcoming} />
               ))}

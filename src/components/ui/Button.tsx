@@ -15,7 +15,7 @@ export default function Button({
   return (
   <button
     className={clsx(
-      "w-[123px] h-[35px] flex items-center justify-center rounded-lg font-medium text-[12px] cursor-pointer transition-all duration-300",
+      "w-[123px] h-[35px] flex items-center justify-center rounded-2xl font-medium text-[12px] cursor-pointer transition-all duration-300",
       variant === "primary" &&
         "bg-green-primary text-white hover:bg-green-primary-2",
       variant === "secondary" &&
