@@ -48,7 +48,7 @@ export default function OurTeamsPage() {
         <div className="flex flex-col min-h-screen bg-white-primary">
 
             {/* Hero Section */}
-            <div className="flex flex-col lg:flex-row items-center justify-start p-4 sm:p-8 w-full max-w-6xl mx-auto gap-8">
+            <div className="flex flex-col lg:flex-row items-center justify-start p-4 sm:p-8 w-full max-w-8xl mx-auto gap-8">
                 <div className="flex-shrink-0 w-full max-w-[542px] h-[360px] sm:h-[300px] md:h-[360px] lg:w-1/2">
                     <Image
                         src="/teams.png"
@@ -98,7 +98,7 @@ export default function OurTeamsPage() {
                 {/* Teams Grid */}
                 <div className="px-4">
                     {filteredTeams.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4">
                             {filteredTeams.map((team) => (
                                 <TeamsCard key={team.id} {...team} />
                             ))}

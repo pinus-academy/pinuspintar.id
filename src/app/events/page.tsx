@@ -12,9 +12,9 @@ const EventPage = () => {
   const filteredUpcoming = upcoming;
 
   return (
-    <section className="relative bg-white-primary min-h-screen">
+    <section className="relative min-h-screen">
       {/* Hero Section */}
-      <div className="relative flex flex-col-reverse lg:flex-row gap-6 lg:gap-10 justify-evenly items-center lg:items-start pt-12 sm:pt-16 lg:pt-20 mb-8 lg:mb-10 px-4 sm:px-6 lg:px-8">
+      <div className="relative flex max-w-8xl mx-auto flex-col-reverse lg:flex-row gap-6 lg:gap-10 justify-evenly items-center lg:items-start pt-12 sm:pt-16 lg:pt-20 mb-8 lg:mb-10 px-4 lg:px-0">
         <div className="space-y-4 sm:space-y-5 lg:space-y-7 lg:mt-20 w-full lg:w-auto">
           <h1 className="text-green-primary text-2xl sm:text-3xl md:text-[36px] font-bold leading-tight max-w-full lg:max-w-[630px]">
             Temukan Potensimu: Ikuti Acara-Acara Seru Bersama PinusPintar!
