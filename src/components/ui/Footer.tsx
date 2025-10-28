@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="px-8 py-12 bg-[#183428] text-white-primary mt-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div className="flex items-center gap-2 mb-6">
                         <Image src="icon/white.svg" alt="Logo" width={35} height={35} className='size-15' />

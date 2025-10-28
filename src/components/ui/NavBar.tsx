@@ -41,7 +41,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full fixed top-0 z-20 bg-white" ref={menuRef}>
-      <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between p-6 w-full max-w-8xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -57,7 +57,7 @@ export default function NavBar() {
         </Link>
 
         {/* Menu desktop */}
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden lg:flex space-x-10">
           <Link href="/" className="font-medium text-green-primary hover:text-green-700">
             Beranda
           </Link>
@@ -78,7 +78,7 @@ export default function NavBar() {
         {/* Tombol menu (mobile only) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-green-primary focus:outline-none z-50 relative transition-transform duration-200 hover:scale-110"
+          className="lg:hidden text-green-primary focus:outline-none z-50 relative transition-transform duration-200 hover:scale-110"
           aria-label="Toggle menu"
         >
           <div className="relative">
@@ -96,7 +96,7 @@ export default function NavBar() {
 
       {/* Menu dropdown (mobile) with smooth animation */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out transform origin-top z-40 ${
+        className={`lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out transform origin-top z-40 ${
           isOpen 
             ? 'opacity-100 scale-y-100 translate-y-0' 
             : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
