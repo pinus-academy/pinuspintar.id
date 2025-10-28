@@ -14,7 +14,7 @@ const EventPage = () => {
   return (
     <section className="relative bg-white-primary min-h-screen">
       {/* Hero Section */}
-      <div className="relative flex flex-col-reverse lg:flex-row gap-6 lg:gap-10 justify-center items-center lg:items-start pt-12 sm:pt-16 lg:pt-20 mb-8 lg:mb-10 px-4 sm:px-6 lg:px-8">
+      <div className="relative flex flex-col-reverse lg:flex-row gap-6 lg:gap-10 justify-evenly items-center lg:items-start pt-12 sm:pt-16 lg:pt-20 mb-8 lg:mb-10 px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 sm:space-y-5 lg:space-y-7 lg:mt-20 w-full lg:w-auto">
           <h1 className="text-green-primary text-2xl sm:text-3xl md:text-[36px] font-bold leading-tight max-w-full lg:max-w-[630px]">
             Temukan Potensimu: Ikuti Acara-Acara Seru Bersama PinusPintar!
@@ -26,12 +26,12 @@ const EventPage = () => {
           </p>
         </div>
 
-        <div className="shadow-lg rounded-2xl overflow-hidden flex items-center justify-center w-full max-w-[320px] sm:max-w-[360px] h-[280px] sm:h-[360px] md:h-[420px] lg:h-[480px] bg-white shrink-0">
+        <div className="shadow-lg rounded-2xl overflow-hidden flex items-center justify-center w-full max-w-[640px] aspect-[16/9] bg-white shrink-0">
           <Image
             src="/galleries/zizal.jpg"
             alt="gambar acara"
-            width={360}
-            height={480}
+            width={640}
+            height={360}
             className="object-cover w-full h-full"
             priority
           />

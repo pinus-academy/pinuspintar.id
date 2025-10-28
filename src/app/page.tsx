@@ -40,7 +40,7 @@ const PinusPintarHomepage = () => {
               melalui proyek praktis dan aplikasi dunia nyata.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-              <Button variant="primary" className="px-10 py-6 w-full  sm:w-auto text-[18px] font-medium" onClick={scrollToFeaturedCourses}>
+              <Button variant="primary" className="px-10 py-7 w-full  sm:w-auto text-[18px] font-medium" onClick={scrollToFeaturedCourses}>
                 Jelajahi
               </Button>
             </div>

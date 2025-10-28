@@ -98,7 +98,7 @@ export default function OurTeamsPage() {
                 {/* Teams Grid */}
                 <div className="px-4">
                     {filteredTeams.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4">
                             {filteredTeams.map((team) => (
                                 <TeamsCard key={team.id} {...team} />
                             ))}

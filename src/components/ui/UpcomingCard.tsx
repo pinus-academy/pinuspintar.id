@@ -41,11 +41,11 @@ export default function UpcomingCard({
                         </BadgeUpcoming>
                     </div>
                     <div className="absolute bottom-3 left-4 z-10 flex gap-2">
-                        <div className="bg-white text-black px-3 py-1 rounded-md shadow-lg text-sm flex gap-1 h-8 items-center">
+                        <div className="bg-white text-black px-3 py-1 rounded-md shadow-lg text-sm flex gap-1 h-10 items-center">
                             <Image src="icon/calendar.svg" width={20} height={20} alt="Calendar" />
                             {date}
                         </div>
-                        <div className="bg-white text-black px-3 py-1 rounded-md shadow-lg text-sm h-8 flex items-center">
+                        <div className="bg-white text-black px-3 py-1 rounded-md shadow-lg text-sm h-10 flex items-center">
                             {time}
                         </div>
                     </div>
@@ -56,7 +56,7 @@ export default function UpcomingCard({
                             {truncateText(title, 50)}
                         </h3>
                     </a>
-                    <p className="text-[14px] text-gray-500">
+                    <p className="text-[16px] text-gray-500">
                         {description ? description : shortDescription}
                     </p>
                 </div>
