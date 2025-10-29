@@ -7,6 +7,9 @@ import { courses } from '@/lib/courses';
 import UpcomingCard from '@/components/ui/UpcomingCard';
 import { upcoming } from '@/lib/upcoming';
 import Link from "next/link";
+import { news } from '@/lib/news';
+import NewsCard from '@/components/ui/NewsCard';
+import Header from '@/components/about/Header';
 
 const PinusPintarHomepage = () => {
 
@@ -19,6 +22,7 @@ const PinusPintarHomepage = () => {
 
   const filteredCourses = courses;
   const filteredUpcoming = upcoming;
+  const filteredNews = news;
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -118,6 +122,31 @@ const PinusPintarHomepage = () => {
             </p>
           )}
         </div>
+      </div>
+
+      <div className="p-8 mb-16 w-full max-w-8xl mx-auto">
+        <div id="media-coverage" className="px-4 py-8 w-full max-w-8xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Liputan Media
+          </h2>
+        </div>
+        <div>
+          {filteredNews.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {filteredNews.map(news => (
+                <NewsCard key={news.id} {...news} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
+              Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className='relative'>
+        <Header />
       </div>
     </div>
   );
