@@ -1,10 +1,8 @@
 import { newsProps } from "@/lib/newsTypes";
 import { truncateText } from "@/lib/utils";
 import Image from "next/image";
-import BadgeUpcoming from "./BadgeUpcoming";
 
 export default function NewsCard({
-    id,
     title,
     date,
     logo,
