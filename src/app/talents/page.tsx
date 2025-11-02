@@ -5,8 +5,25 @@ import TalentCard from '@/components/ui/TalentCard';
 import { useState } from 'react';
 
 const TalentPage = () => {
-    const filteredTalents = talents; 
+    const [selectedLevel, setSelectedLevel] = useState('');
     
+    const filteredTalents = talents.filter(talent => {
+        if (selectedLevel === '') {
+            return true;
+        }
+
+        const talentTypeLower = talent.type.toLowerCase();
+        const selectedLevelLower = selectedLevel.toLowerCase();
+        
+        return talentTypeLower.includes(selectedLevelLower);
+    });
+    
+    interface LevelChangeEvent extends React.ChangeEvent<HTMLSelectElement> {}
+
+    const handleLevelChange = (event: LevelChangeEvent) => {
+        setSelectedLevel(event.target.value);
+    };
+
     return (
         <section className="relative px-4 sm:px-6 lg:px-8 py-6 lg:py-8 w-full max-w-8xl mx-auto">
             <div className="mb-6 lg:mb-8 mt-20">
@@ -34,22 +51,23 @@ const TalentPage = () => {
                             className="block w-1/2 max-w-44 py-4 pl-3 pr-10 text-base text-gray-900 border-gray-300 rounded-lg  focus:outline-none shadow-lg md:w-full"
                         >
                             <option value="" disabled>Skill</option>
-                            <option value="beginner">Front-End Developer</option>
-                            <option value="intermediate">Back-End Developer</option>
-                            <option value="advanced">Full-Stack Developer</option>
-                            <option value="expert">DevOps Engineer</option>
-                            <option value="expert">Mobile Developer</option>
+                            <option value="frontend">Front-End Developer</option>
+                            <option value="backend">Back-End Developer</option>
+                            <option value="fullstack">Full-Stack Developer</option>
+                            <option value="devops">DevOps Engineer</option>
+                            <option value="mobile">Mobile Developer</option>
                         </select>
                         <select
                             id="level-select"
                             name="level"
-                            defaultValue=""
+                            value={selectedLevel} 
+                            onChange={handleLevelChange}
                             className="block w-1/2 max-w-44 py-4 pl-3 pr-10 text-base text-gray-900  border-gray-300 rounded-lg focus:outline-none shadow-lg md:w-full"
                         >
-                            <option value="" disabled>Level</option>
-                            <option value="junior">Junior</option>
-                            <option value="intermediate">Intermediate</option>
-                            <option value="senior">Senior</option>
+                            <option value="">All Levels</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Senior">Senior</option>
                         </select>
                     </div>
                 </div>
