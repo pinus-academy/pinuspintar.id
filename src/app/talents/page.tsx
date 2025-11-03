@@ -5,10 +5,14 @@ import TalentCard from '@/components/ui/TalentCard';
 import { useState, useMemo } from 'react';
 
 interface SelectChangeEvent extends React.ChangeEvent<HTMLSelectElement> {}
+interface InputChangeEvent extends React.ChangeEvent<HTMLInputElement> {}
+
 
 const TalentPage = () => {
     const [selectedLevel, setSelectedLevel] = useState('');
     const [selectedRole, setSelectedRole] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
+
 
     const uniqueRoles = useMemo(() => {
         const roles = talents.map(talent => talent.role);
@@ -18,6 +22,8 @@ const TalentPage = () => {
     const filteredTalents = talents.filter(talent => {
         const talentTypeLower = talent.type.toLowerCase();
         const talentRoleLower = talent.role.toLowerCase();
+        const talentNameLower = talent.name.toLowerCase();
+        const talentSkillLower = talent.skill?.toLowerCase() || '';
 
         const levelMatch = 
             selectedLevel === '' || 
@@ -26,6 +32,12 @@ const TalentPage = () => {
         const roleMatch = 
             selectedRole === '' || 
             talentRoleLower === selectedRole.toLowerCase();
+
+        const searchMatch =
+            searchTerm === '' ||
+            talentNameLower.includes(searchTerm.toLowerCase()) ||
+            talentSkillLower.includes(searchTerm.toLowerCase()) ||
+            talentRoleLower.includes(searchTerm.toLowerCase());
 
         return levelMatch && roleMatch;
     });
@@ -36,6 +48,10 @@ const TalentPage = () => {
 
     const handleRoleChange = (event: SelectChangeEvent) => {
         setSelectedRole(event.target.value);
+    };
+
+    const handleSearchChange = (event: InputChangeEvent) => {
+        setSearchTerm(event.target.value);
     };
 
     return (
@@ -54,6 +70,8 @@ const TalentPage = () => {
                         <input
                             type="text"
                             placeholder='Search'
+                            value={searchTerm}
+                            onChange={handleSearchChange}
                             className=' text-gray-900 py-4 pr-6 pl-15  rounded-lg shadow-lg w-full  focus:outline-0'
                         />
                     </form>

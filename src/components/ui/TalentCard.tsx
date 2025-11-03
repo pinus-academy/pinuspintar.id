@@ -25,9 +25,8 @@ export default function TalentCard({
     const detailUrl = `/talents/${id}`; 
 
     return (
-        <div className="bg-white rounded-lg overflow-hidden border border-gray-300 flex flex-col justify-between p-4">
-            
-                
+        <Link href={detailUrl} className="block group hover:shadow-lg transition-shadow">
+            <div className="bg-white rounded-lg overflow-hidden border border-gray-300 flex flex-col justify-between p-4 h-full">
                 <div className="flex flex-col gap-4 mb-4 bg-white rounded-lg">
                     <div className="flex items-center gap-4">
                         <Image
@@ -37,7 +36,6 @@ export default function TalentCard({
                             alt={name}
                             className="size-16 rounded-full aspect-square object-cover"
                         />
-
                         <div className="flex flex-col">
                             <h5 className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">{name}</h5>
                             <h1 className="text-sm text-gray-700">{role}</h1>
@@ -52,9 +50,7 @@ export default function TalentCard({
                         </BadgeTalent>
                     </div>
                 </div>
-                
                 <hr className="border-gray-300 border-t-2 w-full" />
-                
                 <div className="flex-grow flex flex-col gap-3 bg-white rounded-lg px-3 py-3">
                     <h4 className=" text-gray-900">
                         {skill}
@@ -63,6 +59,7 @@ export default function TalentCard({
                         {description ? description : 'No description available.'}
                     </p>
                 </div>
-        </div>
+            </div>
+        </Link>
     );
 }

@@ -17,7 +17,7 @@ export const talents: TalentCardProps[] = [
         photo: "/teams/Haedar.png",
         type: "Senior", // *Ditambahkan*
         skill: "Strategy • Business Development", // *Ditambahkan*
-        description: "Focusing on company growth, market positioning, and strategic planning." // *Ditambahkan*
+        description: "Aspiring backend engineer skilled in PHP Laravel, Next.js, and PHP Symfony. Experienced in microservices, API gateways (NginX+), and web servers (Apache, NginX). Proficient in MySQL, PostgreSQL, and MariaDB, with expertise in Git, Docker, Kubernetes, and cloud platforms (AWS). Familiar with React.js and Alpine.js." // *Ditambahkan*
     },
     {
         id: 2,
