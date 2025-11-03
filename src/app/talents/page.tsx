@@ -2,26 +2,40 @@
 
 import { talents } from '@/lib/talents';
 import TalentCard from '@/components/ui/TalentCard';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+
+interface SelectChangeEvent extends React.ChangeEvent<HTMLSelectElement> {}
 
 const TalentPage = () => {
     const [selectedLevel, setSelectedLevel] = useState('');
-    
+    const [selectedRole, setSelectedRole] = useState('');
+
+    const uniqueRoles = useMemo(() => {
+        const roles = talents.map(talent => talent.role);
+        return [...new Set(roles)].sort(); 
+    }, []);
+
     const filteredTalents = talents.filter(talent => {
-        if (selectedLevel === '') {
-            return true;
-        }
-
         const talentTypeLower = talent.type.toLowerCase();
-        const selectedLevelLower = selectedLevel.toLowerCase();
-        
-        return talentTypeLower.includes(selectedLevelLower);
-    });
-    
-    interface LevelChangeEvent extends React.ChangeEvent<HTMLSelectElement> {}
+        const talentRoleLower = talent.role.toLowerCase();
 
-    const handleLevelChange = (event: LevelChangeEvent) => {
+        const levelMatch = 
+            selectedLevel === '' || 
+            talentTypeLower.includes(selectedLevel.toLowerCase());
+
+        const roleMatch = 
+            selectedRole === '' || 
+            talentRoleLower === selectedRole.toLowerCase();
+
+        return levelMatch && roleMatch;
+    });
+
+    const handleLevelChange = (event: SelectChangeEvent) => {
         setSelectedLevel(event.target.value);
+    };
+
+    const handleRoleChange = (event: SelectChangeEvent) => {
+        setSelectedRole(event.target.value);
     };
 
     return (
@@ -45,17 +59,18 @@ const TalentPage = () => {
                     </form>
                     <div className='w-full flex gap-4 md:gap-8 md:w-1/2'>
                         <select
-                            id="skill-select"
-                            name="skill"
-                            defaultValue=""
+                            id="role-select"
+                            name="role"
+                            value={selectedRole}
+                            onChange={handleRoleChange}
                             className="block w-1/2 max-w-44 py-4 pl-3 pr-10 text-base text-gray-900 border-gray-300 rounded-lg  focus:outline-none shadow-lg md:w-full"
                         >
-                            <option value="" disabled>Skill</option>
-                            <option value="frontend">Front-End Developer</option>
-                            <option value="backend">Back-End Developer</option>
-                            <option value="fullstack">Full-Stack Developer</option>
-                            <option value="devops">DevOps Engineer</option>
-                            <option value="mobile">Mobile Developer</option>
+                            <option value="">All Roles</option> 
+                            {uniqueRoles.map((role) => (
+                                <option key={role} value={role}>
+                                    {role}
+                                </option>
+                            ))}
                         </select>
                         <select
                             id="level-select"
