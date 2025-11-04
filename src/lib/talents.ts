@@ -3,130 +3,119 @@ import { TalentCardProps } from "./talentTypes";
 export const talents: TalentCardProps[] = [
     {
         id: 1,
-        name: "Ahmad Ghozali",
-        type: "Senior", // Sudah ada
-        skill: "React • Node.js • Express • MongoDB • REST API", // Sudah ada
-        role: "Director",
-        photo: "/teams/Ghozali.png",
-        description: "A passionate developer who enjoys building end-to-end web solutions, combining creative UI design with powerful backend logic. Experienced ...",
+        name: "Abdullah Muhamad Sidiq",
+        type: "Junior",
+        skill: "CSS3 • JavaScript (ES6+) • Svelte • Tailwind CSS • DBeaver",
+        role: "Fullstack Developer",
+        photo: "/talents/Sidiq.png",
+        description: "With experience in administrative and retail operations, I am currently developing my career as a Web Developer. I am dedicated to building responsive, user-friendly websites and continually expanding my knowledge of modern web technologies.",
         experiences: [
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Fullstack Developer",
+                company: "Deployaja.id",
+                year: "August 2025 - Present",
+                tech: "Svelte, JavaScript (ES6+), Tailwind , PostgreSQL",
+                responsibility: "Collaborated with the engineering team to build and implement dynamic features, Assisted in debugging and improving existing frontend codebases, Optimized web performance and ensured cross-browser compatibility"
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Online Store Administrator",
+                company: "Warunk Jago (Lazada)",
+                year: "March 2023 - October 2024",
+                tech: "Lazada Seller Center, Google Analytics, Google Trends",
+                responsibility: "Process incoming online orders accurately and on time, Prepare and pack products for shipment following company standards, Update order status and coordinate with logistics partners for delivery, Maintain product stock levels and report low inventory to managemen"
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Store Operator",
+                company: "Istana Cemerlang",
+                year: "October 2021 - December 2022",
+                tech: "Sales and Customer Service, Inventory Management, Cashier, and Product Display",
+                responsibility: "Provide customer service, manage inventory, and handle cashier duties, Ensure product displays are visually appealing and well-organized"
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Office Assistant",
+                company: "STIKes Wijaya Husada",
+                year: "April 2021 - July 2021",
+                tech: "Microsoft Office, Google Workspace, Data Entry",
+                responsibility: "Assisted lecturers in managing student grades and academic records, Input and update academic data into the campus system accurately, Helped prepare reports, attendance sheets, and student performance summaries, Organized digital and physical academic documents"
             }
         ],
         skillset: [
             {
                 key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Svelte, Tailwind, Next.js, PostgreSQL, Node.js"
             },
             {
                 key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "JavaScript, PHP, HTML, CSS"
             },
             {
                 key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Git, GitHub, DBeaver, Visual Studio Code"
             },
 
         ],
         education: [
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "2025 - Present",
+                name: "Pinus Pintar Bootcamp | Fullstack Developer"
             },
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "2017 - 2020",
+                name: "SMK Al Asiyah | Teknik Komputer & Jaringan"
             }
         ]
-        
     },
     {
         id: 6,
-        name: "Haedar Alfatah",
-        role: "VP of Strategy",
-        photo: "/teams/Haedar.png",
-        type: "Senior",
-        skill: "Strategy • Business Development",
-        description: "Aspiring backend engineer skilled in PHP Laravel, Next.js, and PHP Symfony. Experienced in microservices, API gateways (NginX+), and web servers (Apache, NginX). Proficient in MySQL, PostgreSQL, and MariaDB, with expertise in Git, Docker, Kubernetes, and cloud platforms (AWS). Familiar with React.js and Alpine.js.",
+        name: "Muhammad Faishal Lunawan",
+        role: "Fullstack Developer",
+        photo: "/talents/faishal.png",
+        type: "Intermediate",
+        skill: "JavaScript • GO • PHP • MySQL • PostgreSQL",
+        description: "Full-stack Developer with expertise in application development and maintenance. Strong understanding of the entire technology stack, from front-end to back-end, and supporting infrastructure. Experienced in contributing to ensuring application availability and performance, and addressing emerging issues with efficient solutions. Strong troubleshooting skills and the ability to collaborate within a dynamic team.",
         experiences: [
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Fullstack Developer",
+                company: "PT Pinus Pintar Teknologi",
+                year: "July 2025 - Present",
+                tech: "JavaScript, GO, PHP, MySQL, PostgreSQL",
+                responsibility: "Develop, maintain, and optimize web applications (full stack), Analyze and fix bugs and performance issues in applications, from the front-end to the back-end and database, Participate in code reviews, write technical documentation, and contribute to development process improvements, Implement best practices in coding and deployment to minimize downtime and ensure system stability"
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "IoT Developer",
+                company: "CV. Omah IoT",
+                year: "September 2023 - December 2023",
+                tech: "Arduino, ESP32, MQTT, Node-RED, MySQL, PostgreSQL",
+                responsibility: "Create and implement applications or systems that connect devices, sensors, and networks to collect and exchange data, Work with microcontrollers, sensors, and embedded systems, ensuring they communicate properly with cloud or backend platforms, Analyze system performance, identify bottlenecks, and improve reliability, speed, and energy efficiency"
             }
         ],
         skillset: [
             {
                 key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Spring Boot, CodeIgniter, Laravel, Gin, Next.js"
             },
             {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
+                key: "Language",
+                value: "Java, Go, PHP, SQL, HTML, CSS, JS, C"
             },
             {
                 key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Atlassian Suite (Jira, Confluence, Bitbucket), Postman, DBeaver, Intellij Idea, Visual Studio Code, RabbitMQ, Vault, Slack, Microsoft Suite (Outlook, Word, Teams, Excel), GitHub, Pritunl (VPN), Teleport, XAMPP, Laragon"
             },
+            {
+                key: "Soft Skills",
+                value: "Team Collaboration, Time Management, Fast Learner, Communication, Initiative & Self-Learning"
+            }
 
         ],
         education: [
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "August 2024",
+                name: "Politeknik Negeri Semarang | Electronics Engineering"
             },
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "August 2025",
+                name: "Pinus Pintar Bootcamp | Fullstack Developer"
             }
         ]
     },

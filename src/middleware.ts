@@ -5,6 +5,16 @@ import { codes } from './lib/accessCodes'
 export function middleware(req: NextRequest) {
   const { pathname, searchParams } = req.nextUrl
 
+  // Allow _next/image requests to pass through without authentication
+  if (pathname.startsWith('/_next/image')) {
+    return NextResponse.next()
+  }
+
+  // Allow static files in /talents directory (images, etc.) to pass through
+  if (pathname.match(/^\/talents\/.*\.(png|jpg|jpeg|gif|webp|svg)$/i)) {
+    return NextResponse.next()
+  }
+
   const isProtected = pathname.startsWith('/talents')
   if (!isProtected) return NextResponse.next()
 
@@ -18,12 +28,14 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL('/', req.url))
   }
 
-
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/talents/:path*'],
+  matcher: [
+    '/talents/:path*',
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+   ],
 }
 
 function decodeBase64(str: string) {
@@ -32,4 +44,13 @@ function decodeBase64(str: string) {
     } catch {
       return ''
     }
+}
+
+function isStaticOrApi(pathname: string): boolean {
+    return (
+      pathname.startsWith("/api") ||
+      pathname.startsWith("/_next") ||
+      pathname.startsWith("/favicon.ico") ||
+      pathname.startsWith("/public")
+    );
 }
