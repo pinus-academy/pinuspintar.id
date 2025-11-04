@@ -416,7 +416,7 @@ export const talents: TalentCardProps[] = [
         id: 8,
         name: "Nurhidayat",
         role: "Quality Assurance",
-        photo: "/teams/Nurhidayat.png",
+        photo: "/talents/Nurhidayat.png",
         type: "Junior",
         skill: "Manual Testing • Automated Testing • Selenium • API Testing",
         description: "Quality Assurance (QA) Engineer with strong analytical skills and exceptional attention to detail. Experienced in performing manual and automated testing to ensure system quality, stability, and functionality. Skilled in creating test plans, executing API testing with Postman, and identifying bugs early in the development cycle. Collaborates effectively with developers and product teams to enhance application performance and reliability. Dedicated to maintaining high software quality standards before release.",
