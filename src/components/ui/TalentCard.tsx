@@ -1,3 +1,4 @@
+import { useSearchParams } from "next/navigation";
 import type { TalentCardProps } from "@/lib/talentTypes";
 import Image from "next/image";
 import BadgeTalent from "@/components/talents/BadgeTalent";
@@ -12,6 +13,8 @@ export default function TalentCard({
     description,
     photo,
 }: TalentCardProps) {
+    const searchParams = useSearchParams();
+    const token = searchParams.get("token");
 
     const badgeVariant =
         type === "Senior"
@@ -22,8 +25,9 @@ export default function TalentCard({
                 ? "green"
                 : "gray";
 
-    const detailUrl = `/talents/${id}`; 
-
+        const detailUrl = token
+            ? `/talents/${id}?token=${token}`
+            : `/talents/${id}`;
     return (
         <Link href={detailUrl} className="block group hover:shadow-lg transition-shadow">
             <div className="bg-white rounded-lg overflow-hidden border border-gray-300 flex flex-col justify-between p-4 h-full">
