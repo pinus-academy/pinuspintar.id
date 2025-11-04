@@ -87,7 +87,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                 
                 <ul className="space-y-8">
                     {experiences.map((experience, index) => (
-                        <li className="relative">
+                        <li key={index} className="relative">
                             <div className="flex items-start">
                                 <div className="absolute left-2 sm:left-4 w-4 h-4 rounded-full bg-green-secondary border-4 border-white z-10"></div>
                                 

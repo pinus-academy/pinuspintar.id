@@ -1,22 +1,22 @@
-import { talents } from "@/lib/talents"; 
+import { talents } from "@/lib/talents";
 import TalentDetailLayout from "@/components/talents/TalentDetailLayout";
-import { notFound } from "next/navigation"; 
+import { notFound } from "next/navigation";
 
 interface TalentDetailPageProps {
-    params: {
-        id: string; 
-    };
+  params: Promise<{
+    id: string;
+  }>;
 }
 
-export default function TalentDetailPage({ params }: TalentDetailPageProps) {
-    const talentId = parseInt(params.id);
+export default async function TalentDetailPage({ params }: TalentDetailPageProps) {
+  const { id } = await params;
+  const talentId = parseInt(id);
 
-    const talentData = talents.find(t => t.id === talentId);
+  const talentData = talents.find((t) => t.id === talentId);
 
-    if (!talentData) {
-        return notFound();
-    }
+  if (!talentData) {
+    return notFound();
+  }
 
-    return <TalentDetailLayout talent={talentData} />;
+  return <TalentDetailLayout talent={talentData} />;
 }
-
