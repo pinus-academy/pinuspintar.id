@@ -7,7 +7,7 @@ interface TalentDetailLayoutProps {
 }
 
 export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) {
-    const { name, role, type, photo, skill, description, skillset, education, experiences } = talent;
+    const { name, role, type, photo, description, skillset, education, experiences } = talent;
 
     const badgeVariant =
         type === "Senior"
