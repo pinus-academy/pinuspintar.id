@@ -223,7 +223,7 @@ export const talents: TalentCardProps[] = [
         name: "Rizal Shofwan Rizki",
         role: "Fullstack Developer",
         photo: "/teams/Rizal.png",
-        type: "Senior",
+        type: "Intermediate",
         skill: "JavaScript • Next.js • Svelte js • React js • Typescript",
         description: "Full-stack developer with 1 year of experience developing and maintaining web applications using Next.js and 1 year of experience developing and maintaining websites using Laravel. Proficient in front-end, back-end, and supporting infrastructure. Experienced in ensuring application performance, solving problems with efficient solutions, and collaborating within a team.",
         experiences: [
@@ -356,7 +356,7 @@ export const talents: TalentCardProps[] = [
         name: "Feri Ferdiyanto",
         role: "Fullstack Developer",
         photo: "/teams/Feri.png",
-        type: "Senior",
+        type: "Intermediate",
         skill: "Node.js • React.js • Svelte.js • Sveltekit",
         description: "A Full-Stack & Svelte Developer with experience in Laravel, Nest.js, React, and Svelte/SvelteKit. Experienced in building responsive, secure, and high-performance web applications. Skilled in developing APIs, managing databases, and creating modern, technology-based solutions for business needs. Focused on interactive front-end development with SvelteKit and scalable back-end system integration.",
         experiences: [
