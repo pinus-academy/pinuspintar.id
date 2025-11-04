@@ -14,7 +14,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
             ? "orange"
             : type === "Intermediate"
                 ? "blue"
-                : type === "Advanced"
+                : type === "Junior"
                     ? "green"
                     : "gray";
 

@@ -21,7 +21,7 @@ export default function TalentCard({
             ? "orange"
             : type === "Intermediate"
                 ? "blue"
-                : type === "Advanced" 
+                : type === "Junior" 
                 ? "green"
                 : "gray";
 
