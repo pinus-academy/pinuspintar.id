@@ -222,7 +222,7 @@ export const talents: TalentCardProps[] = [
         id: 4,
         name: "Rizal Shofwan Rizki",
         role: "Fullstack Developer",
-        photo: "/teams/Rizal.png",
+        photo: "/talents/Rizal.png",
         type: "Intermediate",
         skill: "JavaScript • Next.js • Svelte js • React js • Typescript",
         description: "Full-stack developer with 1 year of experience developing and maintaining web applications using Next.js and 1 year of experience developing and maintaining websites using Laravel. Proficient in front-end, back-end, and supporting infrastructure. Experienced in ensuring application performance, solving problems with efficient solutions, and collaborating within a team.",
