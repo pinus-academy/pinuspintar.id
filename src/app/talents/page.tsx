@@ -39,7 +39,7 @@ const TalentPage = () => {
             talentSkillLower.includes(searchTerm.toLowerCase()) ||
             talentRoleLower.includes(searchTerm.toLowerCase());
 
-        return levelMatch && roleMatch;
+        return levelMatch && roleMatch && searchMatch;
     });
 
     const handleLevelChange = (event: SelectChangeEvent) => {
