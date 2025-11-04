@@ -126,7 +126,7 @@ export const talents: TalentCardProps[] = [
         type: "Junior",
         skill: "pyhton • javascript",
         role: "Backend Developer",
-        photo: "",
+        photo: "/talents/Zidan.png",
         description: "I'm a Backend Developer skilled at building and maintaining robust, scalable server-side applications using JavaScript, Python, and SQL. Experienced with Node.js and Express.js, I specialize in designing RESTful APIs, managing databases, and optimizing application performance. I'm detail-oriented, efficient, and focused on writing clean, maintainable, and secure code.",
         experiences: [
             {
@@ -175,7 +175,7 @@ export const talents: TalentCardProps[] = [
         id: 3,
         name: "Daffa Haidar Ahmad",
         role: "DevOps Engineer",
-        photo: "",
+        photo: "/talents/Daffa.jpeg",
         type: "Junior",
         skill: "Kubernetes • Apache • Nginx • Docker",
         description: "I'm a DevOps engineer with a strong passion for learning and a strong determination to thrive in the technology world, and I'm able to work both in teams and independently. I'm currently focusing on DevOps Engineering.",
@@ -185,14 +185,14 @@ export const talents: TalentCardProps[] = [
                 company: "PT Pinuspintar Technology",
                 year: "July 2025 - Present",
                 tech: "Grafana, Kubernetes, Docker",
-                responsibility: "Design, implement, and maintain CI/CD pipelines using GitHub Actions to automate build, test, and deployment processes.,Manage containerized applications using Docker and orchestrate deployments with Kubernetes.,Monitor application performance and system health using Grafana and other observability tools.,Maintain and secure Linux-based servers for development and testing environments.,Collaborate with development teams to improve deployment reliability and optimize infrastructure efficiency."
+                responsibility: "Design, implement, and maintain CI/CD pipelines using GitHub Actions to automate build, test, and deployment processes, Manage containerized applications using Docker and orchestrate deployments with Kubernetes, Monitor application performance and system health using Grafana and other observability tools, Maintain and secure Linux-based servers for development and testing environments, Collaborate with development teams to improve deployment reliability and optimize infrastructure efficiency."
             },
             {
                 position: "Quality Assurance",
                 company: "PT Pinuspintar Tehcnology",
                 year: "Januari 2025 - June 2025",
                 tech: "Grafana, Kubernetes, Docker",
-                responsibility: "Participate in code reviews and contribute to development process improvements.,Create a CI/CD pipeline using GitHub Actions to automate the build and deployment of Node.js applications.,Create and manage a Linux server for simple application testing.,Participate in code reviews and contribute to development process improvements."
+                responsibility: "Participate in code reviews and contribute to development process improvements, Create a CI/CD pipeline using GitHub Actions to automate the build and deployment of Node.js applications, Create and manage a Linux server for simple application testing, Participate in code reviews and contribute to development process improvements."
             },
         ],
         skillset: [
@@ -227,7 +227,7 @@ export const talents: TalentCardProps[] = [
     },
     {
         id: 4,
-        name: "Rizal shofwan rizki",
+        name: "Rizal Shofwan Rizki",
         role: "Fullstack Developer",
         photo: "/teams/Rizal.png",
         type: "Senior",
@@ -239,35 +239,35 @@ export const talents: TalentCardProps[] = [
                 company: "PT. Pinus Technology",
                 year: "September 2025 - present",
                 tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Develop and maintain scalable RESTful APIs using Node.js and react.js,Design and manage database schemas using PostgreSQL and MongoDB for efficient data storage and retrieval.,Optimize backend performance through query optimization, caching (Redis), and load balancing.,Implement authentication and authorization using JWT and middleware security.,Integrate third-party APIs and handle real-time data using WebSocket.,Utilize Git and GitHub for version control within Agile (Scrum) workflows.,Conduct unit and integration testing using Jest and Postman to ensure API reliability."
+                responsibility: "Develop and maintain scalable RESTful APIs using Node.js and react.js, Design and manage database schemas using PostgreSQL and MongoDB for efficient data storage and retrieval, Optimize backend performance through query optimization,caching (Redis),and load balancing, Implement authentication and authorization using JWT and middleware security, Integrate third-party APIs and handle real-time data using WebSocket, Utilize Git and GitHub for version control within Agile (Scrum) workflows, Conduct unit and integration testing using Jest and Postman to ensure API reliability."
             },
             {
                 position: "Full Stack Developer",
-                company: "PT. Pinus Technology",
-                year: "July 2025 - Septemner 2025",
+                company: "PinusPintar.id",
+                year: "July 2025 - September 2025",
                 tech: "Next.js, PostgreSQL, Docker",
-                responsibility: "Build a system to process transactions and integrate with payment gateways,enabling seamless payment processing and transaction tracking., Developing a recon tool comparing two data, data from the payment gateway and our internal data with match and unmatch results., Developing a bidding queue system using RabbitMQ or Kafka to manage and process bids, ensuring efficient handling of bid requests and tracking the bidding queue status., Working on squad with sprint agile methodology, Daily stand up, provide suggestions, discuss challenges, update tickets on PM tools, and work collaboratively with Lark."
+                responsibility: "Build a system to process transactions and integrate with payment gateways, enabling seamless payment processing and transaction tracking, Developing a recon tool comparing two data, data from the payment gateway and our internal data with match and unmatch results, Developing a bidding queue system using RabbitMQ or Kafka to manage and process bids, ensuring efficient handling of bid requests and tracking the bidding queue status, Working on squad with sprint agile methodology, Daily stand up, provide suggestions, discuss challenges, update tickets on PM tools, and work collaboratively with Lark."
             },
             {
                 position: "Backend Developer",
-                company: "PT. Pinus Technology",
-                year: "Februari 2025 - June 2025",
+                company: "Wali-App",
+                year: "February 2025 - June 2025",
                 tech: "Laravel, Blade, PHP, Postgresql",
-                responsibility: "Collaborated within a team to maintain project responsiveness., Developed the project from scratch using Laravel and PostgreSQL., Managed user authentication and authorization., Handled academic grading and reporting features., Managed student data, including registration, profiles, and active status., Developed payment features for tuition fees and other charges."
+                responsibility: "Collaborated within a team to maintain project responsiveness, Developed the project from scratch using Laravel and PostgreSQL, Managed user authentication and authorization, Handled academic grading and reporting features, Managed student data, including registration, profiles, and active status, Developed payment features for tuition fees and other charges."
             },
             {
                 position: "Frontend Developer",
-                company: "PT. Pinus Technology",
-                year: "December 2024 - Februari 2025",
+                company: "Lazismu",
+                year: "December 2024 - February 2025",
                 tech: "Svelte.js, Tailwind css",
-                responsibility: "Developed a real-time monitoring feature that enables guardians/parents to view students' daily attendance, academic scores, and activities at the pesantren/school., Designed the user flow for SPP (school fee) and other payment processes, incorporating multi-method payment integration, including Bank Virtual Accounts and QRIS, to facilitate cashless transactions.,Created a centralized calendar and event organizer feature to display the pesantren/school's schedule and events."
+                responsibility: "Developed a real-time monitoring feature that enables guardians/parents to view students' daily attendance, academic scores, and activities at the pesantren/school, Designed the user flow for SPP (school fee) and other payment processes, incorporating multi-method payment integration, including Bank Virtual Accounts and QRIS, to facilitate cashless transactions,Created a centralized calendar and event organizer feature to display the pesantren/school's schedule and events."
             },
             {
                 position: "Fullstack Developer",
-                company: "PT. Pinus Technology",
+                company: "Sekol.id",
                 year: "October 2024 - December 2024",
                 tech: "Next.js, react.js",
-                responsibility: "Redesigned the company's digital profile comprehensively to enhance a professional and appealing brand image, Developed content structure and user flow for the bootcamp class registration and access sections, resulting in a 15% increase in registration conversion., Optimized client-side rendering performance to improve page load speed and overall user experience."
+                responsibility: "Redesigned the company's digital profile comprehensively to enhance a professional and appealing brand image, Developed content structure and user flow for the bootcamp class registration and access sections, resulting in a 15% increase in registration conversion, Optimized client-side rendering performance to improve page load speed and overall user experience."
             },
         ],
         skillset: [
@@ -299,7 +299,7 @@ export const talents: TalentCardProps[] = [
                 name: "Universitas Siber Muhammadiyah"
             },
             {
-                year: " July 2021 - Januari 2024",
+                year: " July 2021 - January 2024",
                 name: "SMK Askhabul Kahfi"
             }
         ]
@@ -359,76 +359,73 @@ export const talents: TalentCardProps[] = [
         ],
         education: [
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "September 2025 - Present",
+                name: "Universitas Siber Muhammadiyah"
             },
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "June 2021 - June 2024",
+                name: "SMK Muhammadiyah 2 Boja"
             }
         ]
     },
     {
         id: 7,
-        name: "Septiyan Nungsizu",
-        role: "QA Engineer",
-        photo: "/teams/Sizu.png",
+        name: "Feri Ferdiyanto",
+        role: "Fullstack Developer",
+        photo: "/teams/Feri.png",
         type: "Senior",
-        skill: "Manual Testing • Automated Testing • Selenium",
-        description: "Ensuring product quality and reliability through comprehensive testing processes.",
+        skill: "Node.js • React.js • Svelte.js • Sveltekit",
+        description: "A Full-Stack & Svelte Developer with experience in Laravel, Nest.js, React, and Svelte/SvelteKit. Experienced in building responsive, secure, and high-performance web applications. Skilled in developing APIs, managing databases, and creating modern, technology-based solutions for business needs. Focused on interactive front-end development with SvelteKit and scalable back-end system integration.",
         experiences: [
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Fullstack Developer",
+                company: "Deployaja.id",
+                year: " February 2025 - Present",
+                tech: "Sveltekit, Svelte.js, Typescript",
+                responsibility: "Developed a domain purchasing and management module using SvelteKit + TypeScript, Created external API integrations for domain availability checks, registration, and payments, Created an interactive UI for the internal app marketplace with pagination, scroll-to-top, filter, and single-flight request features, Implemented an interactive modal system and state management for a smoother user experience."
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Fullstack Developer",
+                company: "CRM Application",
+                year: "September 2024 - February 2025",
+                tech: "Next.js, Svelte.js, Typescript",
+                responsibility: "Designed and built a CRM dashboard with a custom DataTable featuring sorting, pagination, checkbox selection, and state persistence between pages, Added a roles & permissions system (Super Admin, Admin) to control user access, Integrated EditorJS with custom blocks such as ProductFlashSale, OrderFormBlock, and ButtonBlock for builder needs, Created a dynamic form with an automatic payment summary using Svelte + TypeScript."
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Backend Developer",
+                company: "Kuliah.ai",
+                year: "November 2024 - December 2024",
+                tech: "Svelte.js, PHP, Laravel",
+                responsibility: "Integrate the platform with external AI APIs to fetch content generation and quiz data, ensuring real-time responses and accurate personalized content, Develop an AI-powered learning platform that generates quizzes, adapts content, and tracks user progress in real-time, Develop a system for admins to monitor user progress, performance, and scores in real-time."
             },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
         ],
         skillset: [
             {
                 key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Svelte.js, SvelteKit, React.js, Blade, Laravel"
             },
             {
                 key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "JavaScript, TypeScript, PHP"
             },
             {
                 key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Git, GitHub, Redis, REST API, Filament"
+            },
+            {
+                key: "Database",
+                value: "Prisma ORM, MySQL, PostgreSQL"
             },
 
         ],
         education: [
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "September 2025 - Present",
+                name: "Universitas Siber Muhammadiyah"
             },
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "June 2021 - June 2024",
+                name: "SMK Muhammadiyah 2 Boja"
             }
         ]
     },
