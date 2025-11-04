@@ -7,7 +7,7 @@ interface TalentDetailLayoutProps {
 }
 
 export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) {
-    const { name, role, type, photo, skill, description } = talent;
+    const { name, role, type, photo, skill, description, skillset, education, experiences } = talent;
 
     const badgeVariant =
         type === "Senior"
@@ -19,9 +19,9 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                     : "gray";
 
     return (
-        <section className="max-w-7xl min-h-screen mx-auto p-4">
+        <section className="max-w-8xl space-y-6 mx-auto p-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full items-start">
-                <div className="md:col-span-1 rounded-lg bg-white p-8 items-center text-center lg:text-left flex flex-col shadow-sm h-full">
+                <div className="md:col-span-1 rounded-lg bg-white p-8 items-center text-center flex flex-col shadow-talent h-full">
                     <div className="text-center mt-6">
                         <Image
                             src={photo}
@@ -38,7 +38,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                         {role}
                     </h5>
                     <BadgeTalent
-                        className="capitalize text-xs font-semibold px-3 py-1 rounded-full self-center lg:self-start"
+                        className="capitalize text-xs font-semibold px-3 py-1 rounded-full self-center"
                         variant={badgeVariant}
                     >
                         {type}
@@ -47,7 +47,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
 
                 <div className="md:col-span-3 flex flex-col gap-6 mb-5">
 
-                    <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm min-h-32 md:min-h-40 flex flex-col">
+                    <div className="rounded-lg p-6 bg-white shadow-talent min-h-32 md:min-h-40 flex flex-col">
                         <h3 className="font-semibold text-gray-800 mb-2">Ringkasan Deskripsi</h3>
                         <p className="text-sm text-gray-600 break-words">
                             {description || "No detailed description available."}
@@ -55,139 +55,74 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className=" h-full min-h-fit border border-gray-200 rounded-lg p-6 bg-white shadow-sm">
+                        <div className=" h-full min-h-fit rounded-lg p-6 bg-white shadow-talent">
                             <h3 className="font-semibold text-gray-800 mb-2">Skill Teknis</h3>
-                            <ul className="text-sm text-gray-600 list-disc list-inside space-y-1 grid grid-cols-1 sm:grid-cols-1 gap-x-8"   >
-                                <li><span className="font-semibold text-gray-700">Framework:</span> {skill.split("•").map((s, index) => (
-                                    s.trim()
-                                )).join(", ")}
-                                </li>
-                                <li><span className="font-semibold text-gray-700">Bahasa Pemograman:</span> {skill.split("•").map((s, index) => (
-                                    s.trim()
-                                )).join(", ")}
-                                </li>
-                                <li><span className="font-semibold text-gray-700">Tools:</span> {skill.split("•").map((s, index) => (
-                                    s.trim()
-                                )).join(", ")}
-                                </li>
+                            <ul className="text-sm text-gray-600 list-disc list-inside space-y-1 grid grid-cols-1 sm:grid-cols-1 gap-x-8">
+                                {skillset.map((skill, index) => (
+                                    <li key={index}>
+                                        <strong>{skill.key}: </strong> {skill.value}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className=" h-full min-h-fit border border-gray-200 rounded-lg p-6 bg-white shadow-sm sm:h-64 md:h-auto flex flex-col">
+                        <div className=" h-full min-h-fit rounded-lg p-6 bg-white shadow-talent sm:h-64 md:h-auto flex flex-col">
                             <h3 className="font-semibold text-gray-800 mb-2">Pendidikan</h3>
                             <ul className="text-sm text-gray-600 list-disc list-inside space-y-1 grid grid-cols-1 sm:grid-cols-1 gap-x-8">
-                                <li>
-                                    Universitas Negeri Semarang
-                                    <span className="text-gray-500"> (2012 - 2016)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Surabaya
-                                    <span className="text-gray-500"> (2011 - 2015)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Malang
-                                    <span className="text-gray-500"> (2013 - 2017)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Yogyakarta
-                                    <span className="text-gray-500"> (2010 - 2014)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Jakarta
-                                    <span className="text-gray-500"> (2012 - 2016)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Bandung
-                                    <span className="text-gray-500"> (2011 - 2015)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Malang
-                                    <span className="text-gray-500"> (2016 - 2020)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Yogyakarta
-                                    <span className="text-gray-500"> (2015 - 2019)</span>
-                                </li>
-                                <li>
-                                    Universitas Negeri Jakarta
-                                    <span className="text-gray-500"> (2017 - 2021)</span>
-                                </li>
+                                {education.map((edu, index) => (
+                                    <li key={index}>
+                                        {edu.name}
+                                        <span className="text-gray-500"> ({edu.year})</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="shadow-sm w-full h-auto p-4 sm:p-6">
+            <div className="shadow-talent w-full h-auto p-4 rounded-lg sm:p-6">
                 <h3 className="font-semibold text-gray-800 mb-2">Pengalaman Kerja</h3>
-                <ul className="list-disc space-y-4 text-sm sm:text-base text-gray-600 p-6">
-                    <li>
-                        <div className="flex flex-col sm:flex-row sm:items-center">
-                            <span className="font-medium">Software Engineer</span>
-                            <span className="hidden sm:inline mx-2">—</span>
-                            <span>PT TechSolution (2020 - 2023)</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5 mt-1">
-                            <span className="text-gray-700 font-semibold">Tech:</span>{" "}
-                            <span>React, Node.js, PostgreSQL, Docker</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5">
-                            <span className="text-gray-700 font-semibold">Responsibilities:</span>{" "}
-                            <span>
-                                Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-col sm:flex-row sm:items-center">
-                            <span className="font-medium">Frontend Developer</span>
-                            <span className="hidden sm:inline mx-2">—</span>
-                            <span>XYZ Digital Agency (2017 - 2020)</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5 mt-1">
-                            <span className="text-gray-700 font-semibold">Tech:</span>{" "}
-                            <span>React, HTML, CSS, JavaScript</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5">
-                            <span className="text-gray-700 font-semibold">Responsibilities:</span>{" "}
-                            <span>
-                                Mengembangkan user interface responsif untuk klien agency dan memastikan kompatibilitas lintas browser.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-col sm:flex-row sm:items-center">
-                            <span className="font-medium">IT Support</span>
-                            <span className="hidden sm:inline mx-2">—</span>
-                            <span>Universitas Negeri Semarang (2015 - 2017)</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5 mt-1">
-                            <span className="text-gray-700 font-semibold">Tech:</span>{" "}
-                            <span>Windows Server, Networking, Troubleshooting</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5">
-                            <span className="text-gray-700 font-semibold">Responsibilities:</span>{" "}
-                            <span>
-                                Memberikan dukungan teknis, melakukan maintenance perangkat keras & lunak, dan membantu staff kampus dalam penggunaan sistem IT.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-col sm:flex-row sm:items-center">
-                            <span className="font-medium">IT Support</span>
-                            <span className="hidden sm:inline mx-2">—</span>
-                            <span>Universitas Negeri Semarang (2015 - 2017)</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5 mt-1">
-                            <span className="text-gray-700 font-semibold">Tech:</span>{" "}
-                            <span>Windows Server, Networking, Troubleshooting</span>
-                        </div>
-                        <div className="ml-2 sm:ml-5">
-                            <span className="text-gray-700 font-semibold">Responsibilities:</span>{" "}
-                            <span>
-                                Memberikan dukungan teknis, melakukan maintenance perangkat keras & lunak, dan membantu staff kampus dalam penggunaan sistem IT.
-                            </span>
-                        </div>
-                    </li>
+                <div className="relative">
+
+                <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-green-primary-2/35"></div>
+                
+                <ul className="space-y-8">
+                    {experiences.map((experience, index) => (
+                        <li className="relative">
+                            <div className="flex items-start">
+                                <div className="absolute left-2 sm:left-4 w-4 h-4 rounded-full bg-green-secondary border-4 border-white z-10"></div>
+                                
+                                <div className="ml-8 sm:ml-12 flex-1">
+                                    <div className=" p-4 rounded-lg border border-gray-100">
+                                        <div className="flex flex-col sm:flex-row sm:items-center mb-2">
+                                            <span className="font-bold text-green-primary">{experience.position}</span>
+                                            <span className="hidden sm:inline mx-2 text-emerald-700">—</span>
+                                            <span className="text-green-primary-2">{experience.company} ({experience.year})</span>
+                                        </div>
+                                        <div className="mt-3">
+                                            <div className="flex items-center text-sm text-gray-700 mb-1">
+                                                <i className="fas fa-code text-blue-500 mr-2"></i>
+                                                <span className="font-medium">Tech:</span>
+                                                <span className="ml-2">{experience.tech}</span>
+                                            </div>
+                                            <div className="text-sm text-gray-700">
+                                                <div className="flex items-start">
+                                                    <i className="fas fa-tasks text-blue-500 mr-2 mt-0.5"></i>
+                                                    <div>
+                                                        <span className="font-medium">Responsibilities:</span>
+                                                        <span className="ml-2">
+                                                            {experience.responsibility}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
+            </div>
             </div>
         </section>
     );

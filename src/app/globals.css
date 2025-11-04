@@ -25,6 +25,7 @@
   --color-blue-primary: #00B4D8;
   --color-purple-primary: #6C63FF;
   --shadow-badge: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-talent: 0 2px 8px 0 rgba(0, 0, 0, 0.15)
 }
 /* @media (prefers-color-scheme: dark) {
   :root {
