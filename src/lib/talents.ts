@@ -134,15 +134,8 @@ export const talents: TalentCardProps[] = [
                 company: "PT Pinuspintar Tehcnology",
                 year: "June 2025 - prasent",
                 tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Develop and maintain scalable RESTful APIs using Node.js and Express.js,Design and manage database schemas using PostgreSQL and MongoDB for efficient data storage and retrieval.,Optimize backend performance through query optimization, caching (Redis), and load balancing.,Implement authentication and authorization using JWT and middleware security.,Integrate third-party APIs and handle real-time data using WebSocket.,Utilize Git and GitHub for version control within Agile (Scrum) workflows.,Conduct unit and integration testing using Jest and Postman to ensure API reliability."
+                responsibility: "Develop and maintain scalable RESTful APIs using Node.js and Express.js, Design and manage database schemas using PostgreSQL and MongoDB for efficient data storage and retrieval, Optimize backend performance through query optimization, caching (Redis), and load balancing, Implement authentication and authorization using JWT and middleware security, Integrate third-party APIs and handle real-time data using WebSocket, Utilize Git and GitHub for version control within Agile (Scrum) workflows, Conduct unit and integration testing using Jest and Postman to ensure API reliability."
             },
-            {
-                position: "Backend Engineer",
-                company: "PT Nusantara Digital Solutions",
-                year: "January 2024 - May 2025",
-                tech: "Node.js, Express.js, MySQL, Redis, Docker, AWS",
-                responsibility: "Develop and deploy microservices-based backend systems using Node.js and Express.js.,Design efficient database models and write optimized SQL queries in MySQL.,Implement caching and session management using Redis to improve system performance.,Build and maintain RESTful and GraphQL APIs for internal and external services.,Containerize backend applications using Docker and manage deployments on AWS EC2 and ECS.,Collaborate with frontend and DevOps teams to ensure seamless CI/CD integration.,Implement logging, monitoring, and alerting to ensure high system availability and reliability."
-            }
         ],
         skillset: [
             {
@@ -306,55 +299,45 @@ export const talents: TalentCardProps[] = [
     },
     {
         id: 5,
-        name: "Dita Setya",
-        role: "Community Coordinator",
-        photo: "/teams/Dita.png",
-        type: "Intermediate",
-        skill: "Event Planning • Social Media Management • Communication",
-        description: "Managing and growing the developer community through engagement and support.",
+        name: "Farhan Zaky",
+        role: "Quality Assurance",
+        photo: "/talents/Zaky.png",
+        type: "Junior",
+        skill: "Manual Testing • Automated Testing • Selenium • API Testing",
+        description: "I am a detail-oriented Quality Assurance Tester with strong analytical skills in identifying and preventing bugs before release. Experienced in designing test scenarios, performing manual web and API testing using Postman, GraphQL & Swagger, and currently expanding expertise in automation testing using Selenium and Katalon Studio. Accustomed to collaborating with developers and product owners to maintain high application quality standards in accordance with the Software Testing Life Cycle (STLC).",
         experiences: [
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Software Quality Assurance",
+                company: "PT Pinus Pintar Teknologi",
+                year: "2023 - Present",
+                tech: "Postman, Swagger, Selenium, Katalon Studio",
+                responsibility: "Ensuring the quality and reliability of DeployAja.id sidra.id and TungTung CRM, core platforms developed by PT Pinus Pintar Teknologi, Perform manual testing and API testing using API Testing Standards to ensure system stability and functionality, Created and executed test cases for new features and performed regression testing after updates, Implemented automation testing using Selenium and Katalon Studio to improve regression testing efficiency, Reported and tracked bugs in Jira/Trello, collaborating with developers and project managers for debugging and validation, Participated in sprint meetings and applied a solid understanding of SDLC and STLC to maintain product quality"
             },
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "SQA & IT Support",
+                company: "Islamic boarding school institutions (Sekol.id System)",
+                year: "2022 - 2023",
+                tech: "Postman, Swagger, Selenium, Katalon Studio",
+                responsibility: "Performed manual testing on a web-based school management system to ensure all features met user requirements, Designed and executed test cases for modules such as student data, finance, and library management, Identified and reported bugs to the development team, assisting in debugging and verification processes, Contributed to improving system efficiency through detailed testing feedback and quality reports."
             },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
         ],
         skillset: [
             {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
+                key: "Manual Testing",
+                value: "Functional, Regression, Sanity, Smoke"
             },
             {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
+                key: "Automation Testing",
+                value: "Selenium, Katalon Studio"
             },
             {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
+                key: "API Testing & Validation",
+                value: "Postman, Swagger, GraphQL"
             },
+            {
+                key: "Soft Skills",
+                value: "Detail-oriented, patient, and systematic thinker, Fast learner and adaptable to new testing tools, Communicative and collaborative with development/product teams, Highly motivated with a strong problem-solving mindset"
+            }
 
         ],
         education: [
@@ -434,513 +417,56 @@ export const talents: TalentCardProps[] = [
     },
     {
         id: 8,
-        name: "Rizky Rizal Shofwan",
-        role: "Frontend Developer",
-        photo: "/teams/Rizal.png",
-        type: "Intermediate",
-        skill: "React • Tailwind CSS • UX/UI",
-        description: "Passionate about creating exceptional user experiences with modern frontend tools.",
+        name: "Nurhidayat",
+        role: "Quality Assurance",
+        photo: "/teams/Nurhidayat.png",
+        type: "Junior",
+        skill: "Manual Testing • Automated Testing • Selenium • API Testing",
+        description: "Quality Assurance (QA) Engineer with strong analytical skills and exceptional attention to detail. Experienced in performing manual and automated testing to ensure system quality, stability, and functionality. Skilled in creating test plans, executing API testing with Postman, and identifying bugs early in the development cycle. Collaborates effectively with developers and product teams to enhance application performance and reliability. Dedicated to maintaining high software quality standards before release.",
         experiences: [
             {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
+                position: "Quality Assurance",
+                company: "PT Pinus Pintar Teknologi",
+                year: "July 2024 - Present",
+                tech: "Postman, Swagger, Selenium, Katalon Studio",
+                responsibility: "Ensuring the quality and reliability of DeployAaja.id and Sidra.id, core SaaS platforms developed by PT Pinus Pintar Teknologi, Performing 70% manual testing (functional, regression, exploratory) and 30% automated testing using Selenium and PyTest to maintain stability and user satisfaction across releases, Conducting API testing with Postman to validate data integrity and ensure seamless communication between frontend and backend systems, Developing and maintaining comprehensive test cases, test scenarios, and automation scripts based on requirement analysis and CI/CD pipelines, Managing and reporting defects through Jira, Trello, and internal QA tracking systems, ensuring effective collaboration with developers during the debugging and validation process."
             },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
         ],
         skillset: [
             {
                 key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "PyTest, Cypress"
             },
             {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
+                key: "Test Management & Tracking",
+                value: "Jira, TestRail"
             },
             {
                 key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
+                value: "Postman, Swagger, Selenium, Katalon Studio, JMeter"
             },
+            {
+                key: "Database",
+                value: "MySQL, PostgreSQL"
+            },
+            {
+                key: "CI/CD & Collaboration",
+                value: "GitHub Actions, Jenkins, Jira, Trello, Slack"
+            },
+            {
+                key: "Soft Skills",
+                value: "Strong analytical and problem-solving skills in identifying and reproducing bugs, High attention to detail and accuracy in testing documentation and execution, Effective collaboration with developers, product owners, and project managers, Adaptable and proactive in fast-paced Agile/Scrum environments, Committed to continuous improvement and maintaining software quality standards"
+            }
 
         ],
         education: [
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "2023 - Present",
+                name: "Pinus Pintar Bootcamp | Software Quality Assurance"
             },
             {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 9,
-        name: "Atilla Satria Putra",
-        role: "DevOps Engineer",
-        photo: "/teams/Atilla.png",
-        type: "Intermediate",
-        skill: "CI/CD • Docker • Kubernetes • Jenkins",
-        description: "Automating deployment pipelines and managing infrastructure as code.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 10,
-        name: "Asya Perdana",
-        role: "Product Manager",
-        photo: "/teams/Asya.png",
-        type: "Intermediate",
-        skill: "Product Roadmap • Agile • Market Analysis",
-        description: "Driving product vision from concept to launch based on market needs and strategy.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 11,
-        name: "Rafi Aziz",
-        role: "QA Engineer",
-        photo: "/teams/Rafi.png",
-        type: "Intermediate",
-        skill: "Performance Testing • Regression Testing",
-        description: "Dedicated to identifying and resolving defects to deliver a stable product.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 12,
-        name: "Umarul Fiddin",
-        role: "DevOps Engineer",
-        photo: "/teams/Umar.png",
-        type: "Senior",
-        skill: "Terraform • GitOps • Monitoring",
-        description: "Implementing and optimizing continuous integration and delivery practices.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 13,
-        name: "Berland Vardy",
-        role: "Backend Developer",
-        photo: "/teams/Berland.png",
-        type: "Senior",
-        skill: "Java • Spring Boot • Microservices",
-        description: "Developing resilient and scalable backend services and APIs.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 14,
-        name: "Imam Oktriyanto",
-        role: "Backend Developer",
-        photo: "/teams/Imam.png",
-        type: "Senior",
-        skill: "PHP • Laravel • MySQL",
-        description: "Creating efficient database structures and robust backend systems.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            }
-        ]
-    },
-    {
-        id: 15,
-        name: "Wisnu Bestama",
-        role: "Frontend Developer",
-        photo: "/teams/Wisnu.png",
-        type: "Intermediate",
-        skill: "Vue.js • Nuxt.js • TypeScript",
-        description: "Specializing in modern JavaScript frameworks to build dynamic applications.",
-        experiences: [
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            },
-            {
-                position: "Software Engineer",
-                company: "PT TechSolution",
-                year: "2020 - 2023",
-                tech: "React, Node.js, PostgreSQL, Docker",
-                responsibility: "Membangun dan memelihara aplikasi web fullstack, mengimplementasikan REST API, dan berkolaborasi dengan tim desain dan QA."
-            }
-        ],
-        skillset: [
-            {
-                key: "Framework",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Bahasa Pemrograman",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-            {
-                key: "Tools",
-                value: "Strategy, Bussiness, Problem Solving"
-            },
-
-        ],
-        education: [
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
-            },
-            {
-                year: "2020 - 2023",
-                name: "Universitas Sebelas Maret"
+                year: "2018 - 2021",
+                name: "MA Muhammadiyyah 1 Sukarame Lampung"
             }
         ]
     },
