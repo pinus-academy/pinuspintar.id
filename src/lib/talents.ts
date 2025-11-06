@@ -729,7 +729,7 @@ export const talents: TalentCardProps[] = [
         id: 13,
         name: "Isa Salahuddin Al Ayubi",
         role: "Frontend Developer",
-        photo: "/talents/",
+        photo: "/talents/Isak.png",
         type: "Junior",
         skill: "React.js • Node.js • Typescript • Sveltekit",
         description: "Frontend Developer with over 1 year of experience building responsive, intuitive, and visually engaging web interfaces. Skilled in JavaScript (ES6+), TypeScript, Svelte, React.js, and Tailwind CSS, with a strong understanding of UI/UX Principles and performance optimization. Committed to creating clean, scalable, and maintainable frontend architectures that deliver seamless user experiences.",
