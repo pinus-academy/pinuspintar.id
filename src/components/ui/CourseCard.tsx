@@ -4,6 +4,7 @@ import Badge from "./Badge";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { CourseCardProps } from "@/lib/courseTypes";
+import Link from "next/link";
 
 export default function CourseCard({
   id,
@@ -22,11 +23,13 @@ export default function CourseCard({
 
   const shortDescription = truncateText(description, 100);
 
+  const detailUrl =  `/events/${id}`;
+
   return (
     <div className="w-full h-full">
-      <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
+      <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
+        
         {/* Image - Clickable */}
-        <a href={`/courses/${id}`} className="block">
           <Image
             src={image}
             width={1000}
@@ -34,17 +37,16 @@ export default function CourseCard({
             alt={title}
             className="w-full h-[200px] object-cover"
           />
-        </a>
 
-        {/* Content - Non-clickable */}
+        {/* Content */}
         <div className="px-5 pt-3 pb-5 transition-colors duration-300 group-hover:bg-gray-100 flex flex-col flex-1 justify-between">
           <div>
+            
             {/* Title - Clickable */}
-            <a href={`/courses/${id}`} className="block">
               <h3 className="font-medium text-[16px] my-2 text-gray-800 hover:text-green-primary transition-colors">
                 {truncateText(title, 50)}
               </h3>
-            </a>
+
             <hr className="my-4 border-t border-gray-300" />
 
             {/* Description */}
@@ -77,12 +79,13 @@ export default function CourseCard({
                   type === "online"
                     ? "emerald"
                     : type === "offline"
-                      ? "red"
-                      : "purple"
+                    ? "red"
+                    : "purple"
                 }
               >
                 {type}
               </Badge>
+
               <Badge variant="blue">Web Programming</Badge>
             </div>
 
@@ -95,20 +98,17 @@ export default function CourseCard({
                   {discountPrice > 0 ? formatCurrency(discountPrice) : "Free"}
                 </span>
               </div>
-              <Button>
-                <a
-                  href={url}
-                  target="_blank"
+
+              <Button
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                 >
                   Selengkapnya
-                </a>
               </Button>
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
