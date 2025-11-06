@@ -725,4 +725,63 @@ export const talents: TalentCardProps[] = [
             }
         ]
     },
+    {
+        id: 13,
+        name: "Isa Salahuddin Al Ayubi",
+        role: "Frontend Developer",
+        photo: "/talents/",
+        type: "Junior",
+        skill: "React.js • Node.js • Typescript • Sveltekit",
+        description: "Frontend Developer with over 1 year of experience building responsive, intuitive, and visually engaging web interfaces. Skilled in JavaScript (ES6+), TypeScript, Svelte, React.js, and Tailwind CSS, with a strong understanding of UI/UX Principles and performance optimization. Committed to creating clean, scalable, and maintainable frontend architectures that deliver seamless user experiences.",
+        experiences: [
+            {
+                position: "Frontend Developer",
+                company: "Pinuspintar.id",
+                year: "2024 - Present",
+                tech: "Next.js, React.js",
+                responsibility: "Contributed to the development of a CRM Project as part of the Front-End team, from feature planning to UI refinement, Developed responsive and user-friendly UI components using HTML, CSS, Tailwind CSS, JavaScript, and Svelte/SvelteKit Collaborated with the Backend team to integrate APIs and ensure smooth and accurate data flow, Optimized layout, responsiveness, and overall user experience across multiple devices, Participated in code reviews and testing to maintain clean, structured, and scalable code, Supported UI/UX consistency by providing input on design, navigation, and user interaction, Handled feature updates and bug fixes to keep the application stable and reliable."
+            },
+        ],
+        skillset: [
+            {
+                key: "Programming Languages",
+                value: "JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL, Nexj.js"
+            },
+            {
+                key: "Frameworks & Libraries",
+                value: "SvelteKit, React.js, Tailwind CSS, Node.js (basic)"
+            },
+            {
+                key: "Design Tools",
+                value: "Figma, Canva, Adobe XD (basic)"
+            },
+            {
+                key: "Databases",
+                value: "MySQL, PostgreSQL (basic)"
+            },
+            {
+                key: "Tools & Platforms",
+                value: "Git, GitHub, Postman, Vite, Nginx, Jira, Trello, Lighthouse"
+            },
+            {
+                key: "Development Practices",
+                value: "Responsive Design, UI/UX Implementation, RESTful API Integration, Accessibility, SEO Optimization, Performance Optimization"
+            },
+            {
+                key: "Soft Skills",
+                value: "Creativity, Collaboration, Problem Solving, Attention to Detail, Communication, Continuous Learning"
+            }
+
+        ],
+        education: [
+            {
+                year: "June 2024 - Present",
+                name: "Pinus Pintar Bootcamp | Frotend Developer"
+            },
+            {
+                year: "2021 - 2024",
+                name: "SMA Zaid Bin Sabit"
+            }
+        ]
+    },
 ];
