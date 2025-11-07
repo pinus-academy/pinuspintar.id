@@ -2,6 +2,7 @@ import { upcomingProps } from "@/lib/upcomingTypes";
 import { truncateText } from "@/lib/utils";
 import Image from "next/image";
 import BadgeUpcoming from "./BadgeUpcoming";
+import Link from "next/link";
 
 export default function UpcomingCard({
     id,
@@ -13,9 +14,11 @@ export default function UpcomingCard({
     image,
 }: upcomingProps) {
     const shortDescription = truncateText(description, 100);
+        const detailUrl =  `/events/${id}`;
+
 
     return (
-            <div className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
+            <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
                 {/* Image + Badge */}
                 <div className="relative">
                     <a href={`/courses/${id}`} className="block">
@@ -31,9 +34,9 @@ export default function UpcomingCard({
                         <BadgeUpcoming
                             className="capitalize"
                             variant={
-                                type === "bootcamp"
+                                type === "Bootcamp"
                                     ? "green"
-                                    : type === "workshop"
+                                    : type === "Workshop"
                                         ? "blue"
                                         : "purple"
                             }>
@@ -61,6 +64,6 @@ export default function UpcomingCard({
                     </p>
                 </div>
                 </div>
-            </div>
+            </Link>
     );
 }

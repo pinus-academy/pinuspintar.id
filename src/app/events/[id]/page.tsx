@@ -1,22 +1,22 @@
-import { courses } from "@/lib/courses";
+import { upcoming } from "@/lib/upcoming";
 import { notFound } from "next/navigation";
-import DetailEventLayout from "@/components/event/DetailEventLayout"
+import DetailUpcomingEventLayout from "@/components/upcomingEvent/DetailUpcomingEventLayout"
 
-interface EventDetailPageProps {
+interface UpcomingEventDetailPageProps {
   params: Promise<{
     id: string;
   }>;
 }
 
-export default async function EventDetailPage({ params }: EventDetailPageProps) {
+export default async function UpcomingEventDetailPage({ params }: UpcomingEventDetailPageProps) {
   const { id } = await params;
-  const coursesId = parseInt(id);
+  const upcomingId = parseInt(id);
 
-  const eventData = courses.find((t) => t.id === coursesId);
+  const eventData = upcoming.find((t) => t.id === upcomingId);
 
   if (!eventData) {
     return notFound();
   }
 
-  return <DetailEventLayout courses={eventData} />;
+  return <DetailUpcomingEventLayout upcoming={eventData} />;
 }
