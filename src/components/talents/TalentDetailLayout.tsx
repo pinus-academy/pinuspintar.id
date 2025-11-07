@@ -47,7 +47,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
 
                 <div className="md:col-span-3 flex flex-col gap-6 mb-5 h-full">
                     <div className="rounded-lg p-6 bg-white shadow-sm min-h-32 md:min-h-40 flex flex-col h-full">
-                        <h3 className="font-semibold text-gray-800 mb-2">Ringkasan Deskripsi</h3>
+                        <h3 className="font-semibold text-gray-800 mb-2">Summary Description</h3>
                         <p className="text-sm text-gray-600 break-words">
                             {description || "No detailed description available."}
                         </p>
@@ -55,7 +55,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
                         <div className="h-full min-h-fit rounded-lg p-6 bg-white shadow-sm flex flex-col">
-                            <h3 className="font-semibold text-gray-800 mb-2">Skill Teknis</h3>
+                            <h3 className="font-semibold text-gray-800 mb-2">Technical Skills</h3>
                             <ul className="text-sm text-gray-600 list-disc list-inside space-y-1 grid grid-cols-1 sm:grid-cols-1 gap-x-8">
                                 {skillset.map((skill, index) => (
                                     <li key={index}>
@@ -65,7 +65,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                             </ul>
                         </div>
                         <div className="h-full min-h-fit rounded-lg p-6 bg-white shadow-sm flex flex-col">
-                            <h3 className="font-semibold text-gray-800 mb-2">Pendidikan</h3>
+                            <h3 className="font-semibold text-gray-800 mb-2">Education</h3>
                             <ul className="text-sm text-gray-600 list-disc list-inside space-y-1 grid grid-cols-1 sm:grid-cols-1 gap-x-8">
                                 {education.map((edu, index) => (
                                     <li key={index}>
@@ -79,7 +79,7 @@ export default function TalentDetailLayout({ talent }: TalentDetailLayoutProps) 
                 </div>
             </div>
             <div className="shadow-talent w-full h-auto p-4 rounded-lg sm:p-6">
-                <h3 className="font-semibold text-gray-800 mb-2">Pengalaman Kerja</h3>
+                <h3 className="font-semibold text-gray-800 mb-2">Work Experience</h3>
                 <div className="relative">
 
                     <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-green-primary-2/35"></div>

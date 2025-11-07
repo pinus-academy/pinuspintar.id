@@ -355,7 +355,7 @@ export const talents: TalentCardProps[] = [
         id: 7,
         name: "Feri Ferdiyanto",
         role: "Fullstack Developer",
-        photo: "/teams/Feri.png",
+        photo: "/talents/Feri.png",
         type: "Intermediate",
         skill: "Node.js • React.js • Svelte.js • Sveltekit",
         description: "A Full-Stack & Svelte Developer with experience in Laravel, Nest.js, React, and Svelte/SvelteKit. Experienced in building responsive, secure, and high-performance web applications. Skilled in developing APIs, managing databases, and creating modern, technology-based solutions for business needs. Focused on interactive front-end development with SvelteKit and scalable back-end system integration.",
@@ -458,7 +458,7 @@ export const talents: TalentCardProps[] = [
         ],
         education: [
             {
-                year: "2023 - Present",
+                year: "2024 - Present",
                 name: "Pinus Pintar Bootcamp | Software Quality Assurance"
             },
             {
@@ -467,5 +467,321 @@ export const talents: TalentCardProps[] = [
             }
         ]
     },
+    {
+        id: 9,
+        name: "Atila Satria Putra",
+        role: "DevOps Engineer",
+        photo: "/talents/Atilla.png",
+        type: "Intermediate",
+        skill: "AWS • Kubernetes • GCP • Grafana • Terraform • Ansible • Jenkins • GitLab CI • GitHub Actions",
+        description: "DevOps Engineer with over 2 years of hands-on experience in building, managing, and automating modern IT infrastructure across both bare-metal and cloud environments. Skilled in auto-provisioning virtual machines and managing networking using Proxmox, while ensuring service stability through comprehensive monitoring, alerting, and incident response systems. Proficient in cloud setup and administration (AWS, GCP, Azure), container orchestration (Kubernetes, Docker), and implementing CI/CD pipelines and Infrastructure as Code (IaC) using Terraform and Ansible. Experienced in Bash scripting for automating deployments, server management, and provisioning workflows. Strong understanding of High Availability (HA) systems, automated backup strategies, network security, and server performance optimization. Adept at collaborating across development, QA, and security teams, and actively involved in on-call rotations and production incident handling.",
+        experiences: [
+            {
+                position: "DevOps Engineer",
+                company: "deployaja.id",
+                year: "July 2024 - Present",
+                tech: "AWS, Kubernetes, GCP, Grafana",
+                responsibility: "Designed and managed Kubernetes-based deployment architecture (AWS EKS) using Helm Charts for production-grade workloads, Implemented automated VM provisioning using Terraform and Ansible on bare-metal infrastructure (Proxmox), Configured networking and virtualization on Proxmox servers and managed hybrid cloud infrastructure, Built and maintained monitoring and alerting systems using Grafana, Prometheus, and Alertmanager, Performed server performance tuning and resource utilization monitoring to improve system efficiency, Set up and managed API Gateway security, including SSL certificate management and server hardening, Implemented automated backup routines using Rsync and cron jobs, Conducted patch management and server configuration audits in collaboration with the security team, Actively participated in QRC/DRC (Quick Response & Disaster Recovery) activities to ensure system continuity and reliability"
+            },
+            {
+                position: "DevOps Engineer",
+                company: "Sidra.id",
+                year: "July 2024 - Present",
+                tech: "AWS, Kubernetes, GCP, Grafana",
+                responsibility: "Developed and managed CI/CD pipelines using GitLab CI for more than 15 applications, Automated environment provisioning and configuration management with Ansible, Set up basic monitoring systems using Prometheus and Grafana, Managed internal network configurations (DNS, routing, VPN) to ensure stable connectivity between servers, Collaborated closely with development teams to optimize system performance and resolve production issues, Maintained server security, including firewall management, SSH configuration, and manual backup routines"
+            },
+        ],
+        skillset: [
+            {
+                key: "Virtualization",
+                value: "VMware, Docker, Kubernetes, Proxmox"
+            },
+            {
+                key: "Cloud Computing",
+                value: "Azure, AWS, Google Cloud Platform (GCP)"
+            },
+            {
+                key: "Scripting & Automation",
+                value: "Bash, Python, Ansible, REST API Automation"
+            },
+            {
+                key: "Monitoring & Logging",
+                value: "Prometheus, Grafana, ELK Stack"
+            },
+            {
+                key: "Database",
+                value: "MySQL, PostgreSQL, MongoDB"
+            },
+            {
+                key: "Security & Networking",
+                value: "API Gateway, SSL/TLS, Firewall Configuration"
+            },
+            {
+                key: "Infrastructure as Code (IaC)",
+                value: "Terraform, Ansible"
+            },
+            {
+                key: "High Availability & Backup",
+                value: "Rsync, Cron-based Backup"
+            },
+            {
+                key: "Networking & Troubleshooting",
+                value: "Load Balancer, TCP/IP Utilities, Network Diagnostics"
+            },
+            {
+                key: "CI/CD Tools",
+                value: "GitLab CI, Jenkins, GitHub Actions"
+            }
 
+        ],
+        education: [
+            {
+                year: "2024 - Present",
+                name: "Pinus Pintar Bootcamp | DevOps Engineer"
+            },
+            {
+                year: "July 2021 - June 2024",
+                name: "SMA Institut Indonesia"
+            }
+        ]
+    },
+    {
+        id: 10,
+        name: "Abdul Rasyid",
+        role: "DevOps Engineer",
+        photo: "/talents/Rasyid.jpeg",
+        type: "Junior",
+        skill: "Azure • AWS • GCP • Docker • Kubernetes • Terraform • Ansible • Jenkins • GitLab CI • GitHub Actions",
+        description: "DevOps Engineer with 2+ years of experience in building and automating IT infrastructure across bare-metal and cloud environments. Skilled in VM provisioning, networking, and system management using Proxmox, Terraform, and Ansible. roficient in cloud platforms (AWS, GCP, Azure) and container orchestration with Kubernetes and Docker. Experienced in CI/CD pipeline setup, monitoring, and alerting using Grafana and Prometheus. Strong knowledge of system security, backup automation, and performance optimization. Collaborative team player involved in production support and incident handling.",
+        experiences: [
+                {
+                    position: "DevOps Engineer",
+                    company: "Deployaja.id",
+                    year: "January 2025 - Present",
+                    tech: "Docker, Kubernetes, Terraform, Ansible, Jenkins, GitLab CI, GitHub Actions",
+                    responsibility: "Designed and managed Kubernetes-based deployment architecture (AWS EKS) using Helm Charts for production-grade workloads, Implemented automated VM provisioning using Terraform and Ansible onbare-metal infrastructure (Proxmox), Configured networking and virtualization on Proxmox servers and managed hybrid cloud infrastructure, Built and maintained monitoring and alerting systems using Grafana, Prometheus, and Alertmanager, Performed server performance tuning and resource utilization monitoring to improve system efficiency, Set up and managed API Gateway security, including SSL certificate management and server hardening, Implemented automated backup routines using Rsync and cron jobs, Conducted patch management and server configuration audits in collaboration with the security team, Actively participated in QRC/DRC (Quick Response & Disaster Recovery) activities to ensure system continuity and reliability, Implemented automated backup routines using Rsync and cron jobs, Conducted patch management and server configuration audits in collaboration with the security team, Actively participated in QRC/DRC (Quick Response & Disaster Recovery) activities to ensure system continuity and reliability"
+                },
+                {
+                    position: "DevOps Engineer",
+                    company: "Sidra.id",
+                    year: "January 2025 - Present",
+                    tech: "Docker, Kubernetes, Terraform, Ansible, Jenkins, GitLab CI, GitHub Actions",
+                    responsibility: "Developed and managed CI/CD pipelines using GitLab CI for more than 15 applications, Automated environment provisioning and configuration management with Ansible, Set up basic monitoring systems using Prometheus and Grafana, Managed internal network configurations (DNS, routing, VPN) to ensure stable connectivity between servers, Collaborated closely with development teams to optimize system performance and resolve production issues, Maintained server security, including firewall management, SSH configuration, and manual backup routines"
+                },
+        ],
+        skillset: [
+            {
+                key: "Virtualization",
+                value: "VMware, Docker, Kubernetes, Proxmox"
+            },
+            {
+                key: "Cloud Computing",
+                value: "Azure, AWS, Google Cloud Platform (GCP)"
+            },
+            {
+                key: "Scripting & Automation",
+                value: "Bash, Python, Ansible, REST API Automation"
+            },
+            {
+                key: "Monitoring & Logging",
+                value: "Prometheus, Grafana, ELK Stack"
+            },
+            {
+                key: "Database",
+                value: "MySQL, PostgreSQL, MongoDB"
+            },
+            {
+                key: "Security & Networking",
+                value: "API Gateway, SSL/TLS, Firewall Configuration"
+            },
+            {
+                key: "Infrastructure as Code (IaC)",
+                value: "Terraform, Ansible"
+            },
+            {
+                key: "High Availability & Backup",
+                value: "Rsync, Cron-based Backup"
+            },
+            {
+                key: "Networking & Troubleshooting",
+                value: "Load Balancer, TCP/IP Utilities, Network Diagnostics"
+            },
+            {
+                key: "CI/CD Tools",
+                value: "GitLab CI, Jenkins, GitHub Actions"
+            }
+
+        ],
+        education: [
+            {
+                year: "2025 - Present",
+                name: "Pinus Pintar Bootcamp | DevOps Engineer"
+            },
+            {
+                year: "May 2022 - June 2025",
+                name: "Bayazi Islamic Leadership Bording School"
+            }
+        ]
+    },
+    {
+        id: 11,
+        name: "Izdihar Akmalul Haqi",
+        role: "Project Manager",
+        photo: "/talents/Izdihar.png",
+        type: "Junior",
+        skill: "Scrum • Kanban • Agile • Project Management • Communication • Leadership",
+        description: "I am a Project Manager with experience managing digital product development from planning to launch. I am skilled at coordinating cross-functional teams, setting priorities, and ensuring projects are on time, on budget, and on quality. I am experienced in using project management tools such as Jira, Trello, and Notion, and have a strong understanding of Agile and Scrum processes. I am results-oriented, communicative, and focused on improving efficiency and team collaboration to achieve business goals",
+        experiences: [
+            {
+                position: "Project Manager",
+                company: "Pt. Pinus Technology",
+                year: "July 2024 - Present",
+                tech: "Jira, Trello, Notion",
+                responsibility: "Plan, manage, and oversee end-to-end product development cycles from ideation to release, Coordinate cross-functional teams (design, development, QA, and operations) to ensure timely and high-quality project delivery, Communicate effectively with stakeholders to align project goals, priorities, and deliverables, Monitor project progress using tools such as Jira, Trello, and Notion, ensuring deadlines and KPIs are met, Identify risks, manage dependencies, and implement mitigation strategies to maintain project stability, Conduct sprint reviews, retrospectives, and performance evaluations to improve workflow efficiency, Utilize data-driven decision-making and reporting dashboards to track project success and team productivity, Reduced project turnaround time by 20% through improved sprint planning"
+            },
+        ],
+        skillset: [
+            {
+                key: "Frameworks & Methodologies",
+                value: "Agile, Scrum, Kanban, Waterfall"
+            },
+            {
+                key: "Tools & Platforms",
+                value: "Jira, Trello, Notion, Asana, Slack, Microsoft Teams, Google Workspace, ClickUp"
+            },
+            {
+                key: "Soft Skills",
+                value: "Leadership, Communication, Problem Solving, Time Management, Strategic Planning, Team Collaboration, Decision Making"
+            }
+
+        ],
+        education: [
+            {
+                year: "June 2024 - Present",
+                name: "Pinus Pintar Bootcamp | Product Manager"
+            },
+            {
+                year: "2022 - 2025",
+                name: "SMA Muhammadiyah 01 Bangsri"
+            }
+        ]
+    },
+    {
+        id: 12,
+        name: "Riki Fasehan",
+        role: "Frontend Developer",
+        photo: "/talents/Riki.png",
+        type: "Junior",
+        skill: "React.js • Node.js • Typescript • Sveltekit",
+        description: "Frontend Developer with over 1 year of experience creating responsive, accessible, and visually engaging web interfaces. Skilled in JavaScript (ES6+), TypeScript, Svelte, React.js, and Tailwind CSS, with a strong understanding of UI/UX design principles and performance optimization. Passionate about building clean, scalable, and maintainable frontend systems that provide seamless user experiences.",
+        experiences: [
+            {
+                position: "Frontend Developer",
+                company: "Pt. Pinus Pintar Teknology",
+                year: "2024 - Present",
+                tech: "Sevlte, Tailwind css",
+                responsibility: "Developed and maintained company landing pages using Svelte + TailwindCSS, Contributed to CRM application development, including features such as, editing user profile photos and logos Creating dynamic landing page templates Frontend backend API integration User interface performance and UX optimization Collaborated with the backend team and UI/UX designers to ensure consistency in the application's appearance and functionality, Performed version control using GitHub and deployed across test and production environments."
+            },
+        ],
+        skillset: [
+            {
+                key: "Programming Languages",
+                value: "JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL"
+            },
+            {
+                key: "Frameworks & Libraries",
+                value: "SvelteKit, React.js, Tailwind CSS, Node.js (basic)"
+            },
+            {
+                key: "Design Tools",
+                value: "Figma, Canva, Adobe XD (basic)"
+            },
+            {
+                key: "Databases",
+                value: "MySQL, PostgreSQL (basic)"
+            },
+            {
+                key: "Tools & Platforms",
+                value: "Git, GitHub, Postman, Vite, Nginx, Jira, Trello, Lighthouse"
+            },
+            {
+                key: "Development Practices",
+                value: "Responsive Design, UI/UX Implementation, RESTful API Integration, Accessibility, SEO Optimization, Performance Optimization"
+            },
+            {
+                key: "Soft Skills",
+                value: "Creativity, Collaboration, Problem Solving, Attention to Detail, Communication, Continuous Learning"
+            }
+
+        ],
+        education: [
+            {
+                year: "June 2024 - Present",
+                name: "Pinus Pintar Bootcamp | Frotend Developer"
+            },
+            {
+                year: "2021 - 2025",
+                name: "Universitas Wahid Hasyim"
+            }
+        ]
+    },
+    {
+        id: 13,
+        name: "Isa Salahuddin Al Ayubi",
+        role: "Frontend Developer",
+        photo: "/talents/Isak.png",
+        type: "Junior",
+        skill: "React.js • Node.js • Typescript • Sveltekit",
+        description: "Frontend Developer with over 1 year of experience building responsive, intuitive, and visually engaging web interfaces. Skilled in JavaScript (ES6+), TypeScript, Svelte, React.js, and Tailwind CSS, with a strong understanding of UI/UX Principles and performance optimization. Committed to creating clean, scalable, and maintainable frontend architectures that deliver seamless user experiences.",
+        experiences: [
+            {
+                position: "Frontend Developer",
+                company: "Pinuspintar.id",
+                year: "2024 - Present",
+                tech: "Next.js, React.js",
+                responsibility: "Contributed to the development of a CRM Project as part of the Front-End team, from feature planning to UI refinement, Developed responsive and user-friendly UI components using HTML, CSS, Tailwind CSS, JavaScript, and Svelte/SvelteKit Collaborated with the Backend team to integrate APIs and ensure smooth and accurate data flow, Optimized layout, responsiveness, and overall user experience across multiple devices, Participated in code reviews and testing to maintain clean, structured, and scalable code, Supported UI/UX consistency by providing input on design, navigation, and user interaction, Handled feature updates and bug fixes to keep the application stable and reliable."
+            },
+        ],
+        skillset: [
+            {
+                key: "Programming Languages",
+                value: "JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL, Nexj.js"
+            },
+            {
+                key: "Frameworks & Libraries",
+                value: "SvelteKit, React.js, Tailwind CSS, Node.js (basic)"
+            },
+            {
+                key: "Design Tools",
+                value: "Figma, Canva, Adobe XD (basic)"
+            },
+            {
+                key: "Databases",
+                value: "MySQL, PostgreSQL (basic)"
+            },
+            {
+                key: "Tools & Platforms",
+                value: "Git, GitHub, Postman, Vite, Nginx, Jira, Trello, Lighthouse"
+            },
+            {
+                key: "Development Practices",
+                value: "Responsive Design, UI/UX Implementation, RESTful API Integration, Accessibility, SEO Optimization, Performance Optimization"
+            },
+            {
+                key: "Soft Skills",
+                value: "Creativity, Collaboration, Problem Solving, Attention to Detail, Communication, Continuous Learning"
+            }
+
+        ],
+        education: [
+            {
+                year: "June 2024 - Present",
+                name: "Pinus Pintar Bootcamp | Frotend Developer"
+            },
+            {
+                year: "2021 - 2024",
+                name: "SMA Zaid Bin Sabit"
+            }
+        ]
+    },
 ];
