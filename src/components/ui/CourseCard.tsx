@@ -6,7 +6,6 @@
   import { CourseCardProps } from "@/lib/courseTypes";
 
   export default function CourseCard({
-    id,
     image,
     type,
     title,
