@@ -4,8 +4,11 @@
   import { CheckCircle } from "lucide-react";
   import Image from "next/image";
   import { CourseCardProps } from "@/lib/courseTypes";
+  import Link from "next/link";
+
 
   export default function CourseCard({
+    id,
     image,
     type,
     title,
@@ -19,11 +22,13 @@
       : (benefits as string).split(",").map((b) => b.trim());
 
     const shortDescription = truncateText(description, 100);
+    const detailUrl =  `/events/courses/${id}`;
+
 
 
     return (
       <div className="w-full h-full">
-        <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
+        <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
           
           {/* Image - Clickable */}
             <Image
@@ -104,7 +109,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     );
   }
