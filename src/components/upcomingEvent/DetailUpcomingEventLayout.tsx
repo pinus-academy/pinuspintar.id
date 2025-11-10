@@ -4,8 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { upcomingProps } from "@/lib/upcomingTypes";
 import BadgeUpcoming from "@/components/upcomingEvent/BadgeUpcoming";
-import { CiCalendar, CiClock2 } from "react-icons/ci";
-import { FiMapPin } from "react-icons/fi";
 
 interface DetailUpcomingEventLayoutProps {
   upcoming: upcomingProps;
@@ -68,18 +66,59 @@ const MenuRegisEvent = ({ upcoming }: { upcoming: upcomingProps }) => {
         <p className="text-lg font-semibold text-black">Event Information</p>
 
         <div className="space-y-3">
-          <div className="flex items-center space-x-3 text-sm text-gray-700 ">
-            <CiCalendar className="text-xl text-black" strokeWidth={1} />
+          {/* Date */}
+          <div className="flex items-center space-x-3 text-sm text-gray-700">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
             <p>{date}</p>
           </div>
 
-          <div className="flex items-center space-x-3 text-sm text-gray-700 ">
-            <CiClock2 className="text-xl text-black" strokeWidth={1} />
+          {/* Time */}
+          <div className="flex items-center space-x-3 text-sm text-gray-700">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
             <p>{time}</p>
           </div>
 
-          <div className="flex items-center space-x-3 text-sm text-gray-700 ">
-            <FiMapPin className="text-xl text-black" strokeWidth={2} />
+          {/* Location */}
+          <div className="flex items-center space-x-3 text-sm text-gray-700">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
             <p>Google Meet</p>
           </div>
         </div>
@@ -127,7 +166,7 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
                 height={1000}
                 className="w-[65rem] h-[24rem] rounded-2xl object-cover mb-4 self-start aspect-square"
               />
-              <div className="absolute w-12 h-12 flex items-center justify-center top-2 right-35 z-0">
+              <div className="absolute w-1 2 h-12 flex items-center justify-center top-2 right-35 z-0">
                 <BadgeUpcoming variant={badgeVariant}>{type}</BadgeUpcoming>
               </div>
             </div>
