@@ -18,5 +18,12 @@ export interface CourseCardProps {
   url?: string;
   classType: string;
   time: string;
-  education: string;
+  mentor: {
+    image: string;
+    name: string;
+    role: string;
+  }[]; education: {
+    key: string;
+    value: string;
+  }[];
 }

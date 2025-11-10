@@ -9,12 +9,12 @@ interface UpcomingEventDetailPageProps {
 }
 
 export default async function UpcomingEventDetailPage({ params }: UpcomingEventDetailPageProps) {
-  const { id } = await params;
+    const { id } = await params;
   const upcomingId = parseInt(id);
 
   const eventData = upcoming.find((t) => t.id === upcomingId);
 
-  if (!eventData) {
+if (!eventData) {
     return notFound();
   }
 

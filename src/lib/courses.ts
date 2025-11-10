@@ -12,7 +12,7 @@ export const courses: CourseCardProps[] = [
       "Job Assistance",
       "Job Assistance",
       "Job Assistance",
-      "Job Assistance",
+      "Job Assistance"
     ],
     price: 25000000000,
     discountPrice: 13000000,
@@ -27,8 +27,26 @@ export const courses: CourseCardProps[] = [
     url: "https://crm.deployaja.id/lp/full-stack-web-development",
     classType: "Live Class",
     time: "19:00 - 21:00 WIB",
-    education: "Full-stack web development from frontend to backend."
+
+    mentor: [
+      {
+        image: "/mentor.png",
+        name: "Muhammad Haedar Alfatah",
+        role: "Full-Stack Developer"
+      }
+    ],
+
+    education: [
+      { key: "Frontend Development", value: "HTML, CSS, JavaScript, Next.js" },
+      { key: "Backend Development", value: "Node.js, Express.js, MongoDB" },
+      { key: "API", value: "RESTful APIs & GraphQL" },
+      { key: "Auth", value: "API integration and authentication" },
+      { key: "Version Control", value: "Git & GitHub" },
+      { key: "Deployment", value: "Cloud service deployment" },
+      { key: "Final Project", value: "Build and present portfolio project" }
+    ]
   },
+
   {
     id: 2,
     title: "UI/UX Design Fundamentals",
@@ -48,8 +66,31 @@ export const courses: CourseCardProps[] = [
     url: "",
     classType: "Online & Offline",
     time: "18:30 - 20:30 WIB",
-    education: "Introduction to UI/UX principles, wireframing, and prototyping."
+
+    mentor: [
+      {
+        image: "/mentor.png",
+        name: "Jane Doe",
+        role: "UI/UX Designer"
+      }
+    ],
+
+    education: [
+      {
+        key: "Introduction",
+        value: "UI/UX principles, design thinking, user research"
+      },
+      {
+        key: "Wireframing",
+        value: "Low-fidelity sketches and design structure"
+      },
+      {
+        key: "Prototyping",
+        value: "High-fidelity prototypes with modern tools"
+      }
+    ]
   },
+
   {
     id: 3,
     title: "Data Science Bootcamp",
@@ -69,8 +110,22 @@ export const courses: CourseCardProps[] = [
     url: "",
     classType: "Offline Class",
     time: "09:00 - 12:00 WIB",
-    education: "Data analysis, ML models, Python programming & AI fundamentals."
+
+    mentor: [
+      {
+        image: "/mentor.png",
+        name: "John Smith",
+        role: "Data Scientist"
+      }
+    ],
+
+    education: [
+      { key: "Python", value: "Data analysis & visualization" },
+      { key: "Machine Learning", value: "Supervised & unsupervised models" },
+      { key: "AI Fundamentals", value: "Neural networks & ML workflow" }
+    ]
   },
+
   {
     id: 4,
     title: "Java Programming",
@@ -89,8 +144,22 @@ export const courses: CourseCardProps[] = [
     image: "/java.png",
     classType: "Live Class",
     time: "19:00 - 21:00 WIB",
-    education: "Java basics, OOP, and building simple real applications."
+
+    mentor: [
+      {
+        image: "/mentor.png",
+        name: "Alex Johnson",
+        role: "Java Developer"
+      }
+    ],
+
+    education: [
+      { key: "Java Basics", value: "Syntax, variables, control flow" },
+      { key: "OOP", value: "Classes, objects, inheritance, polymorphism" },
+      { key: "Apps", value: "Building simple Java applications" }
+    ]
   },
+
   {
     id: 5,
     title: "Digital Marketing Essentials",
@@ -110,6 +179,20 @@ export const courses: CourseCardProps[] = [
     url: "",
     classType: "Hybrid Class",
     time: "18:00 - 20:00 WIB",
-    education: "SEO, social media strategies, ads management, and analytics."
+
+    mentor: [
+      {
+        image: "/mentor.png",
+        name: "Sarah Kim",
+        role: "Digital Marketing Specialist"
+      }
+    ],
+
+    education: [
+      { key: "SEO", value: "Keyword research & on-page optimization" },
+      { key: "Social Media", value: "Instagram, TikTok, Facebook strategy" },
+      { key: "Ads", value: "Google Ads & Meta Ads setup" },
+      { key: "Analytics", value: "Tracking & optimization" }
+    ]
   }
 ];
