@@ -11,7 +11,7 @@ interface DetailUpcomingEventLayoutProps {
   upcoming: upcomingProps;
 }
 
-// -------------------- MENU REGISTER EVENT --------------------
+// -------------------- SIDEBAR REGISTER --------------------
 const MenuRegisEvent = ({ upcoming }: { upcoming: upcomingProps }) => {
   const { price, discountPrice, date, time, mentor } = upcoming;
 
@@ -21,28 +21,28 @@ const MenuRegisEvent = ({ upcoming }: { upcoming: upcomingProps }) => {
         sticky
         top-28
         w-full
-        max-w-[400px]
+        max-w-[350px]
         bg-white
         rounded-[15px]
         px-6
         py-6
-        space-y-[25px]
-        border-2 border-[#F2F2F2]
+        space-y-6
+        border border-[#F2F2F2]
         mx-auto
       "
     >
       {/* Price */}
-      <div className="space-y-2">
+      <div className="space-y-1">
         <p className="text-xl font-bold text-black">
           Rp {discountPrice.toLocaleString("id-ID")}
         </p>
-        <p className="text-sm line-through text-gray-400">
+        <p className="text-sm line-through text-gray-500">
           Rp {price.toLocaleString("id-ID")}
         </p>
       </div>
 
       {/* Button */}
-      <button className="w-full py-3 bg-[#183428] text-white font-semibold text-lg rounded-2xl transition">
+      <button className="w-full py-3 bg-[#183428] text-white font-semibold text-lg rounded-2xl hover:bg-gray-900 transition">
         Register Event
       </button>
 
@@ -54,8 +54,8 @@ const MenuRegisEvent = ({ upcoming }: { upcoming: upcomingProps }) => {
           <Image
             src={men.image}
             alt={men.name}
-            width={1000}
-            height={1000}
+            width={80}
+            height={80}
             className="rounded-full size-16 object-cover bg-gray-600"
           />
 
@@ -93,7 +93,7 @@ const MenuRegisEvent = ({ upcoming }: { upcoming: upcomingProps }) => {
   );
 };
 
-// -------------------- EVENT PAGE MAIN --------------------
+// -------------------- MAIN PAGE --------------------
 const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
   const { title, description, benefit, education, image, type } = upcoming;
 
@@ -110,21 +110,23 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
     <section className="bg-white pb-20">
       <div
         className="
+          max-w-[1400px]
+          mx-auto
           px-4
           sm:px-6
           lg:px-10
           flex
           flex-col
           lg:flex-row
-          gap-10
+          gap-12
           pt-24
         "
       >
         {/* CONTENT */}
-        <div className="w-full lg:w-3/5 xl:w-2/3 space-y-12">
+        <div className="w-full lg:w-3/5 xl:w-2/3 space-y-14">
           {/* TITLE + IMAGE */}
           <div className="space-y-6">
-            <h1 className="font-poppins font-semibold text-[30px] sm:text-[36px] text-[#183428] leading-snug">
+            <h1 className="font-poppins font-semibold text-3xl sm:text-4xl text-[#183428] leading-snug">
               {title}
             </h1>
 
@@ -132,14 +134,15 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
               <Image
                 src={image}
                 alt="event image"
-                width={1200}
-                height={700}
+                width={1400}
+                height={1000}
                 className="
                   w-full
                   h-[220px]
                   sm:h-[300px]
                   md:h-[380px]
                   lg:h-[420px]
+                  xl:h-[460px]
                   rounded-2xl
                   object-cover
                   mb-3
@@ -154,18 +157,20 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
           </div>
 
           {/* DESCRIPTION */}
-          <div className="bg-white rounded-xl p-6 md:p-8 border-2 border-[#F2F2F2]">
-            <p className="font-poppins font-bold text-xl mb-2">About The Event</p>
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2]">
+            <p className="font-poppins font-bold text-xl mb-3">About The Event</p>
 
-            <p className="text-lg leading-relaxed text-justify">{description}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-justify">
+              {description}
+            </p>
 
             {/* Education */}
             <div className="pt-8">
-              <p className="font-poppins font-semibold text-xl mb-2">
+              <p className="font-poppins font-semibold text-xl mb-3">
                 What You'll Learn
               </p>
 
-              <ul className="text-lg space-y-2">
+              <ul className="text-base sm:text-lg space-y-2">
                 {education.map((edu, idx) => (
                   <li key={idx} className="list-disc list-inside">
                     <strong>{edu.key}:</strong> {edu.value}
@@ -176,9 +181,11 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
 
             {/* Benefit */}
             <div className="pt-8">
-              <p className="font-poppins font-semibold text-xl mb-2">Benefits</p>
+              <p className="font-poppins font-semibold text-xl mb-3">
+                Benefits
+              </p>
 
-              <ul className="text-lg space-y-2">
+              <ul className="text-base sm:text-lg space-y-2">
                 {benefit.map((ben, idx) => (
                   <li key={idx} className="list-disc list-inside">
                     <strong>{ben.key}:</strong> {ben.value}
@@ -190,7 +197,7 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
         </div>
 
         {/* SIDEBAR */}
-        <div className="w-full lg:w-2/5 xl:w-1/3 lg:sticky lg:top-28">
+        <div className="w-full lg:w-2/5 xl:w-1/3">
           <MenuRegisEvent upcoming={upcoming} />
         </div>
       </div>

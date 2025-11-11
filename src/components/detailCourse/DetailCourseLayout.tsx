@@ -10,74 +10,120 @@ interface DetailCourseLayoutProps {
   courses: CourseCardProps;
 }
 
-// -------------------- MENU REGISTER EVENT --------------------
+// -------------------- SIDEBAR REGISTER --------------------
 const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
-  const { price, title, startDate, time, mentor } = courses;
+  const { discountPrice, title, startDate, time, mentor } = courses;
 
   return (
     <div
       className="
+        w-full
         lg:w-[350px]
         bg-white
         rounded-2xl
         px-6
         py-6
         space-y-6
-        border-[2px] border-[#F2F2F2]
+        border border-[#F2F2F2]
       "
     >
       {/* Harga */}
       <div className="space-y-2">
         <p className="text-lg font-bold text-black">{title}</p>
         <p className="text-lg text-green-600">
-          Rp {price.toLocaleString("id-ID")}
+          Rp {discountPrice.toLocaleString("id-ID")}
         </p>
       </div>
 
       {/* Tombol */}
-      <button className="w-full py-3 bg-[#183428] text-white font-semibold text-lg rounded-2xl hover:bg-gray-800 transition duration-300">
-        Register Event
+      <button className="w-full py-3 bg-green-950 text-white font-semibold text-lg rounded-2xl hover:bg-green-900 transition duration-300">
+        Buy Course
       </button>
 
-      <hr className="border-t border-gray-200" />
+      <hr className="border-gray-200" />
 
       {/* Mentor */}
       {mentor.map((men, index) => (
-        <div key={index} className="flex justify-start items-center gap-3">
+        <div key={index} className="flex items-center gap-3">
           <Image
             src={men.image}
             alt={men.name}
-            width={1000}
-            height={1000}
-            className="rounded-full size-16 object-cover bg-gray-600"
+            width={64}
+            height={64}
+            className="rounded-full size-14 object-cover bg-gray-600"
           />
 
           <div>
-            <p className="text-lg font-semibold text-black">{men.name}</p>
-            <p className="text-sm font-normal text-gray-600">{men.role}</p>
+            <p className="text-xm font-semibold text-black">{men.name}</p>
+            <p className="text-sm text-gray-600">{men.role}</p>
           </div>
         </div>
       ))}
 
-      <hr className="border-t border-gray-200" />
+      <hr className="border-gray-200" />
 
       {/* Informasi Event */}
       <div className="space-y-4">
-        <p className="text-lg font-semibold text-black">Event Information</p>
+        <p className="text-lg font-semibold text-black">This Course Include</p>
 
-        <div className="space-y-3">
+        <div className="space-y-5">
           <div className="flex items-center gap-3 text-sm text-gray-700">
-            <CiCalendar className="text-xl text-black" strokeWidth={1} />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="size-6 text-black"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z"
+              />
+            </svg>
+
             <p>{startDate}</p>
           </div>
 
           <div className="flex items-center gap-3 text-sm text-gray-700">
-            <CiClock2 className="text-xl text-black" strokeWidth={1} />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="size-6 text-black"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
             <p>{time}</p>
           </div>
 
           <div className="flex items-center gap-3 text-sm text-gray-700">
-            <FiMapPin className="text-xl text-black" strokeWidth={2} />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="size-6 text-black"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+              />
+            </svg>
             <p>Google Meet</p>
           </div>
         </div>
@@ -86,27 +132,18 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
   );
 };
 
-// -------------------- EVENT PAGE MAIN --------------------
+// -------------------- MAIN PAGE --------------------
 const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
-  const { title, description, benefits, education, image, type, learningFlow } =
+  const { title, description, benefits, education, image, learningFlow } =
     courses;
-
-  const badgeVariant =
-    type === "Webinar"
-      ? "green"
-      : type === "Bootcamp"
-      ? "purple"
-      : type === "Workshop"
-      ? "emerald"
-      : "gray";
 
   return (
     <section className="relative bg-white">
-      <div className="p-6 lg:p-10 flex flex-col lg:flex-row gap-10 pt-10 sm:pt-16 lg:pt-20">
+      <div className="max-w-[1500px] mx-auto p-4 sm:p-6 lg:p-10 flex flex-col lg:flex-row gap-10 pt-10 sm:pt-16 lg:pt-20">
         {/* MAIN CONTENT */}
-        <div className="w-full lg:w-3/5 xl:w-2/3 space-y-14">
+        <div className="w-full lg:w-3/5 xl:w-2/3 space-y-10">
           {/* TITLE + IMAGE */}
-          <div className="space-y-6">
+          <div className="space-y-10">
             <h1 className="font-poppins font-semibold text-3xl sm:text-4xl text-[#183428]">
               {title}
             </h1>
@@ -117,22 +154,23 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
                 alt="event image"
                 width={1200}
                 height={700}
-                className="w-7xl h-60 sm:h-72 md:h-80 lg:h-96 xl:h-[26rem] rounded-2xl object-cover"
+                className="w-full h-56 sm:h-72 md:h-80 lg:h-[420px] rounded-2xl object-cover"
               />
             </div>
           </div>
 
           {/* DESCRIPTION */}
-          <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2]">
-            <div className="text-black">  
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2] space-y-10">
+            <div className="text-black">
               <p className="font-poppins font-bold text-xl mb-3">
-                About The Event
+                About The Course
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-justify">
                 {description}
               </p>
             </div>
 
+            {/* What You'll Learn */}
             <div className="pt-8">
               <p className="font-poppins font-semibold text-xl mb-3">
                 What You’ll Learn
@@ -146,6 +184,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
               </ul>
             </div>
 
+            {/* Benefits */}
             <div className="pt-8">
               <h2 className="font-semibold text-xl mb-3">Benefits</h2>
               <ul className="text-base sm:text-lg list-disc list-inside space-y-1">
@@ -155,54 +194,48 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
               </ul>
             </div>
           </div>
-          <div className="border border-[#F2F2F2] w-full h-auto p-4 rounded-lg sm:p-6">
-          <h3 className="font-semibold text-gray-800 mb-2 text-xl">content Class</h3>
-          <div className="relative">
-            <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-green-primary-2/35"></div>
 
-            <ul className="space-y-8">
-              {learningFlow.map((flow, index) => (
-                <li key={index} className="relative">
-                  <div className="flex items-start">
-                    <div className="absolute left-2 sm:left-4 w-4 h-4 rounded-full bg-green-secondary border-4 border-white z-10"></div>
+          {/* Learning Flow */}
+          <div className="border border-[#F2F2F2] w-full p-4 sm:p-6 rounded-lg">
+            <h3 className="font-semibold text-gray-800 mb-8 text-xl">
+              Content Class
+            </h3>
 
-                    <div className="ml-8 sm:ml-12 flex-1">
-                      <div className=" p-4 rounded-lg border border-gray-100">
-                        <div className="flex flex-col sm:flex-row sm:items-center mb-2">
-                          <span className="font-bold text-green-primary">
+            <div className="relative">
+              <ul className="space-y-5">
+                {learningFlow.map((flow, index) => (
+                  <li key={index} className="relative">
+                    <div className="flex items-start">
+                      <div className=" flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center">
+                          <span className="font-bold text-black">
                             Modul: {flow.modul}
                           </span>
-                          <span className="hidden sm:inline mx-2 text-emerald-700">
-                            —
+                          <span className="hidden sm:inline mx-2 text-black font-bold">
+                            -
                           </span>
-                          <span className="text-green-primary-2">
+                          <span className="font-semibold text-black">
                             {flow.title}
                           </span>
                         </div>
-                        <div className="mt-3">
-                          <div className="text-sm text-gray-700">
-                            <div className="flex items-start">
-                              <i className="fas fa-tasks text-blue-500 mr-2 mt-0.5"></i>
-                              <div>
-                                <span className="ml-2">{flow.description}</span>
-                              </div>
-                            </div>
-                          </div>
+
+                        <div>
+                          <p className="text-sm text-gray-700">
+                            {flow.description}
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
-        
 
         {/* SIDEBAR */}
         <div className="w-full lg:w-2/5 xl:w-1/3">
-          <div className="lg:sticky lg:top-25">
+          <div className="lg:sticky lg:top-28">
             <MenuRegisEvent courses={courses} />
           </div>
         </div>

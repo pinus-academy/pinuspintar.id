@@ -148,7 +148,13 @@ export const courses: CourseCardProps[] = [
     image: "/java.png",
     classType: "Live Class",
     time: "19:00 - 21:00 WIB",
-    mentor: [],
+    mentor: [
+      {
+        image: "/teams/Haedar.png",
+        name: "Muhammad Haedar Alfatah",
+        role: "Data Scientist"
+      }
+    ],
     education: [
       { key: "Java Basics", value: "Syntax, variables, data types" },
       { key: "OOP", value: "Classes, objects, inheritance, polymorphism" },

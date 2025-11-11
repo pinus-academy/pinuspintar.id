@@ -21,7 +21,7 @@ export default function UpcomingCard({
             <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
                 {/* Image + Badge */}
                 <div className="relative">
-                    <a href={`/courses/${id}`} className="block">
+                    <a href={`/events/${id}`} className="block">
                         <Image
                             src={image}
                             width={1000}
