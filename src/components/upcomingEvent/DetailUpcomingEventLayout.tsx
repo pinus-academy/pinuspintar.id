@@ -167,7 +167,7 @@ const EventPage2 = ({ upcoming }: DetailUpcomingEventLayoutProps) => {
             {/* Education */}
             <div className="pt-8">
               <p className="font-poppins font-semibold text-xl mb-3">
-                What You'll Learn
+                What You’ll Learn
               </p>
 
               <ul className="text-base sm:text-lg space-y-2">

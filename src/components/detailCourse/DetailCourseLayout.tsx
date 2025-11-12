@@ -3,13 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { CourseCardProps } from "@/lib/courseTypes";
-import { CiCalendar, CiClock2 } from "react-icons/ci";
-import { FiMapPin } from "react-icons/fi";
+import Link from "next/link";
 
 interface DetailCourseLayoutProps {
   courses: CourseCardProps;
 }
-
 // -------------------- SIDEBAR REGISTER --------------------
 const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
   const { discountPrice, title, startDate, time, mentor } = courses;
@@ -34,11 +32,11 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
           Rp {discountPrice.toLocaleString("id-ID")}
         </p>
       </div>
-
-      {/* Tombol */}
-      <button className="w-full py-3 bg-green-950 text-white font-semibold text-lg rounded-2xl hover:bg-green-900 transition duration-300">
-        Buy Course
-      </button>
+      <Link href={`/events/courses/buy/${courses.id}`}>
+        <button className="w-full py-3 bg-green-950 text-white font-semibold text-lg rounded-2xl hover:bg-green-900 transition duration-300">
+          Buy Course
+        </button>
+      </Link>
 
       <hr className="border-gray-200" />
 
