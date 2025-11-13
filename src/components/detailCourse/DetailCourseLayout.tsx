@@ -8,9 +8,8 @@ import Link from "next/link";
 interface DetailCourseLayoutProps {
   courses: CourseCardProps;
 }
-// -------------------- SIDEBAR REGISTER --------------------
 const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
-  const { discountPrice, title, startDate, time, mentor } = courses;
+  const { price, discountPrice, title, startDate, time, mentor } = courses;
 
   return (
     <div
@@ -27,13 +26,16 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
     >
       {/* Harga */}
       <div className="space-y-2">
-        <p className="text-lg font-bold text-black">{title}</p>
-        <p className="text-lg text-green-600">
+        <h5 className="text-lg font-bold text-black">{title}</h5>
+        <p className=" text-lg flex items-center gap-2 text-green-secondary">
           Rp {discountPrice.toLocaleString("id-ID")}
+          <span className="text-sm font-medium text-gray-400 line-through">
+            Rp {price.toLocaleString("id-ID")}
+          </span>
         </p>
       </div>
       <Link href={`/events/courses/buy/${courses.id}`}>
-        <button className="w-full py-3 bg-green-950 text-white font-semibold text-lg rounded-2xl hover:bg-green-900 transition duration-300">
+        <button className="w-full py-3 bg-green-950 cursor-pointer text-white font-semibold text-lg rounded-2xl hover:bg-green-primary-2 transition duration-300">
           Buy Course
         </button>
       </Link>
@@ -130,7 +132,6 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
   );
 };
 
-// -------------------- MAIN PAGE --------------------
 const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
   const { title, description, benefits, education, image, learningFlow } =
     courses;

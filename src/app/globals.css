@@ -20,7 +20,8 @@
   --color-green-primary-2: #1B4032;
   --color-green-secondary: #27AE60;
   --color-green-text: #374F44;
-  --color-white-primary: #F2F2F2;
+  --color-gray-primary: #F2F2F2;
+  --color-gray-text: #cccccc;
   --color-young-green-primary: #2ECC71;
   --color-blue-primary: #00B4D8;
   --color-purple-primary: #6C63FF;
@@ -38,4 +39,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   /* font-family: 'Rubik', sans-serif; */
+/* 
+  Change background color and text color when user selects text.
+  This uses the ::selection pseudo-element to style selected (highlighted) text.
+*/
+::selection {
+  background: var(--color-green-primary);
+  color: #fff;
+}
 }

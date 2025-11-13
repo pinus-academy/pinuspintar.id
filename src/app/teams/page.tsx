@@ -45,7 +45,7 @@ export default function OurTeamsPage() {
             );
 
     return (
-        <div className="flex flex-col min-h-screen bg-white-primary">
+        <div className="flex flex-col min-h-screen bg-gray-primary">
 
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row items-center justify-start p-4 sm:p-8 w-full max-w-8xl mx-auto gap-8">
