@@ -30,6 +30,16 @@ export const news: newsProps[] = [
     "description": "HALO KENDAL – Pemerintah Kabupaten Kendal mengapresiasi digelarnya kegiatan bootcamp yang dilaksanakan oleh PT Pinus Pintar bersama Platform Kitabisa, di Kantor PT Pinus Pintar Kecamatan Boja, Kendal, Rabu (3/9/2025). ",
     "image": "/news/halosemarang_pinus.jpg",
     "url": "https://halosemarang.id/pengembangan-generasi-muda-kendal-bootcamp-web-developer-digelar-di-boja/"
+  },
+  {
+    "id": 4,
+    "title": "PT. Pinus Pintar Adakan Sosialisasi dan Beri Kuota Magang untuk Mahasiswa Poltek SCI Khusus Prodi RKJ",
+    "date": "08 Nov 2025",
+    "logo": "/news/media/logo-polteksci.png",
+    "media": "polteksci.ac.id",
+    "description": "Cirebon, 7 November 2025 — Kampus Politeknik Siber Cerdika Internasional (Poltek SCI) kembali menjalin kerja sama strategis dengan industri. Kali ini, PT. Pinus Pintar hadir secara langsung untuk memberikan sosialisasi mengenai program magang kepada mahasiswa, khususnya Program Studi Rekayasa Komputer dan Jaringan (RKJ).",
+    "image": "/news/polteksci_pinus.jpg",
+    "url": "https://polteksci.ac.id/blog/pt-pinus-pintar-adakan-sosialisasi-dan-beri-kuota-magang-untuk-mahasiswa-poltek-sci-khusus-prodi-rkj/"
   }
 ]
 

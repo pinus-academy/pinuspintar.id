@@ -25,12 +25,12 @@ export const teams: TeamCardProps[] = [
         role: "Cloud Engineer",
         photo: "/teams/Battar.png"
     },
-    {
-        id: 4,
-        name: "Raka Aji",
-        role: "Backend Developer",
-        photo: "/teams/Raka.png"
-    },
+    // {
+    //     id: 4,
+    //     name: "Raka Aji",
+    //     role: "Backend Developer",
+    //     photo: "/teams/Raka.png"
+    // },
     {
         id: 5,
         name: "Dita Setya",
@@ -38,12 +38,12 @@ export const teams: TeamCardProps[] = [
         photo: "/teams/Dita.png"
     },
 
-    {
-        id: 7,
-        name: "Septiyan Nungsizu",
-        role: "QA Engineer",
-        photo: "/teams/Sizu.png"
-    },
+    // {
+    //     id: 7,
+    //     name: "Septiyan Nungsizu",
+    //     role: "QA Engineer",
+    //     photo: "/teams/Sizu.png"
+    // },
     {
         id: 8,
         name: "Rizky Rizal Shofwan",
@@ -74,18 +74,18 @@ export const teams: TeamCardProps[] = [
         role: "DevOps Engineer",
         photo: "/teams/Umar.png"
     },
-    {
-        id: 13,
-        name: "Berland Vardy",
-        role: "Backend Developer",
-        photo: "/teams/Berland.png"
-    },
-    {
-        id: 14,
-        name: "Imam Oktriyanto",
-        role: "Backend Developer",
-        photo: "/teams/Imam.png"
-    },
+    // {
+    //     id: 13,
+    //     name: "Berland Vardy",
+    //     role: "Backend Developer",
+    //     photo: "/teams/Berland.png"
+    // },
+    // {
+    //     id: 14,
+    //     name: "Imam Oktriyanto",
+    //     role: "Backend Developer",
+    //     photo: "/teams/Imam.png"
+    // },
     {
         id: 15,
         name: "Wisnu Bestama",

@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import CourseCard from '@/components/ui/CourseCard';
@@ -12,6 +13,8 @@ import NewsCard from '@/components/ui/NewsCard';
 import Header from '@/components/about/Header';
 
 const PinusPintarHomepage = () => {
+  const [showAllNews, setShowAllNews] = React.useState(false);
+  const [isAnimating, setIsAnimating] = React.useState(false);
 
   const scrollToFeaturedCourses = () => {
     const featuredSection = document.getElementById('featured-courses');
@@ -20,9 +23,34 @@ const PinusPintarHomepage = () => {
     }
   };
 
+  const handleToggleNews = () => {
+    if (!showAllNews) {
+      // Expanding - wait for grid to expand, then show items
+      setIsAnimating(true);
+      setTimeout(() => {
+        setShowAllNews(true);
+        setTimeout(() => {
+          setIsAnimating(false);
+        }, 100);
+      }, 50);
+    } else {
+      // Collapsing - hide items first, then collapse grid
+      setIsAnimating(true);
+      setShowAllNews(false);
+      setTimeout(() => {
+        setIsAnimating(false);
+        // Smooth scroll to top of media section when collapsing
+        const mediaSection = document.getElementById('media-coverage');
+        if (mediaSection) {
+          mediaSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 400);
+    }
+  };
+
   const filteredCourses = courses;
   const filteredUpcoming = upcoming;
-  const filteredNews = news;
+  const filteredNews = [...news].sort((a, b) => b.id - a.id).slice(0, 6); // Maximum 6 items, sorted by id DESC
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -124,6 +152,7 @@ const PinusPintarHomepage = () => {
         </div>
       </div>
 
+      {/* Media Coverage Section */}
       <div className="p-8 mb-16 w-full max-w-8xl mx-auto">
         <div id="media-coverage" className="px-4 py-8 w-full max-w-8xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
@@ -132,11 +161,57 @@ const PinusPintarHomepage = () => {
         </div>
         <div>
           {filteredNews.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {filteredNews.map(news => (
-                <NewsCard key={news.id} {...news} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {/* First 3 items - always visible */}
+                {filteredNews.slice(0, 3).map((newsItem) => (
+                  <div key={newsItem.id} className="opacity-100">
+                    <NewsCard {...newsItem} />
+                  </div>
+                ))}
+                
+                {/* Additional items 4-6 with smooth expansion */}
+                <div 
+                  className={`col-span-full transition-all duration-700 ease-in-out ${
+                    showAllNews ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                  style={{
+                    overflow: showAllNews ? 'visible' : 'hidden',
+                  }}
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+                    {filteredNews.slice(3, 6).map((newsItem, index) => (
+                      <div
+                        key={newsItem.id}
+                        className={`transition-all duration-600 ease-out ${
+                          showAllNews && !isAnimating
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-8'
+                        }`}
+                        style={{
+                          transitionDelay: showAllNews ? `${300 + (index * 150)}ms` : '0ms',
+                        }}
+                      >
+                        <NewsCard {...newsItem} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              {filteredNews.length > 3 && (
+                <div className="flex justify-center mt-8 transition-all duration-300">
+                  <Button 
+                    variant="primary" 
+                    className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300"
+                    onClick={handleToggleNews}
+                    disabled={isAnimating}
+                  >
+                    {showAllNews ? 'Lihat Lebih Sedikit' : 'Lihat Semua'}
+                  </Button>
+                </div>
+              )}
+            </>
           ) : (
             <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
               Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
