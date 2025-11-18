@@ -12,7 +12,7 @@ export interface CourseCardProps {
   durationType: DurationType; // pakai union type
   level: string;
   type: string;
-  category: string;
+  categories: string[];
   featured: boolean;
   image: string;
   url?: string;

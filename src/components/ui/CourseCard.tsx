@@ -11,6 +11,7 @@
     id,
     image,
     type,
+    categories,
     title,
     description,
     benefits,
@@ -73,7 +74,7 @@
 
             {/* Badges + Price + Button */}
             <div className="mt-auto">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
                 <Badge
                   className="capitalize"
                   variant={
@@ -86,8 +87,20 @@
                 >
                   {type}
                 </Badge>
-
-                <Badge variant="blue">Web Programming</Badge>
+                {categories.map((category, i) => {
+                  // acak urutan warna variant, misal: ["blue", "amber", "gray", "green", "purple"]
+                  const colorVariants = ["blue", "amber", "gray", "green", "yellow"];
+                  // Pilih variant berdasarkan urutan indeks
+                  const variant = colorVariants[i % colorVariants.length];
+                  return (
+                    <Badge
+                      key={i}
+                      className="capitalize text-nowrap"
+                      variant={variant === "amber" ? "yellow" : variant as "blue" | "gray" | "green" | "purple" | "emerald" | "red" | "yellow"}
+                    >
+                      {category}
+                    </Badge>
+                )})}
               </div>
 
               <div className="flex items-center justify-between">

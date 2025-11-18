@@ -1,56 +1,48 @@
 import { CourseCardProps } from "@/lib/courseTypes";
 
 export const courses: CourseCardProps[] = [
-  // {
-  //   id: 1,
-  //   title: "Full-Stack Web Development",
-  //   description:
-  //     "Master modern web development with JavaScript, React, and Node.js",
-  //   benefits: [
-  //     "Certificate",
-  //     "Job Assistance",
-  //     "Portfolio Project",
-  //     "Career Mentoring",
-  //     "Live Coding Session"
-  //   ],
-  //   price: 25000000,
-  //   discountPrice: 1,
-  //   startDate: "2025-04-30",
-  //   duration: 12,
-  //   durationType: "weeks",
-  //   level: "Intermediate",
-  //   type: "Online",
-  //   category: "development",
-  //   featured: true,
-  //   image: "/js.png",
-  //   url: "https://crm.deployaja.id/lp/full-stack-web-development",
-  //   classType: "Live Class",
-  //   time: "19:00 - 21:00 WIB",
-  //   mentor: [
-  //     {
-  //       image: "/teams/Haedar.png",
-  //       name: "Muhammad Haedar Alfatah",
-  //       role: "Fullstack Developer"
-  //     }
-  //   ],
-  //   education: [
-  //     { key: "Frontend", value: "HTML, CSS, JavaScript, React.js" },
-  //     { key: "Backend", value: "Node.js, Express.js, MongoDB" },
-  //     { key: "API", value: "RESTful API & Authentication" },
-  //     { key: "Version Control", value: "Git & GitHub" },
-  //     { key: "Deployment", value: "Cloud deployment workflow" },
-  //     { key: "GraphQL", value: "Using and building GraphQL APIs" },
-  //     { key: "Final Project", value: "Build and present your portfolio project" }
-  //   ],
-  //   learningFlow: [
-  //     { modul: 1, title: "Introduction", description: "Introduction to how websites work, the difference between frontend and backend, and the tools used throughout the learning process." },
-  //     { modul: 2, title: "Frontend Development", description: "Building page structure, modern styling techniques, and responsive layouts using Flexbox & Grid." },
-  //     { modul: 3, title: "Backend Development", description: "JavaScript fundamentals, DOM manipulation, event handling, and ES6 features." },
-  //     { modul: 4, title: "API & Authentication", description: "Understanding components, props, hooks, state management, and routing." },
-  //     { modul: 5, title: "Deployment", description: "Version control, branching strategies, pull requests, and collaboration best practices." },
-  //     { modul: 6, title: "Final Project", description: "Building servers, creating REST APIs, managing routing, middleware, and data handling." }
-  //   ]
-  // },
+  {
+    id: 1,
+    title: "Java Backend Development - Part 1",
+    description:
+      "Belajar pengembangan backend menggunakan Java dengan Spring Boot",
+    benefits: [
+      "Sertifikat",
+      "Asistensi Kerja",
+      "Proyek Portofolio",
+      "Konseling Karir",
+      "Sesi Koding Langsung"
+    ],
+    price: 1500000,
+    discountPrice: 20000,
+    startDate: "2025-12-01",
+    duration: 2,
+    durationType: "days",
+    level: "Beginner",
+    type: "Online",
+    categories: ["Backend Development", "Java", "Spring Boot"],
+    featured: true,
+    image: "/course/java.png",
+    url: "https://crm.deployaja.id/lp/full-stack-web-development",
+    classType: "Live Class",
+    time: "19:00 - 21:00 WIB",
+    mentor: [
+      {
+        image: "/teams/Berland.png",
+        name: "Berland Vardy",
+        role: "Backend Developer"
+      }
+    ],
+    education: [
+      { key: "Java", value: "Java Programming" },
+      { key: "Spring Boot", value: "Spring Boot Framework" },
+    ],
+    learningFlow: [
+      { modul: 1, title: "Java Basics", description: "Variables, operators, loops" },
+      { modul: 2, title: "OOP", description: "Classes, objects, polymorphism" },
+      { modul: 3, title: "Projects", description: "Build simple real Java apps" }
+    ]
+  },
 
   // {
   //   id: 2,
