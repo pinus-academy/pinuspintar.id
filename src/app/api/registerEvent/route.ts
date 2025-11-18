@@ -7,9 +7,25 @@ interface RegisterEventPayload {
   phone: string;
   address: string;
   amount: number;
-	courseId: number;
+  courseId: number;
   courseName: string;
   customerGroup: string;
+}
+
+interface CustomerResponse {
+  customer?: {
+    id?: number | string;
+  };
+}
+
+interface PaymentResponse {
+  data?: {
+    paymentUrl?: string;
+  };
+  paymentUrl?: string;
+  payment?: {
+    url?: string;
+  };
 }
 
 export async function POST(request: NextRequest) {
@@ -18,9 +34,6 @@ export async function POST(request: NextRequest) {
 
     console.log("Incoming payload:", body);
 
-    // ============================
-    // 1️⃣ CREATE CUSTOMER FIRST
-    // ============================
     const customerPayload = {
       name: body.name,
       email: body.email,
@@ -29,48 +42,54 @@ export async function POST(request: NextRequest) {
       customerGroup: body.customerGroup,
     };
 
-    const customerResponse = await api.createCustomer(customerPayload);
+    const customerResponse = await api.createCustomer(customerPayload) as CustomerResponse;
 
     console.log("Customer created:", customerResponse);
 
     const customerId = customerResponse?.customer?.id;
-		console.log('customerId', customerId);
+    console.log('customerId', customerId);
 
     if (!customerId) {
-			console.log('customerId not found');
+      console.log('customerId not found');
       return NextResponse.json(
         { message: "Customer created but no customerId returned" },
         { status: 500 }
       );
     }
     const origin = request.nextUrl.origin;
-
-    // =====================================
-    // 2️⃣ CREATE PAYMENT USING customerId
-    // =====================================
-		
+    
     const paymentPayload = {
-      customerId: customerId, // ← PENTING
+      customerId: customerId,
       amount: body.amount,
-			totalAmount: body.amount,
-			status: 'PENDING',
+      totalAmount: body.amount,
+      status: 'PENDING',
       paymentMethod: 'QRIS',
       note: `Payment for course: ${body.courseName}`,
-			returnUrl: `${origin}/events/courses/buy/${body.courseId}`,
+      returnUrl: `${origin}/events/courses/buy/${body.courseId}`,
     };
 
-    const paymentResponse = await api.createPayment(paymentPayload);
+    const paymentResponse = await api.createPayment(paymentPayload) as PaymentResponse;
 
     console.log("Payment created:", paymentResponse);
 
-    // Final success response
-    return NextResponse.json({
-			redirectUrl: paymentResponse.data.paymentUrl
-		}, { status: 200 }
-		);
+    // Handle different possible response structures
+    const paymentUrl = paymentResponse?.data?.paymentUrl || paymentResponse?.paymentUrl || paymentResponse?.payment?.url;
+    
+    if (!paymentUrl) {
+      console.error("Payment URL not found in response:", paymentResponse);
+      return NextResponse.json(
+        { message: "Payment created but no payment URL returned" },
+        { status: 500 }
+      );
+    }
 
-  } catch (error: any) {
+    return NextResponse.json({
+      redirectUrl: paymentUrl
+    }, { status: 200 });
+
+  } catch (error: unknown) {
     console.error("Create payment flow error:", error);
-    return NextResponse.json({ message: error.message }, { status: 500 });
+    const message = error instanceof Error ? error.message : "An unknown error occurred";
+    return NextResponse.json({ message }, { status: 500 });
   }
 }

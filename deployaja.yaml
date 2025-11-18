@@ -11,4 +11,10 @@ resources:
   memory: 1024Mi
   replicas: 1
 
+env:
+  - name: "EXTERNAL_API_URL"
+    value: "https://crm.deployaja.id/api/v1"
+  - name: "EXTERNAL_API_AUTH"
+    value: "YWRtaW5AdHVuZ3R1bmcuY29tOmFkbWluMTIz"
+
 domain: pinuspintar.id

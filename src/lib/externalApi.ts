@@ -1,22 +1,45 @@
 // lib/externalApi.ts
 
-const BASE_URL = "http://localhost:5173/api/v1";
-const AUTH_HEADER = "Basic YWRtaW5AdHVuZ3R1bmcuY29tOmFkbWluMTIz";
+const BASE_URL = process.env.EXTERNAL_API_URL || "http://localhost:5173/api/v1";
+const AUTH_HEADER = process.env.EXTERNAL_API_AUTH || "YWRtaW5AdHVuZ3R1bmcuY29tOmFkbWluMTIz";
 
-async function request(path: string, options: RequestInit = {}) {
+interface ApiErrorResponse {
+  message?: string;
+  error?: string;
+}
+
+interface CustomerPayload {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  customerGroup: string;
+}
+
+interface PaymentPayload {
+  customerId: number | string;
+  amount: number;
+  totalAmount: number;
+  status: string;
+  paymentMethod: string;
+  note: string;
+  returnUrl: string;
+}
+
+async function request(path: string, options: RequestInit = {}): Promise<unknown> {
   try {
     const response = await fetch(`${BASE_URL}${path}`, {
       ...options,
       headers: {
         "Content-Type": "application/json",
-        Authorization: AUTH_HEADER,
+        Authorization: `Basic ${AUTH_HEADER}`,
         ...(options.headers || {}),
       },
     });
 
     const clone = response.clone();
 
-    let data;
+    let data: unknown;
     try {
       data = await response.json();
     } catch {
@@ -26,11 +49,12 @@ async function request(path: string, options: RequestInit = {}) {
     }
 
     if (!response.ok) {
-      throw new Error(data.message || data.error || `API error: ${response.status}`);
+      const errorData = data as ApiErrorResponse;
+      throw new Error(errorData.message || errorData.error || `API error: ${response.status}`);
     }
 
     return data;
-  } catch (err: any) {
+  } catch (err: unknown) {
     if (err instanceof TypeError && err.message.includes("fetch failed")) {
       throw new Error("Cannot connect to external API (maybe offline?)");
     }
@@ -39,13 +63,13 @@ async function request(path: string, options: RequestInit = {}) {
 }
 
 export const api = {
-  createPayment: (body: any) =>
+  createPayment: (body: PaymentPayload) =>
     request("/payments", {
       method: "POST",
       body: JSON.stringify(body),
     }),
 
-  createCustomer: (body: any) =>
+  createCustomer: (body: CustomerPayload) =>
     request("/customers", {
       method: "POST",
       body: JSON.stringify(body),
