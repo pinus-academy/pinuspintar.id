@@ -28,7 +28,7 @@
 
     return (
       <div className="w-full h-full">
-        <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full transition-transform min-h-[580px] w-[305px] group">
+        <Link href={detailUrl} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between w-full h-full transition-transform min-h-[580px] group">
           
           {/* Image - Clickable */}
             <Image
