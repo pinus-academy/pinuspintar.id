@@ -16,4 +16,20 @@ export interface CourseCardProps {
   featured: boolean;
   image: string;
   url?: string;
+  classType: string;
+  time: string;
+  mentor: {
+    image: string;
+    name: string;
+    role: string;
+  }[];
+  education: {
+    key: string;
+    value: string;
+  }[];
+  learningFlow: {
+    modul: number;
+    title: string;
+    description: string;
+  }[];
 }

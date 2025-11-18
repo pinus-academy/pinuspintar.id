@@ -4,10 +4,12 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -58,19 +60,44 @@ export default function NavBar() {
 
         {/* Menu desktop */}
         <div className="hidden lg:flex space-x-10">
-          <Link href="/" className="font-medium text-green-primary hover:text-green-700">
+          <Link 
+            href="/" 
+            className={`font-medium hover:text-green-700 ${
+              pathname === "/" ? "text-green-secondary" : "text-green-primary"
+            }`}
+          >
             Beranda
           </Link>
-          <Link href="/about" className="font-medium text-green-primary hover:text-green-700">
+          <Link 
+            href="/about" 
+            className={`font-medium hover:text-green-700 ${
+              pathname === "/about" ? "text-green-secondary" : "text-green-primary"
+            }`}
+          >
             Tentang Kami
           </Link>
-          <Link href="/events" className="font-medium text-green-primary hover:text-green-700">
+          <Link 
+            href="/events" 
+            className={`font-medium hover:text-green-700 ${
+              pathname.startsWith("/events") ? "text-green-secondary" : "text-green-primary"
+            }`}
+          >
             Acara
           </Link>
-          <Link href="/teams" className="font-medium text-green-primary hover:text-green-700">
+          <Link 
+            href="/teams" 
+            className={`font-medium hover:text-green-700 ${
+              pathname === "/teams" ? "text-green-secondary" : "text-green-primary"
+            }`}
+          >
             Tim Kami
           </Link>
-          <Link href="#" className="font-medium text-green-primary hover:text-green-700">
+          <Link 
+            href="#" 
+            className={`font-medium hover:text-green-700 ${
+              pathname === "#" ? "text-green-secondary" : "text-green-primary"
+            }`}
+          >
             Kemitraan
           </Link>
         </div>
@@ -109,23 +136,33 @@ export default function NavBar() {
             { href: "/events", label: "Acara" },
             { href: "/teams", label: "Tim Kami" },
             { href: "#", label: "Kemitraan" }
-          ].map((item, index) => (
-            <Link 
-              key={item.label}
-              href={item.href} 
-              className={`font-medium text-green-primary hover:text-green-700 transition-all duration-200 hover:scale-105 transform ${
-                isOpen 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-4'
-              }`}
-              style={{
-                transitionDelay: isOpen ? `${index * 50}ms` : '0ms'
-              }}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          ].map((item, index) => {
+            const isActive = item.href === "/" 
+              ? pathname === "/"
+              : item.href === "/events"
+              ? pathname.startsWith("/events")
+              : pathname === item.href;
+            
+            return (
+              <Link 
+                key={item.label}
+                href={item.href} 
+                className={`font-medium hover:text-green-700 transition-all duration-200 hover:scale-105 transform ${
+                  isActive ? "text-green-secondary" : "text-green-primary"
+                } ${
+                  isOpen 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-4'
+                }`}
+                style={{
+                  transitionDelay: isOpen ? `${index * 50}ms` : '0ms'
+                }}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

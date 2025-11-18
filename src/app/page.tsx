@@ -103,21 +103,16 @@ const PinusPintarHomepage = () => {
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredCourses.slice(0, 4).map(course => (
-            <div
-              key={course.id}
-              className="w-full max-w-xs mx-auto sm:max-w-none"
-            >
-              <CourseCard {...course} />
-            </div>
+            <CourseCard key={course.id} {...course} />
           ))}
             </div>
             {filteredCourses.length > 4 && (
           <div className="flex justify-center mt-8">
-            <Link href="/events">
-              <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium">
-            Lihat Semua Bootcamp
-              </Button>
-            </Link>
+            <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300">
+              <Link href="/events">
+                  Lihat Semua
+              </Link>
+            </Button>
           </div>
             )}
           </>
