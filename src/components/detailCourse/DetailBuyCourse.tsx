@@ -169,7 +169,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
 
               <div className="mt-6">
                 <label className="block text-sm font-medium mb-1">
-                  Tempat Tinggal
+                  Domisili
                 </label>
                 <input
                   type="text"
