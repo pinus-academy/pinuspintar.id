@@ -8,7 +8,6 @@
 
 
   export default function CourseCard({
-    id,
     slug,
     image,
     type,
