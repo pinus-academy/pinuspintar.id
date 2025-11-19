@@ -51,7 +51,7 @@ export default function OurTeamsPage() {
             <div className="flex flex-col lg:flex-row items-center justify-start p-4 sm:p-8 w-full max-w-8xl mx-auto gap-8">
                 <div className="flex-shrink-0 w-full max-w-[542px] h-[360px] sm:h-[300px] md:h-[360px] lg:w-1/2">
                     <Image
-                        src="/teams.jpg"
+                        src="/teams.JPEG"
                         alt="Tim Kami"
                         width={600}
                         height={400}

@@ -38,6 +38,13 @@ export const teams: TeamCardProps[] = [
         photo: "/teams/Dita.png"
     },
 
+    {
+        id: 16,
+        name: "Riki Fasehan",
+        role: "Community Coordinator",
+        photo: "/teams/Riki.png"
+    },
+
     // {
     //     id: 7,
     //     name: "Septiyan Nungsizu",
