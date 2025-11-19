@@ -36,7 +36,7 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
       </div>
       <Link href={`/events/courses/buy/${courses.id}`}>
         <button className="w-full py-3 bg-green-950 cursor-pointer text-white font-semibold text-lg rounded-2xl hover:bg-green-primary-2 transition duration-300">
-          Buy Course
+          Beli Kursus
         </button>
       </Link>
 
@@ -64,7 +64,7 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
 
       {/* Informasi Event */}
       <div className="space-y-4">
-        <p className="text-lg font-semibold text-black">This Course Include</p>
+        <p className="text-lg font-semibold text-black">Rincian Kursus</p>
 
         <div className="space-y-5">
           <div className="flex items-center gap-3 text-sm text-gray-700">
@@ -162,8 +162,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
           <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2] space-y-8">
             <div className="text-black">
               <p className="font-poppins font-bold text-xl mb-3">
-                About The Course
-              </p>
+                Tentang Kursus              </p>
               <p className="text-base sm:text-lg leading-relaxed text-justify">
                 {description}
               </p>
@@ -172,8 +171,8 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
             {/* What You'll Learn */}
             <div className="">
               <p className="font-poppins font-semibold text-xl mb-3">
-                What You’ll Learn
-              </p>
+                Materi yang Akan Dipelajari             
+                </p>
               <ul className="text-base sm:text-lg list-disc list-inside space-y-1">
                 {education.map((edu, index) => (
                   <li key={index}>
@@ -185,7 +184,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
 
             {/* Benefits */}
             <div className="">
-              <h2 className="font-semibold text-xl mb-3">Benefits</h2>
+              <h2 className="font-semibold text-xl mb-3">Keuntungan yang didapat</h2>
               <ul className="text-base sm:text-lg list-disc list-inside space-y-1">
                 {benefits.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -197,7 +196,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
           {/* Learning Flow */}
           <div className="border border-[#F2F2F2] w-full p-4 sm:p-6 rounded-lg">
             <h3 className="font-semibold text-gray-800 mb-8 text-xl">
-              Content Class
+              Alur Pembelajaran
             </h3>
 
             <div className="relative">
