@@ -2,6 +2,7 @@ type DurationType = "days" | "weeks";
 
 export interface CourseCardProps {
   id: number;
+  slug: string;
   title: string;
   description: string;
   benefits: string[];

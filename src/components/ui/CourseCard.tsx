@@ -9,6 +9,7 @@
 
   export default function CourseCard({
     id,
+    slug,
     image,
     type,
     categories,
@@ -23,7 +24,7 @@
       : (benefits as string).split(",").map((b) => b.trim());
 
     const shortDescription = truncateText(description, 100);
-    const detailUrl =  `/events/courses/${id}`;
+    const detailUrl =  `/events/courses/${slug}`;
 
 
 
@@ -59,7 +60,7 @@
               {/* Benefits */}
               <ul className="space-y-2 my-4">
                 {benefitList
-                  .slice(3, benefitList.length)
+                  .slice(2, benefitList.length)
                   .map((benefit, i) => (
                     <li
                       key={i}
@@ -88,9 +89,7 @@
                   {type}
                 </Badge>
                 {categories.map((category, i) => {
-                  // acak urutan warna variant, misal: ["blue", "amber", "gray", "green", "purple"]
                   const colorVariants = ["blue", "amber", "gray", "green", "yellow"];
-                  // Pilih variant berdasarkan urutan indeks
                   const variant = colorVariants[i % colorVariants.length];
                   return (
                     <Badge

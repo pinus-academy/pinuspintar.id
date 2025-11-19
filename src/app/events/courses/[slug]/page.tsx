@@ -4,15 +4,14 @@ import { courses } from "@/lib/courses";
 
 interface DetailCoursePageProps {
   params: Promise<{
-    id: string;
+    slug: string;
   }>;
 }
 
 export default async function DetailCoursePage({ params }: DetailCoursePageProps) {
-  const { id } = await params;
-  const courseId = parseInt(id);
+  const { slug } = await params;
 
-  const eventData = courses.find((t) => t.id === courseId);
+  const eventData = courses.find((t) => t.slug === slug);
 
   if (!eventData) {
     return notFound();

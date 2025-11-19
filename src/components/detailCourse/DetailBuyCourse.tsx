@@ -32,15 +32,12 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
     setIsSubmitting(true);
 
     try {
-      // Remove dashes from phone number for submission
       let phoneNumber = phone.replace(/-/g, "");
       
-      // Validate phone number has at least 9 digits
       if (phoneNumber.length < 9) {
         throw new Error("Phone number must be at least 9 digits");
       }
 
-      // Ensure phone number starts with 0 (Indonesian format)
       if (!phoneNumber.startsWith("0")) {
         phoneNumber = `0${phoneNumber}`;
       }
@@ -69,7 +66,6 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
       const data = await response.json();
       console.log("Event registered successfully:", data);
 
-      // Check the returned paymentUrl and redirect if present
       if (data.redirectUrl) {
         window.location.href = data.redirectUrl;
       }
