@@ -138,7 +138,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
 
   return (
     <section className="relative bg-white">
-      <div className="max-w-[1500px] mx-auto p-4 sm:p-6 lg:p-10 flex flex-col lg:flex-row gap-10 pt-10 sm:pt-16 lg:pt-20">
+      <div className="max-w-8xl mx-auto p-4 sm:p-6 lg:p-10 flex flex-col lg:flex-row gap-10 pt-10 sm:pt-16 lg:pt-20">
         {/* MAIN CONTENT */}
         <div className="w-full lg:w-3/5 xl:w-2/3 space-y-10">
           {/* TITLE + IMAGE */}
@@ -159,7 +159,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
           </div>
 
           {/* DESCRIPTION */}
-          <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2] space-y-10">
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-[#F2F2F2] space-y-8">
             <div className="text-black">
               <p className="font-poppins font-bold text-xl mb-3">
                 About The Course
@@ -170,7 +170,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
             </div>
 
             {/* What You'll Learn */}
-            <div className="pt-8">
+            <div className="">
               <p className="font-poppins font-semibold text-xl mb-3">
                 What You’ll Learn
               </p>
@@ -184,7 +184,7 @@ const EventPage2 = ({ courses }: DetailCourseLayoutProps) => {
             </div>
 
             {/* Benefits */}
-            <div className="pt-8">
+            <div className="">
               <h2 className="font-semibold text-xl mb-3">Benefits</h2>
               <ul className="text-base sm:text-lg list-disc list-inside space-y-1">
                 {benefits.map((item, index) => (
