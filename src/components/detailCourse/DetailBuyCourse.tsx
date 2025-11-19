@@ -6,7 +6,7 @@ import { CourseCardProps } from "@/lib/courseTypes";
 
 interface DetailBuyCourseProps {
   courses: CourseCardProps;
-	resultCode?: string;
+  resultCode?: string;
 }
 
 const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
@@ -33,7 +33,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
 
     try {
       let phoneNumber = phone.replace(/-/g, "");
-      
+
       if (phoneNumber.length < 9) {
         throw new Error("Phone number must be at least 9 digits");
       }
@@ -87,7 +87,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
     <section className="pt-24 pb-10 space-y-10">
       <div className="bg-[#F9F9F9]  px-3 py-8 lg:py-10">
         <h1 className="text-center font-semibold text-2xl text-green-text lg:text-3xl">
-          COURSE PURCHASE FORM – PINUS PINTAR
+          FORMULIR PENDAFTARAN KURSUS – PINUS PINTAR
         </h1>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-3 max-w-8xl mx-auto lg:flex-row lg:gap-6">
@@ -96,7 +96,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
           <div className="w-full min-h-fit rounded-2xl p-6 sm:p-8 border-2 border-gray-primary space-y-10">
             <div className="text-black">
               <p className="font-poppins font-bold text-xl mb-6">
-                Personal Information
+                Informasi Pribadi
               </p>
 
               {error && (
@@ -108,7 +108,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Full name
+                    Nama Lengkap
                   </label>
                   <input
                     type="text"
@@ -169,7 +169,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
 
               <div className="mt-6">
                 <label className="block text-sm font-medium mb-1">
-                  Residence
+                  Domisili
                 </label>
                 <input
                   type="text"
@@ -202,7 +202,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
           </div>
 
           <div>
-            {! resultCode ? (
+            {!resultCode ? (
               <>
                 <div className="px-4 py-5 border-b-2 border-gray-primary lg:px-8">
                   <div className="flex items-center gap-2 mb-5">
@@ -220,7 +220,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                         d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
                       />
                     </svg>
-                    <p className="font-semibold text-black">Voucher Code</p>
+                    <p className="font-semibold text-black">Kode Promo</p>
                   </div>
 
                   <div className="flex items-center gap-2">
@@ -285,16 +285,16 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                           strokeLinecap="round"
                         />
                       </svg>
-                      <p className="font-semibold">Total Price</p>
+                      <p className="font-semibold">Total Biaya</p>
                     </div>
 
                     <div className="space-y-3 text-sm">
                       <p className="flex justify-between text-gray-500">
-                        Price
+                        Harga
                         <span>Rp {price.toLocaleString("id-ID")}</span>
                       </p>
                       <p className="flex justify-between text-gray-500">
-                        Discount
+                        Diskon
                         <span>
                           - Rp {(price - discountPrice).toLocaleString("id-ID")}
                         </span>
@@ -317,7 +317,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Submitting..." : "Pay"}
+                    {isSubmitting ? "Sedang Diproses..." : "Bayar Sekarang"}
                   </button>
                 </div>
               </>
@@ -335,7 +335,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                     </svg>
                   </div>
                 </div>
-								<p className="text-green-600 text-center text-lg font-semibold">Pembayaran Berhasil</p>
+                <p className="text-green-600 text-center text-lg font-semibold">Pembayaran Berhasil</p>
               </div>
             )}
           </div>
