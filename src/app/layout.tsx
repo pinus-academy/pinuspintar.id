@@ -12,7 +12,20 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Beranda - PinusPintar.id",
-  description: "Intensive bootcamps in tech, design, and digital marketing.",
+  description: "Intensive bootcamps in tech, design, and DevOps Engineer.",
+  openGraph: {
+    title: "PinusPintar.id",
+    description: "Intensive bootcamps in tech, design, and DevOps Engineer",
+    url: "https://pinuspintar.id/",
+    images: [
+      {
+        url: "https://pinuspintar.id/icon/green.svg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
