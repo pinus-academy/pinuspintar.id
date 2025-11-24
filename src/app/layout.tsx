@@ -16,8 +16,12 @@ export const metadata: Metadata = {
     description: "Intensive bootcamps in tech, design, and DevOps Engineer",
     url: "https://pinuspintar.id",
     images: [
-      "https://pinuspintar.id/og-image-v2.png"
-    ],
+      {
+        url: "https://pinuspintar.id/og-image-v2.png?=2",
+        width: 1200,
+        height: 630,
+      }
+    ]
   },
 };
 
@@ -32,7 +36,7 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased mt-20`}
       >
         <NavBar />
-          {children}
+        {children}
         <Footer />
       </body>
     </html>
