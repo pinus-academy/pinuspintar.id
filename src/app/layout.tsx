@@ -11,19 +11,21 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pinuspintar.id"),
   openGraph: {
     title: "PinusPintar.id",
     description: "Intensive bootcamps in tech, design, and DevOps Engineer",
     url: "https://pinuspintar.id",
     images: [
       {
-        url: "https://pinuspintar.id/og-image-v2.png?=2",
+        url: "/og-image-v2.png?v=2",
         width: 1200,
         height: 630,
       }
-    ]
+    ],
   },
 };
+
 
 export default function RootLayout({
   children,
