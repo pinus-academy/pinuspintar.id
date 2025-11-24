@@ -1,12 +1,8 @@
+"use client";
+
 import { talents } from '@/lib/talents';
 import TalentCard from '@/components/ui/TalentCard';
 import { useState, useMemo, Suspense } from 'react';
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Bakat - PinusPintar.id",
-  description: "Intensive bootcamps in tech, design, and digital marketing.",
-};
 
 type SelectChangeEvent = React.ChangeEvent<HTMLSelectElement>;
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;

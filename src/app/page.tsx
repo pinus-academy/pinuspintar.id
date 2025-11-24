@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
@@ -9,12 +11,6 @@ import Link from "next/link";
 import { news } from '@/lib/news';
 import NewsCard from '@/components/ui/NewsCard';
 import Header from '@/components/about/Header';
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Beranda - PinusPintar.id",
-  description: "Intensive bootcamps in tech, design, and digital marketing.",
-};
 
 const PinusPintarHomepage = () => {
   const [showAllNews, setShowAllNews] = React.useState(false);
