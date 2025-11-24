@@ -1,10 +1,14 @@
-'use client';
-
 import Image from 'next/image';
 import { upcoming } from '@/lib/upcoming';
 import { courses } from '@/lib/courses';
 import UpcomingCard from '@/components/ui/UpcomingCard';
 import CourseCard from '@/components/ui/CourseCard';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Acara - PinusPintar.id",
+  description: "Intensive bootcamps in tech, design, and digital marketing.",
+};
 
 const EventPage = () => {
 

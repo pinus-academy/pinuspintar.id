@@ -1,8 +1,13 @@
-'use client';
 
 import React from 'react';
 import Image from 'next/image';
 import Header from '@/components/about/Header';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang Kami - PinusPintar.id",
+  description: "Intensive bootcamps in tech, design, and digital marketing.",
+};
 
 const AboutUsPage = () => {
 

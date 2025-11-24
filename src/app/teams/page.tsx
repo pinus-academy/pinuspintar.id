@@ -1,9 +1,14 @@
-'use client';
-
 import TeamsCard from '@/components/ui/TeamsCard';
 import { teams } from '@/lib/teams';
 import Image from 'next/image';
 import { useState } from 'react';
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Tim Kami - PinusPintar.id",
+  description: "Intensive bootcamps in tech, design, and digital marketing.",
+};
 
 const roleGroupKeys = [
     "All",
