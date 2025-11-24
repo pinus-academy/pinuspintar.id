@@ -10,7 +10,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   openGraph: {
     title: "PinusPintar.id",
     description: "Intensive bootcamps in tech, design, and DevOps Engineer",
