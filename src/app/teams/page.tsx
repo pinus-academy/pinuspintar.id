@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import TeamsCard from '@/components/ui/TeamsCard';
 import { teams } from '@/lib/teams';

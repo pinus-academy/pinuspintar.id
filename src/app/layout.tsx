@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PinusPintar.id",
+  title: "Beranda - PinusPintar.id",
   description: "Intensive bootcamps in tech, design, and digital marketing.",
 };
 

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { talents } from '@/lib/talents';
 import TalentCard from '@/components/ui/TalentCard';
