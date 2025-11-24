@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://pinuspintar.id/",
     images: [
       {
-        url: "https://pinuspintar.id/icon/green.svg",
+        url: "https://pinuspintar.id/og-image.png",
         width: 1200,
         height: 630,
       },
