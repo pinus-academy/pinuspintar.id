@@ -26,8 +26,8 @@ export default function Header() {
           </div>
         </div>
         <div className='flex-1/3 space-y-4 md:space-y-7 lg:pt-12 text-justify'>
-          <h1 className='text-green-900 font-bold text-4xl '>About Us</h1>
-          <h2 className='text-[#75857E] font-bold text-3xl md:text-4xl'>BOOTCAMP COODING</h2>
+          <h1 className='text-green-900 font-bold text-4xl '>Tentang Kami</h1>
+          <h2 className='text-[#75857E] font-bold text-3xl md:text-4xl'>BOOTCAMP CODING</h2>
           <p className='text-black '> <span className='font-bold text-[#183428]'>PINUS PINTAR TEKNOLOGI</span> adalah komunitas belajar pengembangan talenta teknologi. Berdiri sejak empat  tahun lalu.</p>
           <p className='text-black '>Kami telah memberdayakan lebih dari <span className='font-bold text-[#183428]'>250 peserta </span> ,terdiri dari 49 peserta tatap muka dan lebih dari 220 peserta online, untuk mempelajari coding, devops, cloud engineer dari tingkat dasar hingga siap kerja.</p>
           <p className='text-black '> <span className=' text-[#183428] font-bold'>Semua pembelajaran diberikan secara gratis </span>, termasuk akses ke fasilitas laptop bagi peserta. Pendekatan kami berbasis proyek nyata dan didukung oleh mentor industri, untuk memastikan pesertamemiliki keterampilan yang dibutuhkan dunia kerja saat ini.</p>
