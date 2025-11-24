@@ -10,21 +10,14 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "Beranda - PinusPintar.id",
-  description: "Intensive bootcamps in tech, design, and DevOps Engineer.",
+export const metadata = {
   openGraph: {
     title: "PinusPintar.id",
     description: "Intensive bootcamps in tech, design, and DevOps Engineer",
-    url: "https://pinuspintar.id/",
+    url: "https://pinuspintar.id",
     images: [
-      {
-        url: "https://pinuspintar.id/og-image.png",
-        width: 1200,
-        height: 630,
-      },
+      "https://pinuspintar.id/og-image-v2.png"
     ],
-    type: "website",
   },
 };
 
