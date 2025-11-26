@@ -8,13 +8,17 @@ import { courses } from '@/lib/courses';
 import UpcomingCard from '@/components/ui/UpcomingCard';
 import { upcoming } from '@/lib/upcoming';
 import Link from "next/link";
-import { news } from '@/lib/news';
+import { news, events } from '@/lib/news';
 import NewsCard from '@/components/ui/NewsCard';
+import EventsCard from '@/components/ui/EventCard';
 import Header from '@/components/about/Header';
 
 const PinusPintarHomepage = () => {
   const [showAllNews, setShowAllNews] = React.useState(false);
   const [isAnimating, setIsAnimating] = React.useState(false);
+
+  const [showAllProgram, setShowAllProgram] = React.useState(false);
+  const [isAnimatingProgram, setIsAnimatingProgram] = React.useState(false);
 
   const scrollToFeaturedCourses = () => {
     const featuredSection = document.getElementById('featured-courses');
@@ -47,10 +51,32 @@ const PinusPintarHomepage = () => {
       }, 400);
     }
   };
+  const toggleProgram = () => {
+    if (!showAllProgram) {
+      setIsAnimatingProgram(true);
+      setTimeout(() => {
+        setShowAllProgram(true);
+        setTimeout(() => setIsAnimatingProgram(false), 100);
+      }, 50);
+    } else {
+      setIsAnimatingProgram(true);
+      setShowAllProgram(false);
+      setTimeout(() => {
+        setIsAnimatingProgram(false);
+        const section = document.getElementById('last-program');
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 400);
+    }
+  };
 
   const filteredCourses = courses;
   const filteredUpcoming = upcoming;
-  const filteredNews = [...news].sort((a, b) => b.id - a.id).slice(0, 6); // Maximum 6 items, sorted by id DESC
+  const filteredNews = [...news,]
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 6);
+  const filteredEvent = [...events]
+    .sort((c, d) => c.id - d.id)
+    .slice(0, 6);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -94,33 +120,33 @@ const PinusPintarHomepage = () => {
       <div className="p-8 w-full max-w-8xl mx-auto">
         <div id="featured-courses" className="px-4 py-8 w-full max-w-8xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
-        Program Bootcamp
+            Program Bootcamp
           </h2>
         </div>
         <div>
           <div>
-        {filteredCourses.length > 0 ? (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredCourses.slice(0, 4).map(course => (
-            <CourseCard key={course.id} {...course} />
-          ))}
-            </div>
-            {filteredCourses.length > 4 && (
-          <div className="flex justify-center mt-8">
-            <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300">
-              <Link href="/events">
-                  Lihat Semua
-              </Link>
-            </Button>
-          </div>
+            {filteredCourses.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {filteredCourses.slice(0, 4).map(course => (
+                    <CourseCard key={course.id} {...course} />
+                  ))}
+                </div>
+                {filteredCourses.length > 4 && (
+                  <div className="flex justify-center mt-8">
+                    <Button variant="primary" className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300">
+                      <Link href="/events">
+                        Lihat Semua
+                      </Link>
+                    </Button>
+                  </div>
+                )}
+              </>
+            ) : (
+              <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
+                Belum ada kursus yang tersedia saat ini — nantikan pembaruan selanjutnya!
+              </p>
             )}
-          </>
-        ) : (
-          <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
-            Belum ada kursus yang tersedia saat ini — nantikan pembaruan selanjutnya!
-          </p>
-        )}
           </div>
         </div>
       </div>
@@ -164,12 +190,11 @@ const PinusPintarHomepage = () => {
                     <NewsCard {...newsItem} />
                   </div>
                 ))}
-                
+
                 {/* Additional items 4-6 with smooth expansion */}
-                <div 
-                  className={`col-span-full transition-all duration-700 ease-in-out ${
-                    showAllNews ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                <div
+                  className={`col-span-full transition-all duration-700 ease-in-out ${showAllNews ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                   style={{
                     overflow: showAllNews ? 'visible' : 'hidden',
                   }}
@@ -178,11 +203,10 @@ const PinusPintarHomepage = () => {
                     {filteredNews.slice(3, 6).map((newsItem, index) => (
                       <div
                         key={newsItem.id}
-                        className={`transition-all duration-600 ease-out ${
-                          showAllNews && !isAnimating
+                        className={`transition-all duration-600 ease-out ${showAllNews && !isAnimating
                             ? 'opacity-100 translate-y-0'
                             : 'opacity-0 translate-y-8'
-                        }`}
+                          }`}
                         style={{
                           transitionDelay: showAllNews ? `${300 + (index * 150)}ms` : '0ms',
                         }}
@@ -193,16 +217,80 @@ const PinusPintarHomepage = () => {
                   </div>
                 </div>
               </div>
-              
+
               {filteredNews.length > 3 && (
                 <div className="flex justify-center mt-8 transition-all duration-300">
-                  <Button 
-                    variant="primary" 
+                  <Button
+                    variant="primary"
                     className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300"
                     onClick={handleToggleNews}
                     disabled={isAnimating}
                   >
                     {showAllNews ? 'Lihat Lebih Sedikit' : 'Lihat Semua'}
+                  </Button>
+                </div>
+              )}
+            </>
+          ) : (
+            <p className="text-center text-gray-500 py-10 font-medium text-[20px]">
+              Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
+            </p>
+          )}
+        </div>
+      </div>
+      <div className='p-8 mb-16 w-full max-w-8xl mx-auto'>
+        <div id="media-coverage" className="px-4 py-8 w-full max-w-8xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Progam Terakhir
+          </h2>
+        </div>
+        <div>
+          {filteredNews.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {/* First 3 items - always visible */}
+                {filteredEvent.slice(0, 3).map((item) => (
+                  <div key={item.id} className="opacity-100">
+                    <EventsCard {...item} />
+                  </div>
+                ))}
+
+                {/* Additional items 4-6 with smooth expansion */}
+                <div
+                  className={`col-span-full transition-all duration-700 ease-in-out ${showAllProgram ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  style={{
+                    overflow: showAllNews ? 'visible' : 'hidden',
+                  }}
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+                    {filteredEvent.slice(3, 6).map((item, index) => (
+                      <div
+                        key={item.id}
+                        className={`transition-all duration-600 ease-out ${showAllProgram && !isAnimatingProgram
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-8'
+                          }`}
+                        style={{
+                          transitionDelay: showAllProgram ? `${300 + (index * 150)}ms` : '0ms',
+                        }}
+                      >
+                        <EventsCard {...item} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {filteredEvent.length > 3 && (
+                <div className="flex justify-center mt-8 transition-all duration-300">
+                  <Button
+                    variant="primary"
+                    className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300"
+                    onClick={toggleProgram}
+                    disabled={isAnimatingProgram}
+                  >
+                    {showAllProgram ? 'Lihat Lebih Sedikit' : 'Lihat Semua'}
                   </Button>
                 </div>
               )}
