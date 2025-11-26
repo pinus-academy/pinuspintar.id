@@ -1,7 +1,6 @@
 import { events } from '@/lib/news'
 import Image from 'next/image';
 import type { Metadata } from "next";
-import { spawn } from 'child_process';
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://pinuspintar.id"),

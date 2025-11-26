@@ -6,8 +6,6 @@ export default function EventsCard({
     title,
     startDate,
     endDate,
-    logo,
-    media,
     description,
     image,
     url
