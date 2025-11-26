@@ -99,7 +99,7 @@ export default function BootcampLanding() {
                                     alt={`gambar-${index}`}
                                     width={305}
                                     height={381}
-                                    className="w-40 h-100 md:w-80 object-cover"
+                                    className="w-40 h-100 md:w-80 max-h-50 object-cover"
                                 />
                             ))}
                         </div>
