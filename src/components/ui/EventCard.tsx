@@ -1,4 +1,4 @@
-import { eventProps } from "@/lib/newsTypes";
+import { eventProps } from "@/lib/eventTypes";
 import { truncateText } from "@/lib/utils";
 import Image from "next/image";
 

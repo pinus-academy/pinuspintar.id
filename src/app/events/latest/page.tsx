@@ -1,4 +1,4 @@
-import { events } from '@/lib/news'
+import { events } from '@/lib/events'
 import Image from 'next/image';
 import type { Metadata } from "next";
 
