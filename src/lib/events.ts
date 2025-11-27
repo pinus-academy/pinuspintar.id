@@ -4,7 +4,7 @@ export const events: eventProps[] = [
   {
     "id": 5,
     "title": "Beasiswa Pelatihan Kerja Tech4Hope",
-    "startDate": "08 Okt 2025",
+    "startDate": "08 Sep 2025",
     "endDate": "Sekarang",
     "logo": "/news/media/kitabisa.png",
     "icon": "/news/media/Union.png",
