@@ -63,9 +63,10 @@ export default function BootcampLanding() {
                             <Image
                                 src={bootcampData.image}
                                 alt="event image"
-                                width={2000}
-                                height={1000}
-                                className="w-full h-56 sm:h-72 md:h-80 lg:h-[420px] rounded-2xl object-cover"
+                                priority
+                                width={3000}
+                                height={3000}
+                                className="w-full h-56 sm:h-72 md:h-80 lg:max-h-1/3 lg:h-full rounded-2xl object-cover"
                             />
                             <div className="absolute top-3 right-4 z-10 flex gap-3 bg-white text-black px-3 py-1 rounded-md shadow-lg text-sm h-10 items-center ">
                                 <Image src="/icon/calendar.svg" width={20} height={20} alt="Calendar" />
