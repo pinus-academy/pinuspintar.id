@@ -3,7 +3,7 @@ export interface eventProps{
     title: string;
     startDate: string;
     endDate: string;
-    logo: string|null;
+    banner: string;
     icon: string|null;
     media: string;
     description: string;

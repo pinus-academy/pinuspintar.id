@@ -7,7 +7,7 @@ export default function EventsCard({
     startDate,
     endDate,
     description,
-    image,
+    banner,
     url
 }: eventProps) {
     const shortDescription = truncateText(description, 100);
@@ -18,7 +18,7 @@ export default function EventsCard({
                 <div className="relative">
                     <div className="block">
                         <Image
-                            src={image}
+                            src={banner}
                             width={1200}
                             height={1000}
                             alt={title}
