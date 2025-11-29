@@ -1,5 +1,4 @@
 import { certificates } from '@/lib/certificates';
-import { events } from '@/lib/events'
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
@@ -36,9 +35,9 @@ import { notFound } from 'next/navigation';
 //     },
 // };
 
-export default function CertificateDetail({ params }: { params: { id: string } }) {
-
-    const decodedId = decodeURIComponent(params.id);
+export default async function CertificateDetail({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const decodedId = decodeURIComponent(id);
     const certificate = certificates.find(certificate => certificate.id === decodedId);
 
     if (!certificate) {
