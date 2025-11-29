@@ -7,12 +7,12 @@ export const teams: TeamCardProps[] = [
         role: "Director",
         photo: "/teams/Ghozali.png"
     },
-    {
-        id: 6,
-        name: "Haedar Alfatah",
-        role: "VP of Strategy",
-        photo: "/teams/Haedar.png"
-    },
+    // {
+    //     id: 6,
+    //     name: "Haedar Alfatah",
+    //     role: "VP of Strategy",
+    //     photo: "/teams/Haedar.png"
+    // },
     {
         id: 2,
         name: "Feri Ferdiyanto",
@@ -72,7 +72,7 @@ export const teams: TeamCardProps[] = [
     {
         id: 11,
         name: "Rafi Aziz",
-        role: "QA Engineer",
+        role: "Software QA",
         photo: "/teams/Rafi.png"
     },
     {
@@ -96,7 +96,7 @@ export const teams: TeamCardProps[] = [
     {
         id: 15,
         name: "Wisnu Bestama",
-        role: "Frontend Developer",
+        role: "Data Engineer",
         photo: "/teams/Wisnu.png"
     },
 ];
