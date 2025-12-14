@@ -52,8 +52,11 @@ const AboutUsPage = () => {
         <div className='text-center mb-8 py-20'>
           <h1 className='font-bold text-[32px] text-[#374F44] mb-10 lg:mb-20 '>Galeri Kami</h1>
           <div className='flex flex-wrap gap-8 justify-center lg:justify-start'>
-            <Image src={'/gambar8.png'} loading='lazy' alt='gambar 8' width={305} height={381} className='w-40 md:w-80' />
-            <Image src={'/gambar9.png'} loading='lazy' alt='gambar 9' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/galleries/rafi-journey.jpeg'} loading='lazy' alt='rafi journey' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/galleries/dita-journey.jpeg'} loading='lazy' alt='dita journey' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/galleries/wisnu-journey.jpeg'} loading='lazy' alt='wisnu journey' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/galleries/imam-ig.png'} loading='lazy' alt='gambar 8' width={305} height={381} className='w-40 md:w-80' />
+            <Image src={'/galleries/beasiswa.png'} loading='lazy' alt='gambar 9' width={305} height={381} className='w-40 md:w-80' />
           </div>
         </div>
       </div>
