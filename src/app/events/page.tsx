@@ -101,7 +101,7 @@ const EventPage = () => {
               }
             }}
           >
-            {filteredCourses.map((course, index) => (
+            {filteredCourses.map((course) => (
               <motion.div
                 key={course.id}
                 variants={{
@@ -163,7 +163,7 @@ const EventPage = () => {
               }
             }}
           >
-            {filteredUpcoming.map((item, index) => (
+            {filteredUpcoming.map((item) => (
               <motion.div
                 key={item.id}
                 variants={{

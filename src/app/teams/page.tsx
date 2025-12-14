@@ -160,7 +160,7 @@ export default function OurTeamsPage() {
                                 }
                             }}
                         >
-                            {filteredTeams.map((team, index) => (
+                            {filteredTeams.map((team) => (
                                 <motion.div
                                     key={team.id}
                                     variants={{
