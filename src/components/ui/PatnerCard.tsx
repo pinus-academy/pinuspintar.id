@@ -26,7 +26,6 @@ export default function PatnerCard({
                 <div>
                     <p className="text-base text-justify text-gray-500">
                         {description}
-                        {/* <span className="text-green-primary font-semibold">Selengkapnya</span> */}
                     </p>
                 </div>
             </div>

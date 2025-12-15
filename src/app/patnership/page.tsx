@@ -13,7 +13,7 @@ const PatnershipPage = () => {
     const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
 
     return (
-        <section ref={sectionRef} className='relative min-h-screen p-20'>
+        <section ref={sectionRef} className='relative min-h-screen px-8 lg:p-20'>
             <motion.h2
                 className='flex justify-center text-4xl font-bold pb-20 text-green-primary text-center'
                 initial={{ opacity: 0, y: 30 }}
