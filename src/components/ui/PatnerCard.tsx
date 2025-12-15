@@ -7,7 +7,7 @@ export default function PatnerCard({
     bgColor,
     image,
 }: patnerProps) {
-    const bgColorClass = bgColor ? `bg-[${bgColor}]` : "";
+    const bgColorClass = bgColor ? `bg-[#3E62AC]` : "";
 
     return (
         <div className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
