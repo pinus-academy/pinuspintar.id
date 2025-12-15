@@ -93,7 +93,7 @@ export default function NavBar() {
             Tim Kami
           </Link>
           <Link 
-            href="#" 
+            href="/patnership" 
             className={`font-medium hover:text-green-700 ${
               pathname === "#" ? "text-green-secondary" : "text-green-primary"
             }`}
