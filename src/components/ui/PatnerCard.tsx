@@ -11,7 +11,7 @@ export default function PatnerCard({
     return (
         <div className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
             <div className="relative">
-                <div className={"block p-16 " + (bgColor ? `bg-[${bgColor}]` : "")} >
+                <div className={"block p-16 " + (bgColor ? `bg-[#3E62AC]` : "")} >
                     <Image
                         src={image}
                         width={1000}
