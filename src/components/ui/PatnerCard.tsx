@@ -1,5 +1,4 @@
 import { patnerProps } from "@/lib/patnerTypes";
-import { truncateText } from "@/lib/utils";
 import Image from "next/image";
 
 export default function PatnerCard({
@@ -8,7 +7,6 @@ export default function PatnerCard({
     bgColor,
     image,
 }: patnerProps) {
-    const shortDescription = truncateText(description, 100);
 
     return (
         <div className="bg-white rounded-lg overflow-hidden  shadow-box shadow-xl flex flex-col justify-between h-full transition-transform min-h-[565px] w-full max-w-[413px] mx-auto group">
