@@ -95,7 +95,7 @@ export default function NavBar() {
           <Link 
             href="/patnership" 
             className={`font-medium hover:text-green-700 ${
-              pathname === "#" ? "text-green-secondary" : "text-green-primary"
+              pathname === "/patnership" ? "text-green-secondary" : "text-green-primary"
             }`}
           >
             Kemitraan
@@ -135,7 +135,7 @@ export default function NavBar() {
             { href: "/about", label: "Tentang Kami" },
             { href: "/events", label: "Acara" },
             { href: "/teams", label: "Tim Kami" },
-            { href: "#", label: "Kemitraan" }
+            { href: "/patnership", label: "Kemitraan" }
           ].map((item, index) => {
             const isActive = item.href === "/" 
               ? pathname === "/"
