@@ -13,9 +13,9 @@ const PatnershipPage = () => {
     const gridInView = useInView(gridRef, { once: true, margin: "-100px" });
 
     return (
-        <section ref={sectionRef} className='relative min-h-screen px-8 lg:p-20'>
+        <section ref={sectionRef} className='relative min-h-screen px-8 pb-10 lg:px-20'>
             <motion.h2
-                className='flex justify-center text-4xl font-bold pb-20 text-green-primary text-center'
+                className='flex justify-center text-4xl font-bold py-20 text-green-primary text-center'
                 initial={{ opacity: 0, y: 30 }}
                 animate={sectionInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
