@@ -33,5 +33,11 @@ export const patners: patnerProps[] = [
     "description": "SMK Bhakti Nusantara Boja adalah sekolah menengah kejuruan swasta yang berlokasi di Boja, Kabupaten Kendal, Jawa Tengah, yang berfokus pada pendidikan keterampilan dan keahlian untuk menyiapkan siswa siap kerja.",
     "image": "/patnership/smk_binus.png",
   },
+  {
+    "id": 6,
+    "title": "JagooIT",
+    "description": "JagooIT adalah PT Jago Talenta Indonesia, perusahaan penyedia layanan IT di Indonesia yang fokus pada outsourcing talenta IT, headhunter, pelatihan korporat, serta pengelolaan administrasi dan payroll untuk membantu perusahaan memperoleh tenaga IT secara efisien.",
+    "image": "/patnership/JagooIT.png",
+  },
 
 ]
