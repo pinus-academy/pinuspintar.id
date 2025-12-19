@@ -131,7 +131,7 @@ const PinusPintarHomepage = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
             >
               PinusPintar menawarkan bootcamp intensif di bidang teknologi, desain,
-              dan pemasaran digital. Belajar langsung dari para ahli industri
+              dan cloud engineer . Belajar langsung dari para ahli industri
               melalui proyek praktis dan aplikasi dunia nyata.
             </motion.p>
             <motion.div 
@@ -291,109 +291,6 @@ const PinusPintarHomepage = () => {
           )}
         </div>
       </div>
-
-      {/* Media Coverage Section */}
-      <div className="p-8 mb-16 w-full max-w-8xl mx-auto" ref={newsRef}>
-        <motion.div 
-          id="media-coverage" 
-          className="px-4 py-8 w-full max-w-8xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={newsInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
-            Liputan Media
-          </h2>
-        </motion.div>
-        <div>
-          {filteredNews.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {/* First 3 items - always visible */}
-                {filteredNews.slice(0, 3).map((newsItem, index) => (
-                  <motion.div 
-                    key={newsItem.id} 
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={newsInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: index * 0.1,
-                      ease: "easeOut"
-                    }}
-                    whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  >
-                    <NewsCard {...newsItem} />
-                  </motion.div>
-                ))}
-
-                {/* Additional items 4-6 with smooth expansion */}
-                <motion.div
-                  className="col-span-full"
-                  initial={false}
-                  animate={{
-                    height: showAllNews ? 'auto' : 0,
-                    opacity: showAllNews ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  style={{
-                    overflow: 'hidden',
-                  }}
-                >
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6">
-                    {filteredNews.slice(3, 6).map((newsItem, index) => (
-                      <motion.div
-                        key={newsItem.id}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={showAllNews ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        transition={{ 
-                          duration: 0.4,
-                          delay: showAllNews ? index * 0.1 : 0,
-                          ease: "easeOut"
-                        }}
-                        whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                      >
-                        <NewsCard {...newsItem} />
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              </div>
-
-              {filteredNews.length > 3 && (
-                <motion.div 
-                  className="flex justify-center mt-8 transition-all duration-300"
-                  initial={{ opacity: 0 }}
-                  animate={newsInView ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Button
-                      variant="primary"
-                      className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300"
-                      onClick={handleToggleNews}
-                      disabled={isAnimating}
-                    >
-                      {showAllNews ? 'Lihat Lebih Sedikit' : 'Lihat Semua'}
-                    </Button>
-                  </motion.div>
-                </motion.div>
-              )}
-            </>
-          ) : (
-            <motion.p 
-              className="text-center text-gray-500 py-10 font-medium text-[20px]"
-              initial={{ opacity: 0 }}
-              animate={newsInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6 }}
-            >
-              Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
-            </motion.p>
-          )}
-        </div>
-      </div>
       <div className='p-8 mb-16 w-full max-w-8xl mx-auto' ref={eventsRef}>
         <motion.div 
           id="last-program" 
@@ -488,6 +385,107 @@ const PinusPintarHomepage = () => {
               className="text-center text-gray-500 py-10 font-medium text-[20px]"
               initial={{ opacity: 0 }}
               animate={eventsInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.6 }}
+            >
+              Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
+            </motion.p>
+          )}
+        </div>
+      </div>
+      <div className="p-8 mb-16 w-full max-w-8xl mx-auto" ref={newsRef}>
+        <motion.div 
+          id="media-coverage" 
+          className="px-4 py-8 w-full max-w-8xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={newsInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-primary text-center sm:text-left">
+            Liputan Media
+          </h2>
+        </motion.div>
+        <div>
+          {filteredNews.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {/* First 3 items - always visible */}
+                {filteredNews.slice(0, 3).map((newsItem, index) => (
+                  <motion.div 
+                    key={newsItem.id} 
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={newsInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: index * 0.1,
+                      ease: "easeOut"
+                    }}
+                    whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                  >
+                    <NewsCard {...newsItem} />
+                  </motion.div>
+                ))}
+
+                {/* Additional items 4-6 with smooth expansion */}
+                <motion.div
+                  className="col-span-full"
+                  initial={false}
+                  animate={{
+                    height: showAllNews ? 'auto' : 0,
+                    opacity: showAllNews ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  style={{
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+                    {filteredNews.slice(3, 6).map((newsItem, index) => (
+                      <motion.div
+                        key={newsItem.id}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={showAllNews ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                        transition={{ 
+                          duration: 0.4,
+                          delay: showAllNews ? index * 0.1 : 0,
+                          ease: "easeOut"
+                        }}
+                        whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                      >
+                        <NewsCard {...newsItem} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+
+              {filteredNews.length > 3 && (
+                <motion.div 
+                  className="flex justify-center mt-8 transition-all duration-300"
+                  initial={{ opacity: 0 }}
+                  animate={newsInView ? { opacity: 1 } : {}}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      variant="primary"
+                      className="px-15 py-6 w-full sm:w-auto text-[18px] font-medium transition-all duration-300"
+                      onClick={handleToggleNews}
+                      disabled={isAnimating}
+                    >
+                      {showAllNews ? 'Lihat Lebih Sedikit' : 'Lihat Semua'}
+                    </Button>
+                  </motion.div>
+                </motion.div>
+              )}
+            </>
+          ) : (
+            <motion.p 
+              className="text-center text-gray-500 py-10 font-medium text-[20px]"
+              initial={{ opacity: 0 }}
+              animate={newsInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
             >
               Belum ada acara yang tersedia saat ini — nantikan pembaruan selanjutnya!
