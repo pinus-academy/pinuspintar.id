@@ -34,6 +34,14 @@ export async function POST(request: NextRequest) {
 
     console.log("Incoming payload:", body);
 
+    // Validate if amount (discountPrice) is valid
+    if (!body.amount || body.amount < 1) {
+      return NextResponse.json(
+        { message: "Invalid amount. Must be greater than 0" },
+        { status: 400 }
+      );
+    }
+
     const customerPayload = {
       name: body.name,
       email: body.email,

@@ -18,6 +18,10 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
   const [residence, setResidence] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isRegistrationSuccess, setIsRegistrationSuccess] = useState(false);
+
+  // Validate if price and discountPrice are valid
+  const isValidPrice = price && discountPrice && discountPrice >= 1;
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value.replace(/\D/g, "");
@@ -30,6 +34,14 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
     e.preventDefault();
     setError(null);
     setIsSubmitting(true);
+
+    // If price is not valid, only submit personal info without payment
+    if (!isValidPrice) {
+      console.log("Registration without payment:", { fullName, email, phone, residence });
+      setIsRegistrationSuccess(true);
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       let phoneNumber = phone.replace(/-/g, "");
@@ -202,7 +214,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
           </div>
 
           <div>
-            {!resultCode ? (
+            {!resultCode && !isRegistrationSuccess ? (
               <>
                 <div className="px-4 py-5 border-b-2 border-gray-primary lg:px-8">
                   <div className="flex items-center gap-2 mb-5">
@@ -317,11 +329,11 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sedang Diproses..." : "Bayar Sekarang"}
+                    {isSubmitting ? "Sedang Diproses..." : isValidPrice ? "Bayar Sekarang" : "Daftar Sekarang"}
                   </button>
                 </div>
               </>
-            ) : (
+            ) : resultCode ? (
               <div className="flex flex-col justify-center items-center h-72 gap-2 animate-[fade-in-up_1.3s_ease-in-out_forwards]">
                 <div className="p-1 border-2 border-green-600 rounded-full text-white w-fit animate-pulse">
                   <div className="p-2 bg-green-600 rounded-full text-white w-fit">
@@ -336,6 +348,22 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                   </div>
                 </div>
                 <p className="text-green-600 text-center text-lg font-semibold">Pembayaran Berhasil</p>
+              </div>
+            ) : (
+              <div className="flex flex-col justify-center items-center h-72 gap-2 animate-[fade-in-up_1.3s_ease-in-out_forwards]">
+                <div className="p-1 border-2 border-green-600 rounded-full text-white w-fit animate-pulse">
+                  <div className="p-2 bg-green-600 rounded-full text-white w-fit">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="size-10"
+                    >
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                    </svg>
+                  </div>
+                </div>
+                <p className="text-green-600 text-center text-lg font-semibold">Pendaftaran Berhasil</p>
               </div>
             )}
           </div>
