@@ -21,7 +21,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
   const [isRegistrationSuccess, setIsRegistrationSuccess] = useState(false);
 
   // Validate if price and discountPrice are valid
-  const isValidPrice = price && discountPrice && discountPrice >= 1;
+  const isPaymentRequired = price && discountPrice && discountPrice >= 1;
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value.replace(/\D/g, "");
@@ -34,14 +34,6 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
     e.preventDefault();
     setError(null);
     setIsSubmitting(true);
-
-    // If price is not valid, only submit personal info without payment
-    if (!isValidPrice) {
-      console.log("Registration without payment:", { fullName, email, phone, residence });
-      setIsRegistrationSuccess(true);
-      setIsSubmitting(false);
-      return;
-    }
 
     try {
       let phoneNumber = phone.replace(/-/g, "");
@@ -76,10 +68,11 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
       }
 
       const data = await response.json();
-      console.log("Event registered successfully:", data);
 
       if (data.redirectUrl) {
         window.location.href = data.redirectUrl;
+      }else if (data.message === "Registration successful" && !isPaymentRequired) {
+        setIsRegistrationSuccess(true);
       }
     } catch (err) {
       if (err instanceof TypeError && err.message === "Failed to fetch") {
@@ -329,7 +322,7 @@ const Inputpage = ({ courses, resultCode }: DetailBuyCourseProps) => {
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sedang Diproses..." : isValidPrice ? "Bayar Sekarang" : "Daftar Sekarang"}
+                    {isSubmitting ? "Sedang Diproses..." : isPaymentRequired ? "Bayar Sekarang" : "Daftar Sekarang"}
                   </button>
                 </div>
               </>

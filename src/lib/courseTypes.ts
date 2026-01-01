@@ -1,4 +1,4 @@
-type DurationType = "days" | "weeks";
+type DurationType = "days" | "weeks" | "months";
 
 export interface CourseCardProps {
   id: number;
@@ -17,7 +17,7 @@ export interface CourseCardProps {
   featured: boolean;
   image: string;
   url?: string;
-  classType: string;
+  location: string;
   time: string;
   mentor: {
     image: string;

@@ -32,16 +32,6 @@ export async function POST(request: NextRequest) {
   try {
     const body: RegisterEventPayload = await request.json();
 
-    console.log("Incoming payload:", body);
-
-    // Validate if amount (discountPrice) is valid
-    if (!body.amount || body.amount < 1) {
-      return NextResponse.json(
-        { message: "Invalid amount. Must be greater than 0" },
-        { status: 400 }
-      );
-    }
-
     const customerPayload = {
       name: body.name,
       email: body.email,
@@ -52,10 +42,14 @@ export async function POST(request: NextRequest) {
 
     const customerResponse = await api.createCustomer(customerPayload) as CustomerResponse;
 
-    console.log("Customer created:", customerResponse);
+    if (body.amount <= 0) {
+      return NextResponse.json(
+        { message: "Registration successful" },
+        { status: 200 }
+      );
+    }
 
     const customerId = customerResponse?.customer?.id;
-    console.log('customerId', customerId);
 
     if (!customerId) {
       console.log('customerId not found');
@@ -78,9 +72,6 @@ export async function POST(request: NextRequest) {
 
     const paymentResponse = await api.createPayment(paymentPayload) as PaymentResponse;
 
-    console.log("Payment created:", paymentResponse);
-
-    // Handle different possible response structures
     const paymentUrl = paymentResponse?.data?.paymentUrl || paymentResponse?.paymentUrl || paymentResponse?.payment?.url;
     
     if (!paymentUrl) {

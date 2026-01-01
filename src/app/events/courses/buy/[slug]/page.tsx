@@ -6,12 +6,11 @@ export default async function DetailBuyCoursePage({
   params,
   searchParams,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { id } = await params;
-  const courseBuyId = parseInt(id);
-  const eventData = courses.find((t) => t.id === courseBuyId);
+  const { slug } = await params;
+  const eventData = courses.find((t) => t.slug === slug);
 
   const resolvedSearchParams = await searchParams;
   const resultCode = typeof resolvedSearchParams?.resultCode === "string" ? resolvedSearchParams.resultCode : undefined;

@@ -53,7 +53,7 @@
 
               {/* Description */}
               <p className="text-sm text-gray-700 text-[12px]">
-                {description ? description : shortDescription}
+                {shortDescription}
               </p>
 
               {/* Benefits */}

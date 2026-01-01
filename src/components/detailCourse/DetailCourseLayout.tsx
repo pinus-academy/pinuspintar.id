@@ -9,7 +9,7 @@ interface DetailCourseLayoutProps {
   courses: CourseCardProps;
 }
 const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
-  const { price, discountPrice, title, startDate, time, mentor } = courses;
+  const { price, discountPrice, title, startDate, time, mentor, location } = courses;
 
   // Validate if price and discountPrice are valid
   const isValidPrice = price && discountPrice && discountPrice >= 1;
@@ -37,7 +37,7 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
           </span>
         </p>
       </div>
-      <Link href={`/events/courses/buy/${courses.id}`}>
+      <Link href={`/events/courses/buy/${courses.slug}`}>
         <button 
           className="w-full py-3 bg-green-950 cursor-pointer text-white font-semibold text-lg rounded-2xl hover:bg-green-primary-2 transition duration-300"
         >
@@ -129,7 +129,7 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
               />
             </svg>
-            <p>Google Meet</p>
+            <p>{location}</p>
           </div>
         </div>
       </div>
