@@ -30,18 +30,12 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
       {/* Harga */}
       <div className="space-y-2">
         <h5 className="text-lg font-bold text-black">{title}</h5>
-        {isValidPrice ? (
-          <p className=" text-lg flex items-center gap-2 text-green-secondary">
-            Rp {discountPrice.toLocaleString("id-ID")}
-            <span className="text-sm font-medium text-gray-400 line-through">
-              Rp {price.toLocaleString("id-ID")}
-            </span>
-          </p>
-        ) : (
-          <p className=" text-lg flex items-center gap-2 text-green-secondary">
-            Free
-          </p>
-        )}
+        <p className=" text-lg flex items-center gap-2 text-green-secondary">
+          Rp {(discountPrice ?? 0).toLocaleString("id-ID")}
+          <span className="text-sm font-medium text-gray-400 line-through">
+            Rp {(price ?? 0).toLocaleString("id-ID")}
+          </span>
+        </p>
       </div>
       <Link href={`/events/courses/buy/${courses.id}`}>
         <button 
