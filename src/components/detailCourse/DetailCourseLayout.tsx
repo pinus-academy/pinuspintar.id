@@ -11,6 +11,9 @@ interface DetailCourseLayoutProps {
 const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
   const { price, discountPrice, title, startDate, time, mentor } = courses;
 
+  // Validate if price and discountPrice are valid
+  const isValidPrice = price && discountPrice && discountPrice >= 1;
+
   return (
     <div
       className="
@@ -27,16 +30,24 @@ const MenuRegisEvent = ({ courses }: { courses: CourseCardProps }) => {
       {/* Harga */}
       <div className="space-y-2">
         <h5 className="text-lg font-bold text-black">{title}</h5>
-        <p className=" text-lg flex items-center gap-2 text-green-secondary">
-          Rp {discountPrice.toLocaleString("id-ID")}
-          <span className="text-sm font-medium text-gray-400 line-through">
-            Rp {price.toLocaleString("id-ID")}
-          </span>
-        </p>
+        {isValidPrice ? (
+          <p className=" text-lg flex items-center gap-2 text-green-secondary">
+            Rp {discountPrice.toLocaleString("id-ID")}
+            <span className="text-sm font-medium text-gray-400 line-through">
+              Rp {price.toLocaleString("id-ID")}
+            </span>
+          </p>
+        ) : (
+          <p className=" text-lg flex items-center gap-2 text-green-secondary">
+            Free
+          </p>
+        )}
       </div>
       <Link href={`/events/courses/buy/${courses.id}`}>
-        <button className="w-full py-3 bg-green-950 cursor-pointer text-white font-semibold text-lg rounded-2xl hover:bg-green-primary-2 transition duration-300">
-          Beli Kursus
+        <button 
+          className="w-full py-3 bg-green-950 cursor-pointer text-white font-semibold text-lg rounded-2xl hover:bg-green-primary-2 transition duration-300"
+        >
+          {isValidPrice ? "Beli Kursus" : "Daftar Sekarang"}
         </button>
       </Link>
 
