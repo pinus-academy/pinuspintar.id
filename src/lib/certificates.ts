@@ -66,4 +66,9 @@ export const certificates: certificateProps[] = [
     "name": "Retno Imam Oktriyanto",
     "image": "/certificates/INT.02.013.png",
   },
+  {
+    "id": "INT.04.014/MG-PP/XI/2025",
+    "name": "Surya Bima Wardhana",
+    "image": "/certificates/INT.04.014.png",
+  },
 ]
