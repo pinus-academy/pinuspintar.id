@@ -114,14 +114,14 @@ const PinusPintarHomepage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                Tingkatkan Keahlianmu,
+                Teknologi Gratis
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Majukan Kariermu
+                Untuk Underprivileged & Dhuafa
               </motion.span>
             </motion.h1>
             <motion.p 
@@ -130,9 +130,7 @@ const PinusPintarHomepage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              PinusPintar menawarkan bootcamp intensif di bidang teknologi, desain,
-              dan cloud engineer . Belajar langsung dari para ahli industri
-              melalui proyek praktis dan aplikasi dunia nyata.
+              PinusPintar membuka akses pendidikan teknologi gratis bagi underprivileged dan dhuafa, dengan pendampingan mentor industri dan proyek nyata.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start"
