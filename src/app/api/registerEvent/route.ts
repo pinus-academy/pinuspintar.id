@@ -61,7 +61,9 @@ export async function POST(request: NextRequest) {
     const customerResponse = await api.createCustomer(customerPayload) as CustomerResponse;
 
     if (body.amount <= 0) {
-      const origin = request.nextUrl.origin;
+      const origin = request.headers.get("host") 
+        ? `${request.nextUrl.protocol}//${request.headers.get("host")}` 
+        : request.nextUrl.origin;
       const html = getRegistrationEmailHtml({
         logoUrl: `${origin}/icon/green.svg`,
         bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Registrasi Anda berhasil.</p>`,
