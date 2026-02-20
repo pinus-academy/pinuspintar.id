@@ -1,5 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { api } from "@/lib/externalApi";
+import { getRegistrationEmailHtml } from "@/lib/email";
+
+const NOTIFICATION_SERVICE_URL = "https://notification-service.deployaja.id";
+
+async function sendRegistrationEmail(payload: { to: string; subject: string; html: string }) {
+  try {
+    await fetch(`${NOTIFICATION_SERVICE_URL}/notify/email`, {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "X-API-KEY": process.env.NOTIFICATION_SERVICE_API_KEY || ""
+      },
+      body: JSON.stringify({ ...payload, displayName: 'PinusPintar.id' }),
+    });
+  } catch (err) {
+    console.error("Failed to send registration email:", err);
+  }
+}
 
 interface RegisterEventPayload {
   name: string;
@@ -43,6 +61,16 @@ export async function POST(request: NextRequest) {
     const customerResponse = await api.createCustomer(customerPayload) as CustomerResponse;
 
     if (body.amount <= 0) {
+      const origin = request.nextUrl.origin;
+      const html = getRegistrationEmailHtml({
+        logoUrl: `${origin}/icon/green.svg`,
+        bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Registrasi Anda berhasil.</p>`,
+      });
+      sendRegistrationEmail({
+        to: body.email,
+        subject: "Registrasi Berhasil - Pinus Pintar",
+        html,
+      }).catch(console.error);
       return NextResponse.json(
         { message: "Registration successful" },
         { status: 200 }
@@ -81,6 +109,16 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    const html = getRegistrationEmailHtml({
+      logoUrl: `${origin}/icon/green.svg`,
+      bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Silakan selesaikan pembayaran melalui link yang telah dikirim.</p>`,
+    });
+    sendRegistrationEmail({
+      to: body.email,
+      subject: "Registrasi & Pembayaran - Pinus Pintar",
+      html,
+    }).catch(console.error);
 
     return NextResponse.json({
       redirectUrl: paymentUrl

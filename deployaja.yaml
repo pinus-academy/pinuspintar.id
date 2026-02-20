@@ -16,5 +16,7 @@ env:
     value: "https://crm.deployaja.id/api/v1"
   - name: "EXTERNAL_API_AUTH"
     value: "YWRtaW5AdHVuZ3R1bmcuY29tOmFkbWluMTIz"
+  - name: "NOTIFICATION_SERVICE_API_KEY"
+    value: "9f688a4a13c292cb682dc733948fb7c8541e9f6d9cf32d65518f3bee125487b9"
 
 domain: pinuspintar.id

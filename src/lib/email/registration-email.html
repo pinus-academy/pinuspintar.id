@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinus Pintar</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Poppins', Arial, sans-serif; background-color: #f5f5f5; }
+    .wrapper { max-width: 600px; margin: 0 auto; background-color: #ffffff; }
+    .header { padding: 32px 24px; text-align: center; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: center; gap: 10px;}
+    .logo { max-width: 180px; height: auto; }
+    .logo-text { font-size: 40px; font-weight: bold; color: #183428; }
+    .body { padding: 32px 24px; color: #333; font-size: 15px; line-height: 1.6; }
+    .body p { margin: 0 0 16px; }
+    .footer { padding: 24px; text-align: center; font-size: 12px; color: #888; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="{{LOGO_URL}}" alt="Pinus Pintar" class="logo" width="40" />
+      <span class="logo-text">PinusPintar</span>
+    </div>
+    <div class="body">
+      {{BODY_CONTENT}}
+    </div>
+    <div class="footer">
+      &copy; {{YEAR}} Pinus Pintar. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
