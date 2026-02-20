@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
         ? `${request.nextUrl.protocol}//${request.headers.get("host")}` 
         : request.nextUrl.origin;
       const html = getRegistrationEmailHtml({
-        logoUrl: `${origin}/icon/green.svg`,
+        logoUrl: `${origin}/icon/green.png`,
         bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Registrasi Anda berhasil.</p>`,
       });
       sendRegistrationEmail({
