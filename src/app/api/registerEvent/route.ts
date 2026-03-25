@@ -12,7 +12,7 @@ async function sendRegistrationEmail(payload: { to: string; subject: string; htm
         "Content-Type": "application/json",
         "X-API-KEY": process.env.NOTIFICATION_SERVICE_API_KEY || ""
       },
-      body: JSON.stringify({ ...payload, displayName: 'PinusPintar.id' }),
+      body: JSON.stringify({ ...payload, displayName: 'PinusPintar.id', cc: 'admin@pinuspintar.id' }),
     });
   } catch (err) {
     console.error("Failed to send registration email:", err);
@@ -66,7 +66,34 @@ export async function POST(request: NextRequest) {
         : request.nextUrl.origin;
       const html = getRegistrationEmailHtml({
         logoUrl: `${origin}/icon/green.png`,
-        bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Registrasi Anda berhasil.</p>`,
+        bodyContent: `
+          <div style="margin:0 0 16px;">
+            <p style="margin:0 0 8px;">Halo <strong>${body.name}</strong>,</p>
+            <p style="margin:0;">Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Registrasi Anda berhasil.</p>
+          </div>
+
+          <div style="margin:24px 0 0; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+            <h3 style="margin:0 0 12px; font-size:16px; line-height:1.3; color:#111;">Data Anda</h3>
+            <table role="presentation" cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse; font-size:14px; color:#333;">
+              <tr>
+                <td style="padding:8px 0; width:140px; color:#666;">Nama</td>
+                <td style="padding:8px 0; font-weight:600;">${body.name}</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0; width:140px; color:#666;">Email</td>
+                <td style="padding:8px 0;">${body.email}</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0; width:140px; color:#666;">No. HP</td>
+                <td style="padding:8px 0;">${body.phone}</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0; width:140px; color:#666;">Alamat</td>
+                <td style="padding:8px 0;">${body.address}</td>
+              </tr>
+            </table>
+          </div>
+        `.trim(),
       });
       sendRegistrationEmail({
         to: body.email,
@@ -114,7 +141,44 @@ export async function POST(request: NextRequest) {
 
     const html = getRegistrationEmailHtml({
       logoUrl: `${origin}/icon/green.svg`,
-      bodyContent: `<p>Halo ${body.name},</p><p>Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Silakan selesaikan pembayaran melalui link yang telah dikirim.</p>`,
+      bodyContent: `
+        <div style="margin:0 0 16px;">
+          <p style="margin:0 0 8px;">Halo <strong>${body.name}</strong>,</p>
+          <p style="margin:0;">Terima kasih telah mendaftar untuk <strong>${body.courseName}</strong>. Silakan selesaikan pembayaran melalui link berikut.</p>
+        </div>
+
+        <div style="margin:16px 0 0;">
+          <a href="${paymentUrl}" style="display:inline-block; background:#183428; color:#ffffff; text-decoration:none; padding:12px 16px; border-radius:10px; font-weight:700;">
+            Lanjutkan Pembayaran
+          </a>
+          <p style="margin:12px 0 0; font-size:12px; color:#666;">
+            Jika tombol tidak berfungsi, salin dan buka link ini:
+            <span style="word-break:break-all;">${paymentUrl}</span>
+          </p>
+        </div>
+
+        <div style="margin:24px 0 0; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+          <h3 style="margin:0 0 12px; font-size:16px; line-height:1.3; color:#111;">Data Anda</h3>
+          <table role="presentation" cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse; font-size:14px; color:#333;">
+            <tr>
+              <td style="padding:8px 0; width:140px; color:#666;">Nama</td>
+              <td style="padding:8px 0; font-weight:600;">${body.name}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0; width:140px; color:#666;">Email</td>
+              <td style="padding:8px 0;">${body.email}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0; width:140px; color:#666;">No. HP</td>
+              <td style="padding:8px 0;">${body.phone}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0; width:140px; color:#666;">Alamat</td>
+              <td style="padding:8px 0;">${body.address}</td>
+            </tr>
+          </table>
+        </div>
+      `.trim(),
     });
     sendRegistrationEmail({
       to: body.email,
