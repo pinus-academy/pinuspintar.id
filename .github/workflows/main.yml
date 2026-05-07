@@ -1,6 +1,7 @@
 name: Docker Build and Publish and Deploy to DeployAja
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
   pull_request:
