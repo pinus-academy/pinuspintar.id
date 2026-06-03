@@ -10,7 +10,7 @@ export const teams: TeamCardProps[] = [
     {
         id: 6,
         name: "Haedar Alfatah",
-        //role: "VP of Strategy",
+        role: "",
         photo: "/teams/Haedar.png"
     },
     {
